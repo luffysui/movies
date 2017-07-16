@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="04832fb2-9080-40fd-9d68-1370e5097010" name="server" url="http://47.94.17.109">
+        <fileTransfer host="47.94.17.109" port="22" rootFolder="/usr/www/html/project_suiyi" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
