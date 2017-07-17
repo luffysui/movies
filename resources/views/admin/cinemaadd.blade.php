@@ -24,7 +24,7 @@
         <p>
             <label>影院区域</label>
             <span class="field" >
-                <b class="myselect" >
+                <b id="ssss" class="myselect" >
                     <select name="region_code" id="cid" style="min-width:20%">
                         <option value="dfff">---请选择---</option>
                     </select>
