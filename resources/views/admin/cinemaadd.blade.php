@@ -44,9 +44,18 @@
             <span class="field"><input type="text" name="cinema_movie" id="" class="longinput"></span>
         </p>
         <p>
+            <label>影院经度</label>
+            <span class="field"><input type="text" name="cinema_ew" id="" class="longinput"></span>
+        </p>
+        <p>
+            <label>影院纬度</label>
+            <span class="field"><input type="text" name="cinema_sn" id="" class="longinput"></span>
+        </p>
+        <p>
             <label>交通信息</label>
             <span class="field"><input type="text" name="cinema_travel" id="" class="longinput"></span>
         </p>
+
 
 
 {{--lkj--}}

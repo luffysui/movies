@@ -37,6 +37,8 @@
                 <th class="head0" rowspan="1" colspan="1">影院电话</th>
                 <th class="head0" rowspan="1" colspan="1">正在上映</th>
                 <th class="head0" rowspan="1" colspan="1">特色信息</th>
+                <th class="head0" rowspan="1" colspan="1">影院经度</th>
+                <th class="head0" rowspan="1" colspan="1">影院纬度</th>
                 <th class="head0" rowspan="1" colspan="1">交通信息</th>
                 <th class="head0" rowspan="1" colspan="1">操作</th>
             </tr>
@@ -50,6 +52,8 @@
                 <th class="head0" rowspan="1" colspan="1">影院电话</th>
                 <th class="head0" rowspan="1" colspan="1">正在上映</th>
                 <th class="head0" rowspan="1" colspan="1">特色信息</th>
+                <th class="head0" rowspan="1" colspan="1">影院经度</th>
+                <th class="head0" rowspan="1" colspan="1">影院纬度</th>
                 <th class="head0" rowspan="1" colspan="1">交通信息</th>
                 <th class="head0" rowspan="1" colspan="1">操作</th>
             </tr>
@@ -65,6 +69,8 @@
                 <td class="center">{{ $v->cinema_phone }}</td>
                 <td class="center">{{ $v->cinema_movie }}</td>
                 <td class="center">{{ $v->cinema_features }}</td>
+                <td class="center">{{ $v->cinema_ew }}</td>
+                <td class="center">{{ $v->cinema_sn }}</td>
                 <td class="center">{{ $v->cinema_travel }}</td>
                 <td class="center">
                 <a href="javascript:doDel({{$v->cinema_id}})">删除</a>|

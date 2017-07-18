@@ -71,6 +71,8 @@ class CinemaController extends Controller
             'cinema_phone.required' => '联系方式必须填写',
             'cinema_movie.required' => '正在上映必须填写',
             'cinema_travel.required' => '交通信息必须填写',
+            'cinema_ew.required' => '影院经度必须填写',
+            'cinema_sn.required' => '影院纬度必须填写',
             'region_code.integer' => '区域名称必须填写'
         );
 
@@ -83,6 +85,8 @@ class CinemaController extends Controller
             'cinema_phone' => 'required',
             'cinema_movie' => 'required',
             'cinema_travel' => 'required',
+            'cinema_ew' => 'required',
+            'cinema_sn' => 'required',
         ],$messages);
         //去除多余的字段
         $arr = $request->except('_token');
