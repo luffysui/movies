@@ -1,13 +1,13 @@
 ﻿@extends('home.parent')
-@section('title', '即将上映')
+@section('title', '正在上映')
 @section('content')
 <div class="movieShow clearfix">
 <a class="fastBuyNav fastBuyNav2" id="fastBuyNav" href="javascript:;"></a>
   <div class="showLeft">
-	  <h2 class="showTitle clearfix"><a class="on" href="javascript:;">正在热映</a><span class="fg">/</span><a href="http://piao.163.com/movie/upComing.html?isTable=1&currentPage=1">即将上映</a></h2>
+	  <h2 class="showTitle clearfix"><a class="on" href="javascript:;" style="font-size:30px;color:#000; ">正在热映</a><span class="fg">/</span><a href="{{ url('/upcoming') }}">即将上映</a></h2>
 	  <div class="showMain" id="playListBox">
 		<div class="listSort"><span class="listSum">正在热映 
-	  {{ count($movieList) }}
+	  {{ $movieCount }}
 	  部</span>
 	  
 		  <a class="styleBtn styleBtn_hb" href="http://piao.163.com/movie/onshow.html?isTable=0"><i></i>海报</a>
@@ -20,7 +20,9 @@
 	  <ul class="movie_con">
          <li class="l1">
             <div class="showImg">
-			
+                @if( $v->d3)
+                    <em class="mvType mvType3d"></em>
+                @endif
 			
 			 <a href="/beijing/movie/48488.html" title="{{ $v->name }}" target="_blank"><img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/></a>
 			</div>
@@ -47,17 +49,13 @@
 			<span>
 			{{ $v->stateName }}</span>
 			<span>{{ $v->typeName }}</span>
-			<span>{{ $v->duration }}分钟</span>
+			<span>{{ floor($v->duration/60)}}小时{{  ($v->duration)%60  }}分钟</span>
 			</p>
           </li>
           
 		  <li class="l3">
 		 
-          
-		      
-				
-				   
-				   
+
 				  <div class="res">     
 				    <p class="price"><strong>31</strong>元起</p>
 				    <a href="/beijing/movie/48488.html#pq=1.buy" class="showBtn" target="_blank">选座购票</a>

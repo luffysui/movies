@@ -59,9 +59,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::resource('/list', 'Admin\ListController');
 
 });
-//前台首页
-Route::get('/', 'Home\IndexController@index');
-//正在热映影片
-Route::get('/onshow', 'Home\MovieListController@onshow');
-//即将上映影片
-Route::get('/upcoming', 'Home\MovieListController@upcoming');
+
+//获取所在城市的路由群组
+Route::group(['middleware' => 'getCity'], function(){
+    //前台首页
+    Route::get('/', 'Home\IndexController@index');
+    //正在热映影片
+    Route::get('/onshow', 'Home\MovieListController@onshow');
+    //即将上映影片
+    Route::get('/upcoming', 'Home\MovieListController@upcoming');
+});
+
+//前台修改城市
+Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
