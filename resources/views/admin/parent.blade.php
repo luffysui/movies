@@ -19,7 +19,7 @@
     <link rel="stylesheet" media="screen" href="{{ asset('admin/css/style.ie9.css') }}"/>
     <![endif]-->
     <!--[if IE 8]>
-    <link rel="stylesheet" media="screen" href="css/style.ie8.css"/>
+    <link rel="stylesheet" media="screen" href="{{ asset('admin/css/style.ie8.css') }}"/>
     <![endif]-->
     <!--[if lt IE 9]>
     <script src="{{ asset('admin/js/plugins/css3-mediaqueries.js') }}"></script>

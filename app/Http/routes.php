@@ -10,10 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-//前台登录路由
-Route::get('/', function () {
-    return view('welcome');
-});
+////前台登录路由
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 //后台登录路由
 Route::get('admin/login', 'Admin\LoginController@showLogin');
@@ -59,3 +59,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::resource('/list', 'Admin\ListController');
 
 });
+//前台首页
+Route::get('/', 'Home\IndexController@index');
+//正在热映影片
+Route::get('/onshow', 'Home\MovieListController@onshow');
+//即将上映影片
+Route::get('/upcoming', 'Home\MovieListController@upcoming');

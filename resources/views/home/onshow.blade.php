@@ -1,0 +1,119 @@
+﻿@extends('home.parent')
+@section('title', '即将上映')
+@section('content')
+<div class="movieShow clearfix">
+<a class="fastBuyNav fastBuyNav2" id="fastBuyNav" href="javascript:;"></a>
+  <div class="showLeft">
+	  <h2 class="showTitle clearfix"><a class="on" href="javascript:;">正在热映</a><span class="fg">/</span><a href="http://piao.163.com/movie/upComing.html?isTable=1&currentPage=1">即将上映</a></h2>
+	  <div class="showMain" id="playListBox">
+		<div class="listSort"><span class="listSum">正在热映 
+	  {{ count($movieList) }}
+	  部</span>
+	  
+		  <a class="styleBtn styleBtn_hb" href="http://piao.163.com/movie/onshow.html?isTable=0"><i></i>海报</a>
+		  <a class="styleBtn styleBtn_lb_on" href="javascript:;"><i></i>列表</a>
+	  </div>
+	  
+<div class="showList">
+		  
+	   @foreach( $movieList as $v)
+	  <ul class="movie_con">
+         <li class="l1">
+            <div class="showImg">
+			
+			
+			 <a href="/beijing/movie/48488.html" title="{{ $v->name }}" target="_blank"><img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/></a>
+			</div>
+          </li>
+		  
+          <li class="l2">
+            <h3><a href="/beijing/movie/48488.html" title="{{ $v->name }}" target="_blank">{{ $v->name }}</a>
+			
+			 <span class="star_bg ml20"><b class="star" style="width:72%"></b></span>
+			 <em>7.2</em>
+			
+			</h3>
+            <p class="p1">{{ $v->description }}</p>
+            <p class="p2">上映：{{ date('Y年m月d日',$v->start_time) }}</p>
+            <p class="p2">导演：{{ $v->director }}</p>
+            <p class="p2">主演：{{ $v->star }}  </p>
+            <p class="p3">
+                @if($v->d3)
+                <span>3D</span>
+                @endif
+                @if($v->imax)
+                    <span>IMAX</span>
+                @endif
+			<span>
+			{{ $v->stateName }}</span>
+			<span>{{ $v->typeName }}</span>
+			<span>{{ $v->duration }}分钟</span>
+			</p>
+          </li>
+          
+		  <li class="l3">
+		 
+          
+		      
+				
+				   
+				   
+				  <div class="res">     
+				    <p class="price"><strong>31</strong>元起</p>
+				    <a href="/beijing/movie/48488.html#pq=1.buy" class="showBtn" target="_blank">选座购票</a>
+			      </div>
+				 
+				 
+	
+		  </li>
+      </ul>
+	  @endforeach
+	   
+
+</div>
+          <style>
+              .pagination li{
+                  font-size: 20px;
+                  float: left;
+                  line-height:30px;
+                  padding-left: 20px;
+              }
+              .paginate li a{
+                  padding:10px;
+
+              }
+          </style>
+          {!! $movieList->render() !!}
+
+
+	  </div>
+  </div>
+	<div class="showRight">
+<div class="side1">
+    <div class="side1Client"></div>
+    <dl class="side1Pro">
+        <dt>购票流程</dt>
+        <dd><b class="b1"></b>1.选择影院和场次</dd>
+        <dd><b class="b2"></b>2.在线选座位并支付</dd>
+        <dd><b class="b3"></b>3.短信获取取票码</dd>
+        <dd><b class="b4"></b>4.凭码自助取票</dd>
+    </dl>
+</div>
+		<div class="mt15">
+    <h2 class="colTitle"><span class="colText">电影周排行榜</span></h2>
+    <ul  class="weeklyTop">
+        <li><em class="score fr">7.5</em><b class="b0"></b><a href="/beijing/movie/48542.html" target="_blank" title="神偷奶爸3">神偷奶爸3</a></li>
+        <li><em class="score fr">7.0</em><b class="b1"></b><a href="/beijing/movie/48489.html" target="_blank" title="大护法">大护法</a></li>
+        <li><em class="score fr">7.0</em><b class="b2"></b><a href="/beijing/movie/47722.html" target="_blank" title="绝世高手">绝世高手</a></li>
+        <li><em class="score fr">7.2</em><b class="b3"></b><a href="/beijing/movie/48488.html" target="_blank" title="悟空传">悟空传</a></li>
+        <li><em class="score fr">8.0</em><b class="b4"></b><a href="/beijing/movie/48522.html" target="_blank" title="变形金刚5：最后的骑士">变形金刚5：最后...</a></li>
+    </ul>
+		</div>
+		<div class="mt15">
+		</div>       
+	</div>
+</div>
+
+
+
+@endsection
