@@ -72,8 +72,21 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/cinemalist', 'Home\CinemaListController@index');
     //影院详情页面
     Route::get('/cinema/{cinemaId}', 'Home\CinemaController@index');
+    //影片详情+影院详情页面---第一家影院
+    Route::get('/movie/{movieId}', 'Home\MovieController@index');
+    //影片详情+影院详情页面---不同影院
+    Route::get('/movie/{movieId}/{cinemaId}', 'Home\MovieController@index');
 
 });
 
 //前台修改城市
 Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
+//前台登陆
+Route::get('/login','Home\LoginController@login');
+//注册
+Route::get('/register','Home\LoginController@register');
+//执行登陆
+Route::post('/dologin','Home\LoginController@dologin');
+//执行注册
+Route::post('/doregister','Home\LoginController@doregister');
+
