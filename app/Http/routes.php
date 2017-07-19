@@ -68,6 +68,11 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/onshow', 'Home\MovieListController@onshow');
     //即将上映影片
     Route::get('/upcoming', 'Home\MovieListController@upcoming');
+    //影院列表页面
+    Route::get('/cinemalist', 'Home\CinemaListController@index');
+    //影院详情页面
+    Route::get('/cinema/{cinemaId}', 'Home\CinemaController@index');
+
 });
 
 //前台修改城市

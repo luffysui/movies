@@ -193,4 +193,18 @@
             </div>
         </div>
     </section>
+    <section class="mainCont clearfix mt15">
+        <dl class="partner">
+            <dt>智能挑选价最低</dt>
+            <dd>
+                <img src="{{ asset('home/Picture/logo_1.jpg') }}" width="128" height="48" alt="">
+                <img src="{{ asset('home/Picture/logo_2.jpg') }}" width="128" height="48" alt="">
+                <img src="{{ asset('home/Picture/logo_3.jpg') }}" width="128" height="48" alt="">
+                <img src="{{ asset('home/Picture/logo_4.jpg') }}" width="128" height="48" alt="">
+                <img src="{{ asset('home/Picture/logo_5.jpg') }}" width="128" height="48" alt="">
+                <img src="{{ asset('home/Picture/logo_6.jpg') }}" width="128" height="48" alt="">
+            </dd>
+        </dl>
+    </section>
+</section>
     @endsection
