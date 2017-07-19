@@ -72,6 +72,10 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/cinemalist', 'Home\CinemaListController@index');
     //影院详情页面
     Route::get('/cinema/{cinemaId}', 'Home\CinemaController@index');
+    //影片详情+影院详情页面---第一家影院
+    Route::get('/movie/{movieId}', 'Home\MovieController@index');
+    //影片详情+影院详情页面---不同影院
+    Route::get('/movie/{movieId}/{cinemaId}', 'Home\MovieController@index');
 
 });
 
