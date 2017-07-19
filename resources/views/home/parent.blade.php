@@ -16,6 +16,9 @@
 <link rel="stylesheet" href="{{ asset('home/Css/core.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/index2014.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/mv_list.css') }}"/>
+{{--地图--}}
+
+    {{--地图--}}
 
 <script src="{{ asset('home/Scripts/jquery-1.4.2.js') }}"></script>
 	
@@ -154,7 +157,7 @@
         </div>
     	<ul class="shift">  
             <li>
-                <a  class="active" href="/beijing/movie/page-1-type-0.html" rel="nofollow">首页</a>
+                <a  class="active" href="{{ url('/') }}" rel="nofollow">首页</a>
             </li>  		
     		<li class="movie" id="movieLink">
 				<a  class="" href="javascript:;">电影<i class="triangle2"></i></a>
@@ -164,7 +167,7 @@
                 </dl>
             </li>
     		<li>
-				<a  class=""  href="/beijing/cinema/category-ALL-area-0-type-0.html?keywords=#from=cinema" rel="nofollow">影院</a>
+				<a  class=""  href="{{ url('cinemalist') }}" rel="nofollow">影院</a>
 			</li>
             <li>
             	<a target="_blank" class="" href="/beijing/client.html#from=daohang" rel="nofollow">客户端</a>
@@ -196,20 +199,7 @@
 
 
 
-    <section class="mainCont clearfix mt15">       
-        <dl class="partner">            
-            <dt>智能挑选价最低</dt>
-            <dd>
-                <img src="{{ asset('home/Picture/logo_1.jpg') }}" width="128" height="48" alt="">
-                <img src="{{ asset('home/Picture/logo_2.jpg') }}" width="128" height="48" alt="">
-                <img src="{{ asset('home/Picture/logo_3.jpg') }}" width="128" height="48" alt="">
-                <img src="{{ asset('home/Picture/logo_4.jpg') }}" width="128" height="48" alt="">
-                <img src="{{ asset('home/Picture/logo_5.jpg') }}" width="128" height="48" alt="">
-                <img src="{{ asset('home/Picture/logo_6.jpg') }}" width="128" height="48" alt="">
-            </dd>
-        </dl>
-    </section>
-</section>
+
 
 
 <footer id="docFoot">
