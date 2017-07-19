@@ -1,0 +1,13 @@
+﻿.legal-wrapper .main-container {
+  background-color: #112b3c;
+  border: 1px solid #3a5a71;
+  overflow-y: scroll;
+}
+.input-alike {
+  border: 1px solid #0c72a4;
+}
+.icon-chevron-up {
+  display: none;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImllOC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLGNBQ0k7RUFDSSx5QkFBQTtFQUNBLHlCQUFBO0VBQ0Esa0JBQUE7O0FBSVI7RUFDSSx5QkFBQTs7QUFHSjtFQUNJLGFBQUEiLCJmaWxlIjoiaWU4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuLmxlZ2FsLXdyYXBwZXIge1xuICAgIC5tYWluLWNvbnRhaW5lciB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMxMTJiM2M7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICMzYTVhNzE7XG4gICAgICAgIG92ZXJmbG93LXk6IHNjcm9sbDtcbiAgICB9XG59XG5cbi5pbnB1dC1hbGlrZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzBjNzJhNDtcbn1cblxuLmljb24tY2hldnJvbi11cCB7XG4gICAgZGlzcGxheTpub25lO1xufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */

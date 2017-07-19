@@ -21,7 +21,7 @@
     {{--地图--}}
 
 <script src="{{ asset('home/Scripts/jquery-1.4.2.js') }}"></script>
-	
+
 	<script src="{{ asset('home/Scripts/easycore.js') }}"></script><script src="{{ asset('home/Scripts/dialog.js') }}"></script><script src="{{ asset('home/Scripts/autocomplete.js') }}"></script>
 <script src="{{ asset('home/Scripts/wb.js') }}" type="text/javascript" charset="utf-8"></script>
 
@@ -33,9 +33,9 @@
     }
   </script>
 
-	
-	
-	
+
+
+
 	<script src="{{ asset('home/Scripts/xframe.js') }}"></script>
 </head>
 <body>
@@ -44,7 +44,10 @@
 </div></noscript>
     <nav id="topNav">
         <div id="topNavWrap">
-            <div id="topNavLeft"><script>Core.navInit("http://pimg1.126.net/movie","","1495696381","")</script></div>
+             <div id="topNavLeft">
+                <a href="{{ url('/login') }}">登录</a>
+                <a href="{{ url('/register') }}">注册</a>
+            </div>
             <ul id="topNavRight">
                 <li><a href="http://order.mall.163.com/movie/list.html" rel="nofollow"  id="myEpay" notice="false" user="y" target="_blank">我的订单</a>&nbsp;&nbsp;<span id="topEpayInfo"></span>|</li>
                 <li><a href="http://piao.163.com/order/code_list.html" rel="nofollow"  target="_blank" user="y" rel="nofollow">我的优惠券</a>&nbsp;&nbsp;|</li>
@@ -55,7 +58,7 @@
                 </li>
             </ul>
             <script>
-            
+
             </script>
         </div>
     </nav>
@@ -155,10 +158,10 @@
                     </div>
             </div>
         </div>
-    	<ul class="shift">  
+    	<ul class="shift">
             <li>
                 <a  class="active" href="{{ url('/') }}" rel="nofollow">首页</a>
-            </li>  		
+            </li>
     		<li class="movie" id="movieLink">
 				<a  class="" href="javascript:;">电影<i class="triangle2"></i></a>
 			     <dl  id="movieMenu">
@@ -171,7 +174,7 @@
 			</li>
             <li>
             	<a target="_blank" class="" href="/beijing/client.html#from=daohang" rel="nofollow">客户端</a>
-            </li> 
+            </li>
     	</ul>
         <div class="search">
             <div class="ie6">
@@ -181,7 +184,7 @@
                     <input type="submit" value=""  class="sub" id="topSearchBtn" title=""/>
                 </form>
             </div>
-        </div>   
+        </div>
     </div>
 </section>
 
@@ -222,19 +225,19 @@
 				</div>
 			</div>
 		</div>
-    </div>	
+    </div>
 	<div id="aboutNEST">
 <a href="http://corp.163.com/eng/about/overview.html" rel="nofollow" target="_blank">About NetEase</a> - <a href="http://gb.corp.163.com/gb/about/overview.html" rel="nofollow"  target="_blank">公司简介</a> - <a href="http://gb.corp.163.com/gb/contactus.html" rel="nofollow"  target="_blank">联系方法</a> - <a href="http://corp.163.com/gb/job/job.html" rel="nofollow" target="_blank">招聘信息</a> - <a href="http://help.163.com/" rel="nofollow" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" rel="nofollow" target="_blank">相关法律</a> - <a href="http://emarketing.biz.163.com/" rel="nofollow" target="_blank">网络营销</a> - <a href="http://piao.163.com/" target="_blank">网易电影</a><br />
   增值电信业务经营许可证：浙B2-20110418&nbsp;|&nbsp;<a href="http://www.lede.com/prove.html" target="_blank">网站相关资质证明</a><br />
   网易乐得科技有限公司版权所有 &copy;2011-2017
-    
+
 	</div>
 </footer>
 	<div id="sideBar">
 		<a id="feedback" href="http://feedback.zxkf.163.com/movie/show.html?flag=1" rel="nofollow" target="_blank" title="提意见" hidefocus="true"></a>
-	    <a id="toTop" href="javascript:;" rel="nofollow" title="回到顶部" hidefocus="true"></a> 
+	    <a id="toTop" href="javascript:;" rel="nofollow" title="回到顶部" hidefocus="true"></a>
 	</div>
-	
+
 	<script src="{{ asset('home/Scripts/imgscroll.js') }}"></script><script src="{{ asset('home/Scripts/mvcommon.js') }}"></script><script src="{{ asset('home/Scripts/index2014.js') }}"></script>
 <script>Core && Core.fastInit && Core.fastInit("1");</script>
 <script type="text/javascript">
