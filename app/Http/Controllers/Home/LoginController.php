@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Home;
 use Illuminate\Http\Request;
 
 use DB;
+
+use Session;
+
 use App\Org\ImageTool;
 
 use App\Http\Requests;
@@ -14,24 +17,45 @@ class LoginController extends Controller
 {
     public function login()
     {
+        Session::put('homeuser','');
         return view('home/login');
 	}
 	public function dologin(Request $request)
     {
+        //表单验证
+    	$messages = [
+            'password.required'=>'必须填写用户名',
+            'phone.required'=>'必须填写手机号'
+        ];
+        $this->validate($request, [
+            'password' => 'required',
+            'phone' => 'required'
+        ],$messages);
+		
     	$info = $request->except('_token');
 		$res = DB::table('user')->where('phone',$info['phone'])->where('password',md5($info['password']))->get();
 		if($res){
+		    //登录成功存入session数组
+		    $session = array(
+		        'user_id'=>$res[0]->user_id,
+                'phone'=>$info['phone'],
+                'password'=>md5($info['password'])
+            );
+		    Session::put('homeuser',$session);
+//		    跳转首页
 			return redirect('/');
+		}else{
+			return redirect('/login')->with('msg','登录失败');
 		}
 	}
 	//生成验证码图片儿
 	public function vc(){
 		$a = new ImageTool();
-		$aa = $a -> captcha();
 	}
 	public function register(){
-		//session_start();
-		return view('home/register');
+        return view('home/register');
+//        $a = Session:get('vc');
+//        dd($a);
 //		echo $_COOKIE['vc'];
 	}
 	public function doregister(Request $request)
@@ -48,7 +72,7 @@ class LoginController extends Controller
             'rpassword.required'=>'确认密码不能为空',  
             'question.required'=>'必须选择密保问题',
             'answer.required'=>'必须填写密保答案',
-            'vcode.required'=>'验证码为空'
+            'vc.required'=>'验证码为空'
         ];
         $this->validate($request, [
             'name' => 'required',
@@ -58,11 +82,14 @@ class LoginController extends Controller
             'rpassword' => 'required',
             'question' => 'required',
             'answer' => 'required',
-            'vcode'=>'required'
+            'vc'=>'required'
         ],$messages);
-		//取得所有表单数据
-		$info = $request->except('_token');
-		//判断两个确认字段是否满足要求
+        //取得所有表单数据
+        $info = $request->except('_token');
+        if(Session::get('vc') != $info['vc']){
+            return redirect()->back()->with('msg','验证码不对');
+        }
+        //判断两个确认字段是否满足要求
 		if($info['phone'] != $info['rphone']){
 			return redirect()->back()->with('msg','手机号与确认手机号不一致');
 		}elseif($info['password'] != $info['rpassword']){

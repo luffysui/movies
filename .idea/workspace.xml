@@ -26,50 +26,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="73" column="53" lean-forward="false" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CinemaListController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CinemaListController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="87" lean-forward="false" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cinemalist.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home/cinemalist.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="44" column="536" lean-forward="false" selection-start-line="44" selection-start-column="536" selection-end-line="44" selection-end-column="536" />
+            <state relative-caret-position="598">
+              <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
               <folding>
-                <element signature="e#4327#4333#0#HTML" expanded="true" />
-                <element signature="e#4333#4339#0#HTML" expanded="true" />
-                <marker date="1500431092764" expanded="true" signature="7765:7923" ph="..." />
-                <marker date="1500431092764" expanded="true" signature="7973:8101" ph="..." />
-                <marker date="1500431092764" expanded="true" signature="8010:8090" ph="..." />
-                <marker date="1500431092764" expanded="true" signature="8029:8089" ph="..." />
-                <marker date="1500431092764" expanded="true" signature="8427:8442" ph="..." />
+                <element signature="e#676#1908#1#PHP" expanded="false" />
+                <element signature="e#1968#2358#1#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetCityMiddleware.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Middleware/GetCityMiddleware.php">
+      <file leaf-file-name="parent.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/home/parent.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+            <state relative-caret-position="82">
+              <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+              <folding>
+                <element signature="e#45#73#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +113,6 @@
         <option value="D:/xampp/htdocs/a.php" />
         <option value="D:/xampp/htdocs/1.txt" />
         <option value="D:/xampp/htdocs/b.php" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Home/MovieListController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Home/IndexController.php" />
@@ -135,10 +121,18 @@
         <option value="D:/xampp/htdocs/2.txt" />
         <option value="D:/xampp/htdocs/c.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Home/CinemaListController.php" />
-        <option value="$PROJECT_DIR$/resources/views/home/parent.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/GetCityMiddleware.php" />
         <option value="$PROJECT_DIR$/resources/views/home/cinemalist.blade.php" />
+        <option value="$PROJECT_DIR$/app/Org/ImageTool.php" />
+        <option value="&lt;6c7ff9d2-3c36-44bc-8041-7e3f81d47ee4&gt;/app/Http/Middleware/GetCityMiddleware.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/HomeMiddleware.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/HomeUserController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/home/parent.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Home/UserController.php" />
       </list>
     </option>
   </component>
@@ -155,10 +149,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-19" />
-    <option name="y" value="68" />
-    <option name="width" value="1382" />
-    <option name="height" value="695" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -175,8 +169,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -240,60 +234,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="movies" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -508,24 +448,24 @@
       <workItem from="1500340058369" duration="31000000" />
       <workItem from="1500387430869" duration="11607000" />
       <workItem from="1500426031835" duration="5138000" />
+      <workItem from="1500450186049" duration="7850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63393000" />
+    <option name="totallyTimeSpent" value="71243000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-19" y="68" width="1382" height="695" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15031983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18532526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13646056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10320285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10292524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -536,6 +476,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -553,6 +494,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CinemaListController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="87" lean-forward="false" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/cinemalist.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="536" lean-forward="false" selection-start-line="44" selection-start-column="536" selection-end-line="44" selection-end-column="536" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/GetCityMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
@@ -573,15 +538,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4327#4333#0#HTML" expanded="true" />
-            <element signature="e#4333#4339#0#HTML" expanded="true" />
-            <marker date="1500431092764" expanded="true" signature="7765:7923" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="7973:8101" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8010:8090" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8029:8089" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8427:8442" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -659,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Org/REST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -675,413 +624,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/xampp/htdocs/a.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../二期项目/region.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/xampp/htdocs/1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <caret line="0" column="52" lean-forward="false" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
-          <caret line="0" column="68" lean-forward="false" selection-start-line="0" selection-start-column="68" selection-end-line="0" selection-end-column="68" />
-          <caret line="0" column="76" lean-forward="false" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
-          <caret line="0" column="83" lean-forward="false" selection-start-line="0" selection-start-column="83" selection-end-line="0" selection-end-column="83" />
-          <caret line="0" column="90" lean-forward="false" selection-start-line="0" selection-start-column="90" selection-end-line="0" selection-end-column="90" />
-          <caret line="0" column="98" lean-forward="false" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
-          <caret line="0" column="105" lean-forward="false" selection-start-line="0" selection-start-column="105" selection-end-line="0" selection-end-column="105" />
-          <caret line="0" column="113" lean-forward="false" selection-start-line="0" selection-start-column="113" selection-end-line="0" selection-end-column="113" />
-          <caret line="0" column="121" lean-forward="false" selection-start-line="0" selection-start-column="121" selection-end-line="0" selection-end-column="121" />
-          <caret line="0" column="129" lean-forward="false" selection-start-line="0" selection-start-column="129" selection-end-line="0" selection-end-column="129" />
-          <caret line="0" column="136" lean-forward="false" selection-start-line="0" selection-start-column="136" selection-end-line="0" selection-end-column="136" />
-          <caret line="0" column="143" lean-forward="false" selection-start-line="0" selection-start-column="143" selection-end-line="0" selection-end-column="143" />
-          <caret line="0" column="150" lean-forward="false" selection-start-line="0" selection-start-column="150" selection-end-line="0" selection-end-column="150" />
-          <caret line="0" column="157" lean-forward="false" selection-start-line="0" selection-start-column="157" selection-end-line="0" selection-end-column="157" />
-          <caret line="0" column="169" lean-forward="false" selection-start-line="0" selection-start-column="169" selection-end-line="0" selection-end-column="169" />
-          <caret line="0" column="176" lean-forward="false" selection-start-line="0" selection-start-column="176" selection-end-line="0" selection-end-column="176" />
-          <caret line="0" column="183" lean-forward="false" selection-start-line="0" selection-start-column="183" selection-end-line="0" selection-end-column="183" />
-          <caret line="0" column="190" lean-forward="false" selection-start-line="0" selection-start-column="190" selection-end-line="0" selection-end-column="190" />
-          <caret line="0" column="197" lean-forward="false" selection-start-line="0" selection-start-column="197" selection-end-line="0" selection-end-column="197" />
-          <caret line="0" column="204" lean-forward="false" selection-start-line="0" selection-start-column="204" selection-end-line="0" selection-end-column="204" />
-          <caret line="0" column="211" lean-forward="false" selection-start-line="0" selection-start-column="211" selection-end-line="0" selection-end-column="211" />
-          <caret line="0" column="220" lean-forward="false" selection-start-line="0" selection-start-column="220" selection-end-line="0" selection-end-column="220" />
-          <caret line="0" column="227" lean-forward="false" selection-start-line="0" selection-start-column="227" selection-end-line="0" selection-end-column="227" />
-          <caret line="0" column="236" lean-forward="false" selection-start-line="0" selection-start-column="236" selection-end-line="0" selection-end-column="236" />
-          <caret line="0" column="243" lean-forward="false" selection-start-line="0" selection-start-column="243" selection-end-line="0" selection-end-column="243" />
-          <caret line="0" column="257" lean-forward="false" selection-start-line="0" selection-start-column="257" selection-end-line="0" selection-end-column="257" />
-          <caret line="0" column="264" lean-forward="false" selection-start-line="0" selection-start-column="264" selection-end-line="0" selection-end-column="264" />
-          <caret line="0" column="275" lean-forward="false" selection-start-line="0" selection-start-column="275" selection-end-line="0" selection-end-column="275" />
-          <caret line="0" column="286" lean-forward="false" selection-start-line="0" selection-start-column="286" selection-end-line="0" selection-end-column="286" />
-          <caret line="0" column="294" lean-forward="false" selection-start-line="0" selection-start-column="294" selection-end-line="0" selection-end-column="294" />
-          <caret line="0" column="305" lean-forward="false" selection-start-line="0" selection-start-column="305" selection-end-line="0" selection-end-column="305" />
-          <caret line="0" column="316" lean-forward="false" selection-start-line="0" selection-start-column="316" selection-end-line="0" selection-end-column="316" />
-          <caret line="0" column="327" lean-forward="false" selection-start-line="0" selection-start-column="327" selection-end-line="0" selection-end-column="327" />
-          <caret line="0" column="338" lean-forward="false" selection-start-line="0" selection-start-column="338" selection-end-line="0" selection-end-column="338" />
-          <caret line="0" column="345" lean-forward="false" selection-start-line="0" selection-start-column="345" selection-end-line="0" selection-end-column="345" />
-          <caret line="0" column="352" lean-forward="false" selection-start-line="0" selection-start-column="352" selection-end-line="0" selection-end-column="352" />
-          <caret line="0" column="359" lean-forward="false" selection-start-line="0" selection-start-column="359" selection-end-line="0" selection-end-column="359" />
-          <caret line="0" column="366" lean-forward="false" selection-start-line="0" selection-start-column="366" selection-end-line="0" selection-end-column="366" />
-          <caret line="0" column="373" lean-forward="false" selection-start-line="0" selection-start-column="373" selection-end-line="0" selection-end-column="373" />
-          <caret line="0" column="380" lean-forward="false" selection-start-line="0" selection-start-column="380" selection-end-line="0" selection-end-column="380" />
-          <caret line="0" column="391" lean-forward="false" selection-start-line="0" selection-start-column="391" selection-end-line="0" selection-end-column="391" />
-          <caret line="0" column="399" lean-forward="false" selection-start-line="0" selection-start-column="399" selection-end-line="0" selection-end-column="399" />
-          <caret line="0" column="407" lean-forward="false" selection-start-line="0" selection-start-column="407" selection-end-line="0" selection-end-column="407" />
-          <caret line="0" column="415" lean-forward="false" selection-start-line="0" selection-start-column="415" selection-end-line="0" selection-end-column="415" />
-          <caret line="0" column="430" lean-forward="false" selection-start-line="0" selection-start-column="430" selection-end-line="0" selection-end-column="430" />
-          <caret line="0" column="439" lean-forward="false" selection-start-line="0" selection-start-column="439" selection-end-line="0" selection-end-column="439" />
-          <caret line="0" column="452" lean-forward="false" selection-start-line="0" selection-start-column="452" selection-end-line="0" selection-end-column="452" />
-          <caret line="0" column="465" lean-forward="false" selection-start-line="0" selection-start-column="465" selection-end-line="0" selection-end-column="465" />
-          <caret line="0" column="474" lean-forward="false" selection-start-line="0" selection-start-column="474" selection-end-line="0" selection-end-column="474" />
-          <caret line="0" column="486" lean-forward="false" selection-start-line="0" selection-start-column="486" selection-end-line="0" selection-end-column="486" />
-          <caret line="0" column="494" lean-forward="false" selection-start-line="0" selection-start-column="494" selection-end-line="0" selection-end-column="494" />
-          <caret line="0" column="503" lean-forward="false" selection-start-line="0" selection-start-column="503" selection-end-line="0" selection-end-column="503" />
-          <caret line="0" column="514" lean-forward="false" selection-start-line="0" selection-start-column="514" selection-end-line="0" selection-end-column="514" />
-          <caret line="0" column="522" lean-forward="false" selection-start-line="0" selection-start-column="522" selection-end-line="0" selection-end-column="522" />
-          <caret line="0" column="531" lean-forward="false" selection-start-line="0" selection-start-column="531" selection-end-line="0" selection-end-column="531" />
-          <caret line="0" column="540" lean-forward="false" selection-start-line="0" selection-start-column="540" selection-end-line="0" selection-end-column="540" />
-          <caret line="0" column="548" lean-forward="false" selection-start-line="0" selection-start-column="548" selection-end-line="0" selection-end-column="548" />
-          <caret line="0" column="556" lean-forward="false" selection-start-line="0" selection-start-column="556" selection-end-line="0" selection-end-column="556" />
-          <caret line="0" column="564" lean-forward="false" selection-start-line="0" selection-start-column="564" selection-end-line="0" selection-end-column="564" />
-          <caret line="0" column="572" lean-forward="false" selection-start-line="0" selection-start-column="572" selection-end-line="0" selection-end-column="572" />
-          <caret line="0" column="581" lean-forward="false" selection-start-line="0" selection-start-column="581" selection-end-line="0" selection-end-column="581" />
-          <caret line="0" column="591" lean-forward="false" selection-start-line="0" selection-start-column="591" selection-end-line="0" selection-end-column="591" />
-          <caret line="0" column="600" lean-forward="false" selection-start-line="0" selection-start-column="600" selection-end-line="0" selection-end-column="600" />
-          <caret line="0" column="608" lean-forward="false" selection-start-line="0" selection-start-column="608" selection-end-line="0" selection-end-column="608" />
-          <caret line="0" column="620" lean-forward="false" selection-start-line="0" selection-start-column="620" selection-end-line="0" selection-end-column="620" />
-          <caret line="0" column="628" lean-forward="false" selection-start-line="0" selection-start-column="628" selection-end-line="0" selection-end-column="628" />
-          <caret line="0" column="643" lean-forward="false" selection-start-line="0" selection-start-column="643" selection-end-line="0" selection-end-column="643" />
-          <caret line="0" column="651" lean-forward="false" selection-start-line="0" selection-start-column="651" selection-end-line="0" selection-end-column="651" />
-          <caret line="0" column="665" lean-forward="false" selection-start-line="0" selection-start-column="665" selection-end-line="0" selection-end-column="665" />
-          <caret line="0" column="673" lean-forward="false" selection-start-line="0" selection-start-column="673" selection-end-line="0" selection-end-column="673" />
-          <caret line="0" column="685" lean-forward="false" selection-start-line="0" selection-start-column="685" selection-end-line="0" selection-end-column="685" />
-          <caret line="0" column="693" lean-forward="false" selection-start-line="0" selection-start-column="693" selection-end-line="0" selection-end-column="693" />
-          <caret line="0" column="706" lean-forward="false" selection-start-line="0" selection-start-column="706" selection-end-line="0" selection-end-column="706" />
-          <caret line="0" column="714" lean-forward="false" selection-start-line="0" selection-start-column="714" selection-end-line="0" selection-end-column="714" />
-          <caret line="0" column="726" lean-forward="false" selection-start-line="0" selection-start-column="726" selection-end-line="0" selection-end-column="726" />
-          <caret line="0" column="741" lean-forward="false" selection-start-line="0" selection-start-column="741" selection-end-line="0" selection-end-column="741" />
-          <caret line="0" column="749" lean-forward="false" selection-start-line="0" selection-start-column="749" selection-end-line="0" selection-end-column="749" />
-          <caret line="0" column="757" lean-forward="false" selection-start-line="0" selection-start-column="757" selection-end-line="0" selection-end-column="757" />
-          <caret line="0" column="765" lean-forward="false" selection-start-line="0" selection-start-column="765" selection-end-line="0" selection-end-column="765" />
-          <caret line="0" column="774" lean-forward="false" selection-start-line="0" selection-start-column="774" selection-end-line="0" selection-end-column="774" />
-          <caret line="0" column="782" lean-forward="false" selection-start-line="0" selection-start-column="782" selection-end-line="0" selection-end-column="782" />
-          <caret line="0" column="790" lean-forward="false" selection-start-line="0" selection-start-column="790" selection-end-line="0" selection-end-column="790" />
-          <caret line="0" column="798" lean-forward="false" selection-start-line="0" selection-start-column="798" selection-end-line="0" selection-end-column="798" />
-          <caret line="0" column="806" lean-forward="false" selection-start-line="0" selection-start-column="806" selection-end-line="0" selection-end-column="806" />
-          <caret line="0" column="814" lean-forward="false" selection-start-line="0" selection-start-column="814" selection-end-line="0" selection-end-column="814" />
-          <caret line="0" column="822" lean-forward="false" selection-start-line="0" selection-start-column="822" selection-end-line="0" selection-end-column="822" />
-          <caret line="0" column="830" lean-forward="false" selection-start-line="0" selection-start-column="830" selection-end-line="0" selection-end-column="830" />
-          <caret line="0" column="838" lean-forward="false" selection-start-line="0" selection-start-column="838" selection-end-line="0" selection-end-column="838" />
-          <caret line="0" column="846" lean-forward="false" selection-start-line="0" selection-start-column="846" selection-end-line="0" selection-end-column="846" />
-          <caret line="0" column="854" lean-forward="false" selection-start-line="0" selection-start-column="854" selection-end-line="0" selection-end-column="854" />
-          <caret line="0" column="862" lean-forward="false" selection-start-line="0" selection-start-column="862" selection-end-line="0" selection-end-column="862" />
-          <caret line="0" column="870" lean-forward="false" selection-start-line="0" selection-start-column="870" selection-end-line="0" selection-end-column="870" />
-          <caret line="0" column="878" lean-forward="false" selection-start-line="0" selection-start-column="878" selection-end-line="0" selection-end-column="878" />
-          <caret line="0" column="886" lean-forward="false" selection-start-line="0" selection-start-column="886" selection-end-line="0" selection-end-column="886" />
-          <caret line="0" column="894" lean-forward="false" selection-start-line="0" selection-start-column="894" selection-end-line="0" selection-end-column="894" />
-          <caret line="0" column="902" lean-forward="false" selection-start-line="0" selection-start-column="902" selection-end-line="0" selection-end-column="902" />
-          <caret line="0" column="910" lean-forward="false" selection-start-line="0" selection-start-column="910" selection-end-line="0" selection-end-column="910" />
-          <caret line="0" column="918" lean-forward="false" selection-start-line="0" selection-start-column="918" selection-end-line="0" selection-end-column="918" />
-          <caret line="0" column="926" lean-forward="false" selection-start-line="0" selection-start-column="926" selection-end-line="0" selection-end-column="926" />
-          <caret line="0" column="934" lean-forward="false" selection-start-line="0" selection-start-column="934" selection-end-line="0" selection-end-column="934" />
-          <caret line="0" column="942" lean-forward="false" selection-start-line="0" selection-start-column="942" selection-end-line="0" selection-end-column="942" />
-          <caret line="0" column="950" lean-forward="false" selection-start-line="0" selection-start-column="950" selection-end-line="0" selection-end-column="950" />
-          <caret line="0" column="958" lean-forward="false" selection-start-line="0" selection-start-column="958" selection-end-line="0" selection-end-column="958" />
-          <caret line="0" column="966" lean-forward="false" selection-start-line="0" selection-start-column="966" selection-end-line="0" selection-end-column="966" />
-          <caret line="0" column="974" lean-forward="false" selection-start-line="0" selection-start-column="974" selection-end-line="0" selection-end-column="974" />
-          <caret line="0" column="982" lean-forward="false" selection-start-line="0" selection-start-column="982" selection-end-line="0" selection-end-column="982" />
-          <caret line="0" column="991" lean-forward="false" selection-start-line="0" selection-start-column="991" selection-end-line="0" selection-end-column="991" />
-          <caret line="0" column="1000" lean-forward="false" selection-start-line="0" selection-start-column="1000" selection-end-line="0" selection-end-column="1000" />
-          <caret line="0" column="1008" lean-forward="false" selection-start-line="0" selection-start-column="1008" selection-end-line="0" selection-end-column="1008" />
-          <caret line="0" column="1017" lean-forward="false" selection-start-line="0" selection-start-column="1017" selection-end-line="0" selection-end-column="1017" />
-          <caret line="0" column="1025" lean-forward="false" selection-start-line="0" selection-start-column="1025" selection-end-line="0" selection-end-column="1025" />
-          <caret line="0" column="1033" lean-forward="false" selection-start-line="0" selection-start-column="1033" selection-end-line="0" selection-end-column="1033" />
-          <caret line="0" column="1041" lean-forward="false" selection-start-line="0" selection-start-column="1041" selection-end-line="0" selection-end-column="1041" />
-          <caret line="0" column="1049" lean-forward="false" selection-start-line="0" selection-start-column="1049" selection-end-line="0" selection-end-column="1049" />
-          <caret line="0" column="1057" lean-forward="false" selection-start-line="0" selection-start-column="1057" selection-end-line="0" selection-end-column="1057" />
-          <caret line="0" column="1065" lean-forward="false" selection-start-line="0" selection-start-column="1065" selection-end-line="0" selection-end-column="1065" />
-          <caret line="0" column="1073" lean-forward="false" selection-start-line="0" selection-start-column="1073" selection-end-line="0" selection-end-column="1073" />
-          <caret line="0" column="1081" lean-forward="false" selection-start-line="0" selection-start-column="1081" selection-end-line="0" selection-end-column="1081" />
-          <caret line="0" column="1089" lean-forward="false" selection-start-line="0" selection-start-column="1089" selection-end-line="0" selection-end-column="1089" />
-          <caret line="0" column="1097" lean-forward="false" selection-start-line="0" selection-start-column="1097" selection-end-line="0" selection-end-column="1097" />
-          <caret line="0" column="1105" lean-forward="false" selection-start-line="0" selection-start-column="1105" selection-end-line="0" selection-end-column="1105" />
-          <caret line="0" column="1113" lean-forward="false" selection-start-line="0" selection-start-column="1113" selection-end-line="0" selection-end-column="1113" />
-          <caret line="0" column="1121" lean-forward="false" selection-start-line="0" selection-start-column="1121" selection-end-line="0" selection-end-column="1121" />
-          <caret line="0" column="1129" lean-forward="false" selection-start-line="0" selection-start-column="1129" selection-end-line="0" selection-end-column="1129" />
-          <caret line="0" column="1137" lean-forward="false" selection-start-line="0" selection-start-column="1137" selection-end-line="0" selection-end-column="1137" />
-          <caret line="0" column="1145" lean-forward="false" selection-start-line="0" selection-start-column="1145" selection-end-line="0" selection-end-column="1145" />
-          <caret line="0" column="1153" lean-forward="false" selection-start-line="0" selection-start-column="1153" selection-end-line="0" selection-end-column="1153" />
-          <caret line="0" column="1163" lean-forward="false" selection-start-line="0" selection-start-column="1163" selection-end-line="0" selection-end-column="1163" />
-          <caret line="0" column="1173" lean-forward="false" selection-start-line="0" selection-start-column="1173" selection-end-line="0" selection-end-column="1173" />
-          <caret line="0" column="1181" lean-forward="false" selection-start-line="0" selection-start-column="1181" selection-end-line="0" selection-end-column="1181" />
-          <caret line="0" column="1189" lean-forward="false" selection-start-line="0" selection-start-column="1189" selection-end-line="0" selection-end-column="1189" />
-          <caret line="0" column="1197" lean-forward="false" selection-start-line="0" selection-start-column="1197" selection-end-line="0" selection-end-column="1197" />
-          <caret line="0" column="1205" lean-forward="false" selection-start-line="0" selection-start-column="1205" selection-end-line="0" selection-end-column="1205" />
-          <caret line="0" column="1213" lean-forward="false" selection-start-line="0" selection-start-column="1213" selection-end-line="0" selection-end-column="1213" />
-          <caret line="0" column="1221" lean-forward="false" selection-start-line="0" selection-start-column="1221" selection-end-line="0" selection-end-column="1221" />
-          <caret line="0" column="1229" lean-forward="false" selection-start-line="0" selection-start-column="1229" selection-end-line="0" selection-end-column="1229" />
-          <caret line="0" column="1243" lean-forward="false" selection-start-line="0" selection-start-column="1243" selection-end-line="0" selection-end-column="1243" />
-          <caret line="0" column="1251" lean-forward="false" selection-start-line="0" selection-start-column="1251" selection-end-line="0" selection-end-column="1251" />
-          <caret line="0" column="1259" lean-forward="false" selection-start-line="0" selection-start-column="1259" selection-end-line="0" selection-end-column="1259" />
-          <caret line="0" column="1267" lean-forward="false" selection-start-line="0" selection-start-column="1267" selection-end-line="0" selection-end-column="1267" />
-          <caret line="0" column="1275" lean-forward="false" selection-start-line="0" selection-start-column="1275" selection-end-line="0" selection-end-column="1275" />
-          <caret line="0" column="1287" lean-forward="false" selection-start-line="0" selection-start-column="1287" selection-end-line="0" selection-end-column="1287" />
-          <caret line="0" column="1295" lean-forward="false" selection-start-line="0" selection-start-column="1295" selection-end-line="0" selection-end-column="1295" />
-          <caret line="0" column="1303" lean-forward="false" selection-start-line="0" selection-start-column="1303" selection-end-line="0" selection-end-column="1303" />
-          <caret line="0" column="1317" lean-forward="false" selection-start-line="0" selection-start-column="1317" selection-end-line="0" selection-end-column="1317" />
-          <caret line="0" column="1325" lean-forward="false" selection-start-line="0" selection-start-column="1325" selection-end-line="0" selection-end-column="1325" />
-          <caret line="0" column="1333" lean-forward="false" selection-start-line="0" selection-start-column="1333" selection-end-line="0" selection-end-column="1333" />
-          <caret line="0" column="1341" lean-forward="false" selection-start-line="0" selection-start-column="1341" selection-end-line="0" selection-end-column="1341" />
-          <caret line="0" column="1349" lean-forward="false" selection-start-line="0" selection-start-column="1349" selection-end-line="0" selection-end-column="1349" />
-          <caret line="0" column="1357" lean-forward="false" selection-start-line="0" selection-start-column="1357" selection-end-line="0" selection-end-column="1357" />
-          <caret line="0" column="1365" lean-forward="false" selection-start-line="0" selection-start-column="1365" selection-end-line="0" selection-end-column="1365" />
-          <caret line="0" column="1373" lean-forward="false" selection-start-line="0" selection-start-column="1373" selection-end-line="0" selection-end-column="1373" />
-          <caret line="0" column="1381" lean-forward="false" selection-start-line="0" selection-start-column="1381" selection-end-line="0" selection-end-column="1381" />
-          <caret line="0" column="1389" lean-forward="false" selection-start-line="0" selection-start-column="1389" selection-end-line="0" selection-end-column="1389" />
-          <caret line="0" column="1397" lean-forward="false" selection-start-line="0" selection-start-column="1397" selection-end-line="0" selection-end-column="1397" />
-          <caret line="0" column="1405" lean-forward="false" selection-start-line="0" selection-start-column="1405" selection-end-line="0" selection-end-column="1405" />
-          <caret line="0" column="1413" lean-forward="false" selection-start-line="0" selection-start-column="1413" selection-end-line="0" selection-end-column="1413" />
-          <caret line="0" column="1421" lean-forward="false" selection-start-line="0" selection-start-column="1421" selection-end-line="0" selection-end-column="1421" />
-          <caret line="0" column="1429" lean-forward="false" selection-start-line="0" selection-start-column="1429" selection-end-line="0" selection-end-column="1429" />
-          <caret line="0" column="1437" lean-forward="false" selection-start-line="0" selection-start-column="1437" selection-end-line="0" selection-end-column="1437" />
-          <caret line="0" column="1445" lean-forward="false" selection-start-line="0" selection-start-column="1445" selection-end-line="0" selection-end-column="1445" />
-          <caret line="0" column="1453" lean-forward="false" selection-start-line="0" selection-start-column="1453" selection-end-line="0" selection-end-column="1453" />
-          <caret line="0" column="1461" lean-forward="false" selection-start-line="0" selection-start-column="1461" selection-end-line="0" selection-end-column="1461" />
-          <caret line="0" column="1470" lean-forward="false" selection-start-line="0" selection-start-column="1470" selection-end-line="0" selection-end-column="1470" />
-          <caret line="0" column="1479" lean-forward="false" selection-start-line="0" selection-start-column="1479" selection-end-line="0" selection-end-column="1479" />
-          <caret line="0" column="1488" lean-forward="false" selection-start-line="0" selection-start-column="1488" selection-end-line="0" selection-end-column="1488" />
-          <caret line="0" column="1496" lean-forward="false" selection-start-line="0" selection-start-column="1496" selection-end-line="0" selection-end-column="1496" />
-          <caret line="0" column="1504" lean-forward="false" selection-start-line="0" selection-start-column="1504" selection-end-line="0" selection-end-column="1504" />
-          <caret line="0" column="1512" lean-forward="false" selection-start-line="0" selection-start-column="1512" selection-end-line="0" selection-end-column="1512" />
-          <caret line="0" column="1520" lean-forward="false" selection-start-line="0" selection-start-column="1520" selection-end-line="0" selection-end-column="1520" />
-          <caret line="0" column="1528" lean-forward="false" selection-start-line="0" selection-start-column="1528" selection-end-line="0" selection-end-column="1528" />
-          <caret line="0" column="1537" lean-forward="false" selection-start-line="0" selection-start-column="1537" selection-end-line="0" selection-end-column="1537" />
-          <caret line="0" column="1546" lean-forward="false" selection-start-line="0" selection-start-column="1546" selection-end-line="0" selection-end-column="1546" />
-          <caret line="0" column="1554" lean-forward="false" selection-start-line="0" selection-start-column="1554" selection-end-line="0" selection-end-column="1554" />
-          <caret line="0" column="1562" lean-forward="false" selection-start-line="0" selection-start-column="1562" selection-end-line="0" selection-end-column="1562" />
-          <caret line="0" column="1570" lean-forward="false" selection-start-line="0" selection-start-column="1570" selection-end-line="0" selection-end-column="1570" />
-          <caret line="0" column="1578" lean-forward="false" selection-start-line="0" selection-start-column="1578" selection-end-line="0" selection-end-column="1578" />
-          <caret line="0" column="1586" lean-forward="false" selection-start-line="0" selection-start-column="1586" selection-end-line="0" selection-end-column="1586" />
-          <caret line="0" column="1594" lean-forward="false" selection-start-line="0" selection-start-column="1594" selection-end-line="0" selection-end-column="1594" />
-          <caret line="0" column="1602" lean-forward="false" selection-start-line="0" selection-start-column="1602" selection-end-line="0" selection-end-column="1602" />
-          <caret line="0" column="1610" lean-forward="false" selection-start-line="0" selection-start-column="1610" selection-end-line="0" selection-end-column="1610" />
-          <caret line="0" column="1618" lean-forward="false" selection-start-line="0" selection-start-column="1618" selection-end-line="0" selection-end-column="1618" />
-          <caret line="0" column="1626" lean-forward="false" selection-start-line="0" selection-start-column="1626" selection-end-line="0" selection-end-column="1626" />
-          <caret line="0" column="1634" lean-forward="false" selection-start-line="0" selection-start-column="1634" selection-end-line="0" selection-end-column="1634" />
-          <caret line="0" column="1643" lean-forward="false" selection-start-line="0" selection-start-column="1643" selection-end-line="0" selection-end-column="1643" />
-          <caret line="0" column="1651" lean-forward="false" selection-start-line="0" selection-start-column="1651" selection-end-line="0" selection-end-column="1651" />
-          <caret line="0" column="1659" lean-forward="false" selection-start-line="0" selection-start-column="1659" selection-end-line="0" selection-end-column="1659" />
-          <caret line="0" column="1667" lean-forward="false" selection-start-line="0" selection-start-column="1667" selection-end-line="0" selection-end-column="1667" />
-          <caret line="0" column="1675" lean-forward="false" selection-start-line="0" selection-start-column="1675" selection-end-line="0" selection-end-column="1675" />
-          <caret line="0" column="1684" lean-forward="false" selection-start-line="0" selection-start-column="1684" selection-end-line="0" selection-end-column="1684" />
-          <caret line="0" column="1692" lean-forward="false" selection-start-line="0" selection-start-column="1692" selection-end-line="0" selection-end-column="1692" />
-          <caret line="0" column="1700" lean-forward="false" selection-start-line="0" selection-start-column="1700" selection-end-line="0" selection-end-column="1700" />
-          <caret line="0" column="1708" lean-forward="false" selection-start-line="0" selection-start-column="1708" selection-end-line="0" selection-end-column="1708" />
-          <caret line="0" column="1716" lean-forward="false" selection-start-line="0" selection-start-column="1716" selection-end-line="0" selection-end-column="1716" />
-          <caret line="0" column="1724" lean-forward="false" selection-start-line="0" selection-start-column="1724" selection-end-line="0" selection-end-column="1724" />
-          <caret line="0" column="1732" lean-forward="false" selection-start-line="0" selection-start-column="1732" selection-end-line="0" selection-end-column="1732" />
-          <caret line="0" column="1740" lean-forward="false" selection-start-line="0" selection-start-column="1740" selection-end-line="0" selection-end-column="1740" />
-          <caret line="0" column="1748" lean-forward="false" selection-start-line="0" selection-start-column="1748" selection-end-line="0" selection-end-column="1748" />
-          <caret line="0" column="1756" lean-forward="false" selection-start-line="0" selection-start-column="1756" selection-end-line="0" selection-end-column="1756" />
-          <caret line="0" column="1764" lean-forward="false" selection-start-line="0" selection-start-column="1764" selection-end-line="0" selection-end-column="1764" />
-          <caret line="0" column="1772" lean-forward="false" selection-start-line="0" selection-start-column="1772" selection-end-line="0" selection-end-column="1772" />
-          <caret line="0" column="1780" lean-forward="false" selection-start-line="0" selection-start-column="1780" selection-end-line="0" selection-end-column="1780" />
-          <caret line="0" column="1788" lean-forward="false" selection-start-line="0" selection-start-column="1788" selection-end-line="0" selection-end-column="1788" />
-          <caret line="0" column="1796" lean-forward="false" selection-start-line="0" selection-start-column="1796" selection-end-line="0" selection-end-column="1796" />
-          <caret line="0" column="1804" lean-forward="false" selection-start-line="0" selection-start-column="1804" selection-end-line="0" selection-end-column="1804" />
-          <caret line="0" column="1812" lean-forward="false" selection-start-line="0" selection-start-column="1812" selection-end-line="0" selection-end-column="1812" />
-          <caret line="0" column="1824" lean-forward="false" selection-start-line="0" selection-start-column="1824" selection-end-line="0" selection-end-column="1824" />
-          <caret line="0" column="1832" lean-forward="false" selection-start-line="0" selection-start-column="1832" selection-end-line="0" selection-end-column="1832" />
-          <caret line="0" column="1840" lean-forward="false" selection-start-line="0" selection-start-column="1840" selection-end-line="0" selection-end-column="1840" />
-          <caret line="0" column="1848" lean-forward="false" selection-start-line="0" selection-start-column="1848" selection-end-line="0" selection-end-column="1848" />
-          <caret line="0" column="1856" lean-forward="false" selection-start-line="0" selection-start-column="1856" selection-end-line="0" selection-end-column="1856" />
-          <caret line="0" column="1864" lean-forward="false" selection-start-line="0" selection-start-column="1864" selection-end-line="0" selection-end-column="1864" />
-          <caret line="0" column="1872" lean-forward="false" selection-start-line="0" selection-start-column="1872" selection-end-line="0" selection-end-column="1872" />
-          <caret line="0" column="1880" lean-forward="false" selection-start-line="0" selection-start-column="1880" selection-end-line="0" selection-end-column="1880" />
-          <caret line="0" column="1888" lean-forward="false" selection-start-line="0" selection-start-column="1888" selection-end-line="0" selection-end-column="1888" />
-          <caret line="0" column="1896" lean-forward="false" selection-start-line="0" selection-start-column="1896" selection-end-line="0" selection-end-column="1896" />
-          <caret line="0" column="1904" lean-forward="false" selection-start-line="0" selection-start-column="1904" selection-end-line="0" selection-end-column="1904" />
-          <caret line="0" column="1912" lean-forward="false" selection-start-line="0" selection-start-column="1912" selection-end-line="0" selection-end-column="1912" />
-          <caret line="0" column="1920" lean-forward="false" selection-start-line="0" selection-start-column="1920" selection-end-line="0" selection-end-column="1920" />
-          <caret line="0" column="1928" lean-forward="false" selection-start-line="0" selection-start-column="1928" selection-end-line="0" selection-end-column="1928" />
-          <caret line="0" column="1936" lean-forward="false" selection-start-line="0" selection-start-column="1936" selection-end-line="0" selection-end-column="1936" />
-          <caret line="0" column="1944" lean-forward="false" selection-start-line="0" selection-start-column="1944" selection-end-line="0" selection-end-column="1944" />
-          <caret line="0" column="1952" lean-forward="false" selection-start-line="0" selection-start-column="1952" selection-end-line="0" selection-end-column="1952" />
-          <caret line="0" column="1961" lean-forward="false" selection-start-line="0" selection-start-column="1961" selection-end-line="0" selection-end-column="1961" />
-          <caret line="0" column="1969" lean-forward="false" selection-start-line="0" selection-start-column="1969" selection-end-line="0" selection-end-column="1969" />
-          <caret line="0" column="1977" lean-forward="false" selection-start-line="0" selection-start-column="1977" selection-end-line="0" selection-end-column="1977" />
-          <caret line="0" column="1985" lean-forward="false" selection-start-line="0" selection-start-column="1985" selection-end-line="0" selection-end-column="1985" />
-          <caret line="0" column="1993" lean-forward="false" selection-start-line="0" selection-start-column="1993" selection-end-line="0" selection-end-column="1993" />
-          <caret line="0" column="2002" lean-forward="false" selection-start-line="0" selection-start-column="2002" selection-end-line="0" selection-end-column="2002" />
-          <caret line="0" column="2010" lean-forward="false" selection-start-line="0" selection-start-column="2010" selection-end-line="0" selection-end-column="2010" />
-          <caret line="0" column="2018" lean-forward="false" selection-start-line="0" selection-start-column="2018" selection-end-line="0" selection-end-column="2018" />
-          <caret line="0" column="2026" lean-forward="false" selection-start-line="0" selection-start-column="2026" selection-end-line="0" selection-end-column="2026" />
-          <caret line="0" column="2034" lean-forward="false" selection-start-line="0" selection-start-column="2034" selection-end-line="0" selection-end-column="2034" />
-          <caret line="0" column="2049" lean-forward="false" selection-start-line="0" selection-start-column="2049" selection-end-line="0" selection-end-column="2049" />
-          <caret line="0" column="2057" lean-forward="false" selection-start-line="0" selection-start-column="2057" selection-end-line="0" selection-end-column="2057" />
-          <caret line="0" column="2065" lean-forward="false" selection-start-line="0" selection-start-column="2065" selection-end-line="0" selection-end-column="2065" />
-          <caret line="0" column="2073" lean-forward="false" selection-start-line="0" selection-start-column="2073" selection-end-line="0" selection-end-column="2073" />
-          <caret line="0" column="2081" lean-forward="false" selection-start-line="0" selection-start-column="2081" selection-end-line="0" selection-end-column="2081" />
-          <caret line="0" column="2089" lean-forward="false" selection-start-line="0" selection-start-column="2089" selection-end-line="0" selection-end-column="2089" />
-          <caret line="0" column="2097" lean-forward="false" selection-start-line="0" selection-start-column="2097" selection-end-line="0" selection-end-column="2097" />
-          <caret line="0" column="2105" lean-forward="false" selection-start-line="0" selection-start-column="2105" selection-end-line="0" selection-end-column="2105" />
-          <caret line="0" column="2113" lean-forward="false" selection-start-line="0" selection-start-column="2113" selection-end-line="0" selection-end-column="2113" />
-          <caret line="0" column="2123" lean-forward="false" selection-start-line="0" selection-start-column="2123" selection-end-line="0" selection-end-column="2123" />
-          <caret line="0" column="2131" lean-forward="false" selection-start-line="0" selection-start-column="2131" selection-end-line="0" selection-end-column="2131" />
-          <caret line="0" column="2139" lean-forward="false" selection-start-line="0" selection-start-column="2139" selection-end-line="0" selection-end-column="2139" />
-          <caret line="0" column="2147" lean-forward="false" selection-start-line="0" selection-start-column="2147" selection-end-line="0" selection-end-column="2147" />
-          <caret line="0" column="2155" lean-forward="false" selection-start-line="0" selection-start-column="2155" selection-end-line="0" selection-end-column="2155" />
-          <caret line="0" column="2163" lean-forward="false" selection-start-line="0" selection-start-column="2163" selection-end-line="0" selection-end-column="2163" />
-          <caret line="0" column="2171" lean-forward="false" selection-start-line="0" selection-start-column="2171" selection-end-line="0" selection-end-column="2171" />
-          <caret line="0" column="2179" lean-forward="false" selection-start-line="0" selection-start-column="2179" selection-end-line="0" selection-end-column="2179" />
-          <caret line="0" column="2187" lean-forward="false" selection-start-line="0" selection-start-column="2187" selection-end-line="0" selection-end-column="2187" />
-          <caret line="0" column="2195" lean-forward="false" selection-start-line="0" selection-start-column="2195" selection-end-line="0" selection-end-column="2195" />
-          <caret line="0" column="2203" lean-forward="false" selection-start-line="0" selection-start-column="2203" selection-end-line="0" selection-end-column="2203" />
-          <caret line="0" column="2211" lean-forward="false" selection-start-line="0" selection-start-column="2211" selection-end-line="0" selection-end-column="2211" />
-          <caret line="0" column="2219" lean-forward="false" selection-start-line="0" selection-start-column="2219" selection-end-line="0" selection-end-column="2219" />
-          <caret line="0" column="2227" lean-forward="false" selection-start-line="0" selection-start-column="2227" selection-end-line="0" selection-end-column="2227" />
-          <caret line="0" column="2235" lean-forward="false" selection-start-line="0" selection-start-column="2235" selection-end-line="0" selection-end-column="2235" />
-          <caret line="0" column="2243" lean-forward="false" selection-start-line="0" selection-start-column="2243" selection-end-line="0" selection-end-column="2243" />
-          <caret line="0" column="2251" lean-forward="false" selection-start-line="0" selection-start-column="2251" selection-end-line="0" selection-end-column="2251" />
-          <caret line="0" column="2259" lean-forward="false" selection-start-line="0" selection-start-column="2259" selection-end-line="0" selection-end-column="2259" />
-          <caret line="0" column="2267" lean-forward="false" selection-start-line="0" selection-start-column="2267" selection-end-line="0" selection-end-column="2267" />
-          <caret line="0" column="2275" lean-forward="false" selection-start-line="0" selection-start-column="2275" selection-end-line="0" selection-end-column="2275" />
-          <caret line="0" column="2283" lean-forward="false" selection-start-line="0" selection-start-column="2283" selection-end-line="0" selection-end-column="2283" />
-          <caret line="0" column="2291" lean-forward="false" selection-start-line="0" selection-start-column="2291" selection-end-line="0" selection-end-column="2291" />
-          <caret line="0" column="2306" lean-forward="false" selection-start-line="0" selection-start-column="2306" selection-end-line="0" selection-end-column="2306" />
-          <caret line="0" column="2314" lean-forward="false" selection-start-line="0" selection-start-column="2314" selection-end-line="0" selection-end-column="2314" />
-          <caret line="0" column="2322" lean-forward="false" selection-start-line="0" selection-start-column="2322" selection-end-line="0" selection-end-column="2322" />
-          <caret line="0" column="2330" lean-forward="false" selection-start-line="0" selection-start-column="2330" selection-end-line="0" selection-end-column="2330" />
-          <caret line="0" column="2338" lean-forward="false" selection-start-line="0" selection-start-column="2338" selection-end-line="0" selection-end-column="2338" />
-          <caret line="0" column="2346" lean-forward="false" selection-start-line="0" selection-start-column="2346" selection-end-line="0" selection-end-column="2346" />
-          <caret line="0" column="2355" lean-forward="false" selection-start-line="0" selection-start-column="2355" selection-end-line="0" selection-end-column="2355" />
-          <caret line="0" column="2363" lean-forward="false" selection-start-line="0" selection-start-column="2363" selection-end-line="0" selection-end-column="2363" />
-          <caret line="0" column="2371" lean-forward="false" selection-start-line="0" selection-start-column="2371" selection-end-line="0" selection-end-column="2371" />
-          <caret line="0" column="2379" lean-forward="false" selection-start-line="0" selection-start-column="2379" selection-end-line="0" selection-end-column="2379" />
-          <caret line="0" column="2387" lean-forward="false" selection-start-line="0" selection-start-column="2387" selection-end-line="0" selection-end-column="2387" />
-          <caret line="0" column="2395" lean-forward="false" selection-start-line="0" selection-start-column="2395" selection-end-line="0" selection-end-column="2395" />
-          <caret line="0" column="2403" lean-forward="false" selection-start-line="0" selection-start-column="2403" selection-end-line="0" selection-end-column="2403" />
-          <caret line="0" column="2412" lean-forward="false" selection-start-line="0" selection-start-column="2412" selection-end-line="0" selection-end-column="2412" />
-          <caret line="0" column="2420" lean-forward="false" selection-start-line="0" selection-start-column="2420" selection-end-line="0" selection-end-column="2420" />
-          <caret line="0" column="2430" lean-forward="false" selection-start-line="0" selection-start-column="2430" selection-end-line="0" selection-end-column="2430" />
-          <caret line="0" column="2438" lean-forward="false" selection-start-line="0" selection-start-column="2438" selection-end-line="0" selection-end-column="2438" />
-          <caret line="0" column="2446" lean-forward="false" selection-start-line="0" selection-start-column="2446" selection-end-line="0" selection-end-column="2446" />
-          <caret line="0" column="2454" lean-forward="false" selection-start-line="0" selection-start-column="2454" selection-end-line="0" selection-end-column="2454" />
-          <caret line="0" column="2462" lean-forward="false" selection-start-line="0" selection-start-column="2462" selection-end-line="0" selection-end-column="2462" />
-          <caret line="0" column="2470" lean-forward="false" selection-start-line="0" selection-start-column="2470" selection-end-line="0" selection-end-column="2470" />
-          <caret line="0" column="2478" lean-forward="false" selection-start-line="0" selection-start-column="2478" selection-end-line="0" selection-end-column="2478" />
-          <caret line="0" column="2486" lean-forward="false" selection-start-line="0" selection-start-column="2486" selection-end-line="0" selection-end-column="2486" />
-          <caret line="0" column="2494" lean-forward="false" selection-start-line="0" selection-start-column="2494" selection-end-line="0" selection-end-column="2494" />
-          <caret line="0" column="2502" lean-forward="false" selection-start-line="0" selection-start-column="2502" selection-end-line="0" selection-end-column="2502" />
-          <caret line="0" column="2510" lean-forward="false" selection-start-line="0" selection-start-column="2510" selection-end-line="0" selection-end-column="2510" />
-          <caret line="0" column="2518" lean-forward="false" selection-start-line="0" selection-start-column="2518" selection-end-line="0" selection-end-column="2518" />
-          <caret line="0" column="2526" lean-forward="false" selection-start-line="0" selection-start-column="2526" selection-end-line="0" selection-end-column="2526" />
-          <caret line="0" column="2534" lean-forward="false" selection-start-line="0" selection-start-column="2534" selection-end-line="0" selection-end-column="2534" />
-          <caret line="0" column="2543" lean-forward="false" selection-start-line="0" selection-start-column="2543" selection-end-line="0" selection-end-column="2543" />
-          <caret line="0" column="2551" lean-forward="false" selection-start-line="0" selection-start-column="2551" selection-end-line="0" selection-end-column="2551" />
-          <caret line="0" column="2559" lean-forward="false" selection-start-line="0" selection-start-column="2559" selection-end-line="0" selection-end-column="2559" />
-          <caret line="0" column="2567" lean-forward="false" selection-start-line="0" selection-start-column="2567" selection-end-line="0" selection-end-column="2567" />
-          <caret line="0" column="2575" lean-forward="false" selection-start-line="0" selection-start-column="2575" selection-end-line="0" selection-end-column="2575" />
-          <caret line="0" column="2583" lean-forward="false" selection-start-line="0" selection-start-column="2583" selection-end-line="0" selection-end-column="2583" />
-          <caret line="0" column="2591" lean-forward="false" selection-start-line="0" selection-start-column="2591" selection-end-line="0" selection-end-column="2591" />
-          <caret line="0" column="2606" lean-forward="false" selection-start-line="0" selection-start-column="2606" selection-end-line="0" selection-end-column="2606" />
-          <caret line="0" column="2622" lean-forward="false" selection-start-line="0" selection-start-column="2622" selection-end-line="0" selection-end-column="2622" />
-          <caret line="0" column="2630" lean-forward="false" selection-start-line="0" selection-start-column="2630" selection-end-line="0" selection-end-column="2630" />
-          <caret line="0" column="2638" lean-forward="false" selection-start-line="0" selection-start-column="2638" selection-end-line="0" selection-end-column="2638" />
-          <caret line="0" column="2647" lean-forward="false" selection-start-line="0" selection-start-column="2647" selection-end-line="0" selection-end-column="2647" />
-          <caret line="0" column="2655" lean-forward="false" selection-start-line="0" selection-start-column="2655" selection-end-line="0" selection-end-column="2655" />
-          <caret line="0" column="2663" lean-forward="false" selection-start-line="0" selection-start-column="2663" selection-end-line="0" selection-end-column="2663" />
-          <caret line="0" column="2671" lean-forward="false" selection-start-line="0" selection-start-column="2671" selection-end-line="0" selection-end-column="2671" />
-          <caret line="0" column="2679" lean-forward="false" selection-start-line="0" selection-start-column="2679" selection-end-line="0" selection-end-column="2679" />
-          <caret line="0" column="2687" lean-forward="false" selection-start-line="0" selection-start-column="2687" selection-end-line="0" selection-end-column="2687" />
-          <caret line="0" column="2695" lean-forward="false" selection-start-line="0" selection-start-column="2695" selection-end-line="0" selection-end-column="2695" />
-          <caret line="0" column="2703" lean-forward="false" selection-start-line="0" selection-start-column="2703" selection-end-line="0" selection-end-column="2703" />
-          <caret line="0" column="2711" lean-forward="false" selection-start-line="0" selection-start-column="2711" selection-end-line="0" selection-end-column="2711" />
-          <caret line="0" column="2719" lean-forward="false" selection-start-line="0" selection-start-column="2719" selection-end-line="0" selection-end-column="2719" />
-          <caret line="0" column="2727" lean-forward="false" selection-start-line="0" selection-start-column="2727" selection-end-line="0" selection-end-column="2727" />
-          <caret line="0" column="2736" lean-forward="false" selection-start-line="0" selection-start-column="2736" selection-end-line="0" selection-end-column="2736" />
-          <caret line="0" column="2744" lean-forward="false" selection-start-line="0" selection-start-column="2744" selection-end-line="0" selection-end-column="2744" />
-          <caret line="0" column="2752" lean-forward="false" selection-start-line="0" selection-start-column="2752" selection-end-line="0" selection-end-column="2752" />
-          <caret line="0" column="2760" lean-forward="false" selection-start-line="0" selection-start-column="2760" selection-end-line="0" selection-end-column="2760" />
-          <caret line="0" column="2768" lean-forward="false" selection-start-line="0" selection-start-column="2768" selection-end-line="0" selection-end-column="2768" />
-          <caret line="0" column="2776" lean-forward="false" selection-start-line="0" selection-start-column="2776" selection-end-line="0" selection-end-column="2776" />
-          <caret line="0" column="2784" lean-forward="false" selection-start-line="0" selection-start-column="2784" selection-end-line="0" selection-end-column="2784" />
-          <caret line="0" column="2792" lean-forward="false" selection-start-line="0" selection-start-column="2792" selection-end-line="0" selection-end-column="2792" />
-          <caret line="0" column="2800" lean-forward="false" selection-start-line="0" selection-start-column="2800" selection-end-line="0" selection-end-column="2800" />
-          <caret line="0" column="2808" lean-forward="false" selection-start-line="0" selection-start-column="2808" selection-end-line="0" selection-end-column="2808" />
-          <caret line="0" column="2816" lean-forward="false" selection-start-line="0" selection-start-column="2816" selection-end-line="0" selection-end-column="2816" />
-          <caret line="0" column="2824" lean-forward="false" selection-start-line="0" selection-start-column="2824" selection-end-line="0" selection-end-column="2824" />
-          <caret line="0" column="2832" lean-forward="false" selection-start-line="0" selection-start-column="2832" selection-end-line="0" selection-end-column="2832" />
-          <caret line="0" column="2840" lean-forward="false" selection-start-line="0" selection-start-column="2840" selection-end-line="0" selection-end-column="2840" />
-          <caret line="0" column="2848" lean-forward="false" selection-start-line="0" selection-start-column="2848" selection-end-line="0" selection-end-column="2848" />
-          <caret line="0" column="2863" lean-forward="false" selection-start-line="0" selection-start-column="2863" selection-end-line="0" selection-end-column="2863" />
-          <caret line="0" column="2872" lean-forward="false" selection-start-line="0" selection-start-column="2872" selection-end-line="0" selection-end-column="2872" />
-          <caret line="0" column="2881" lean-forward="false" selection-start-line="0" selection-start-column="2881" selection-end-line="0" selection-end-column="2881" />
-          <caret line="0" column="2890" lean-forward="false" selection-start-line="0" selection-start-column="2890" selection-end-line="0" selection-end-column="2890" />
-          <caret line="0" column="2900" lean-forward="false" selection-start-line="0" selection-start-column="2900" selection-end-line="0" selection-end-column="2900" />
-          <caret line="0" column="2909" lean-forward="false" selection-start-line="0" selection-start-column="2909" selection-end-line="0" selection-end-column="2909" />
-          <caret line="0" column="2918" lean-forward="false" selection-start-line="0" selection-start-column="2918" selection-end-line="0" selection-end-column="2918" />
-          <caret line="0" column="2927" lean-forward="false" selection-start-line="0" selection-start-column="2927" selection-end-line="0" selection-end-column="2927" />
-          <caret line="0" column="2942" lean-forward="false" selection-start-line="0" selection-start-column="2942" selection-end-line="0" selection-end-column="2942" />
-          <caret line="0" column="2952" lean-forward="false" selection-start-line="0" selection-start-column="2952" selection-end-line="0" selection-end-column="2952" />
-          <caret line="0" column="2961" lean-forward="false" selection-start-line="0" selection-start-column="2961" selection-end-line="0" selection-end-column="2961" />
-          <caret line="0" column="2970" lean-forward="false" selection-start-line="0" selection-start-column="2970" selection-end-line="0" selection-end-column="2970" />
-          <caret line="0" column="2980" lean-forward="false" selection-start-line="0" selection-start-column="2980" selection-end-line="0" selection-end-column="2980" />
-          <caret line="0" column="2990" lean-forward="false" selection-start-line="0" selection-start-column="2990" selection-end-line="0" selection-end-column="2990" />
-          <caret line="0" column="2999" lean-forward="false" selection-start-line="0" selection-start-column="2999" selection-end-line="0" selection-end-column="2999" />
-          <caret line="0" column="3012" lean-forward="false" selection-start-line="0" selection-start-column="3012" selection-end-line="0" selection-end-column="3012" />
-          <caret line="0" column="3025" lean-forward="false" selection-start-line="0" selection-start-column="3025" selection-end-line="0" selection-end-column="3025" />
-          <caret line="0" column="3035" lean-forward="false" selection-start-line="0" selection-start-column="3035" selection-end-line="0" selection-end-column="3035" />
-          <caret line="0" column="3044" lean-forward="false" selection-start-line="0" selection-start-column="3044" selection-end-line="0" selection-end-column="3044" />
-          <caret line="0" column="3059" lean-forward="false" selection-start-line="0" selection-start-column="3059" selection-end-line="0" selection-end-column="3059" />
-          <caret line="0" column="3072" lean-forward="false" selection-start-line="0" selection-start-column="3072" selection-end-line="0" selection-end-column="3072" />
-          <caret line="0" column="3081" lean-forward="false" selection-start-line="0" selection-start-column="3081" selection-end-line="0" selection-end-column="3081" />
-          <caret line="0" column="3090" lean-forward="false" selection-start-line="0" selection-start-column="3090" selection-end-line="0" selection-end-column="3090" />
-          <caret line="0" column="3103" lean-forward="false" selection-start-line="0" selection-start-column="3103" selection-end-line="0" selection-end-column="3103" />
-          <caret line="0" column="3112" lean-forward="false" selection-start-line="0" selection-start-column="3112" selection-end-line="0" selection-end-column="3112" />
-          <caret line="0" column="3121" lean-forward="false" selection-start-line="0" selection-start-column="3121" selection-end-line="0" selection-end-column="3121" />
-          <caret line="0" column="3132" lean-forward="false" selection-start-line="0" selection-start-column="3132" selection-end-line="0" selection-end-column="3132" />
-          <caret line="0" column="3141" lean-forward="false" selection-start-line="0" selection-start-column="3141" selection-end-line="0" selection-end-column="3141" />
-          <caret line="0" column="3150" lean-forward="false" selection-start-line="0" selection-start-column="3150" selection-end-line="0" selection-end-column="3150" />
-          <caret line="0" column="3163" lean-forward="false" selection-start-line="0" selection-start-column="3163" selection-end-line="0" selection-end-column="3163" />
-          <caret line="0" column="3176" lean-forward="false" selection-start-line="0" selection-start-column="3176" selection-end-line="0" selection-end-column="3176" />
-          <caret line="0" column="3185" lean-forward="false" selection-start-line="0" selection-start-column="3185" selection-end-line="0" selection-end-column="3185" />
-          <caret line="0" column="3194" lean-forward="false" selection-start-line="0" selection-start-column="3194" selection-end-line="0" selection-end-column="3194" />
-          <caret line="0" column="3203" lean-forward="false" selection-start-line="0" selection-start-column="3203" selection-end-line="0" selection-end-column="3203" />
-          <caret line="0" column="3212" lean-forward="false" selection-start-line="0" selection-start-column="3212" selection-end-line="0" selection-end-column="3212" />
-          <caret line="0" column="3221" lean-forward="false" selection-start-line="0" selection-start-column="3221" selection-end-line="0" selection-end-column="3221" />
-          <caret line="0" column="3230" lean-forward="false" selection-start-line="0" selection-start-column="3230" selection-end-line="0" selection-end-column="3230" />
-          <caret line="0" column="3239" lean-forward="false" selection-start-line="0" selection-start-column="3239" selection-end-line="0" selection-end-column="3239" />
-          <caret line="0" column="3248" lean-forward="false" selection-start-line="0" selection-start-column="3248" selection-end-line="0" selection-end-column="3248" />
-          <caret line="0" column="3257" lean-forward="false" selection-start-line="0" selection-start-column="3257" selection-end-line="0" selection-end-column="3257" />
-          <caret line="0" column="3266" lean-forward="false" selection-start-line="0" selection-start-column="3266" selection-end-line="0" selection-end-column="3266" />
-          <caret line="0" column="3275" lean-forward="false" selection-start-line="0" selection-start-column="3275" selection-end-line="0" selection-end-column="3275" />
-          <caret line="0" column="3284" lean-forward="false" selection-start-line="0" selection-start-column="3284" selection-end-line="0" selection-end-column="3284" />
-          <caret line="0" column="3293" lean-forward="false" selection-start-line="0" selection-start-column="3293" selection-end-line="0" selection-end-column="3293" />
-          <caret line="0" column="3302" lean-forward="false" selection-start-line="0" selection-start-column="3302" selection-end-line="0" selection-end-column="3302" />
-          <caret line="0" column="3311" lean-forward="false" selection-start-line="0" selection-start-column="3311" selection-end-line="0" selection-end-column="3311" />
-          <caret line="0" column="3320" lean-forward="false" selection-start-line="0" selection-start-column="3320" selection-end-line="0" selection-end-column="3320" />
-          <caret line="0" column="3329" lean-forward="false" selection-start-line="0" selection-start-column="3329" selection-end-line="0" selection-end-column="3329" />
-          <caret line="0" column="3338" lean-forward="false" selection-start-line="0" selection-start-column="3338" selection-end-line="0" selection-end-column="3338" />
-          <caret line="0" column="3347" lean-forward="false" selection-start-line="0" selection-start-column="3347" selection-end-line="0" selection-end-column="3347" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/xampp/htdocs/a.php" />
+    <entry file="file://$PROJECT_DIR$/../../二期项目/region.sql" />
+    <entry file="file://D:/xampp/htdocs/1.txt" />
     <entry file="file://$PROJECT_DIR$/app/Org/GetIp.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1090,43 +635,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="32" column="59" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/wechat/userinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/wechat/menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/微信开发demo/Http.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/wechat/userinfo.php" />
+    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/wechat/menu.php" />
+    <entry file="file://D:/php184/材料/高级课材料/微信开发材料/微信开发demo/Http.class.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_superglobals.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -1143,13 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../二期项目/piao.163/piao.163.com/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="76" column="71" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../二期项目/piao.163/piao.163.com/index.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/home/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1167,13 +672,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../二期项目/piao.163/piao.163.com/cinema.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="33" column="116" lean-forward="false" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../二期项目/piao.163/piao.163.com/cinema.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/home/onshow.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1181,90 +680,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../二期项目/SendDemo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/xampp/htdocs/b.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <marker date="1500353403338" expanded="true" signature="416:494" ph="update regio... " />
-            <marker date="1500353403338" expanded="true" signature="508:571" ph="update city " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/xampp/htdocs/2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="0" column="5448" lean-forward="false" selection-start-line="0" selection-start-column="5448" selection-end-line="0" selection-end-column="5448" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/xampp/htdocs/c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-          <folding>
-            <marker date="1500428321866" expanded="true" signature="644:726" ph="update regio... " />
-            <marker date="1500428321866" expanded="true" signature="741:823" ph="update regio... " />
-            <marker date="1500428321866" expanded="true" signature="839:902" ph="update city " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../二期项目/SendDemo.php" />
+    <entry file="file://D:/xampp/htdocs/b.php" />
+    <entry file="file://D:/xampp/htdocs/2.txt" />
+    <entry file="file://D:/xampp/htdocs/c.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/CinemaListController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="270">
           <caret line="23" column="87" lean-forward="false" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/cinemalist.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="536" lean-forward="false" selection-start-line="44" selection-start-column="536" selection-end-line="44" selection-end-column="536" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Org/REST.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="78" column="29" lean-forward="false" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+          <folding>
+            <marker date="1500436148878" expanded="true" signature="3537:3750" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/GetCityMiddleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
+        <state relative-caret-position="315">
           <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/parent.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Org/ImageTool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1727">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="384">
+          <caret line="174" column="33" lean-forward="true" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="33" />
           <folding>
-            <marker date="1500429256865" expanded="true" signature="9157:9198" ph="..." />
+            <element signature="e#493#923#0#PHP" expanded="false" />
+            <element signature="e#928#933#0#PHP" expanded="false" />
+            <element signature="e#1101#2961#0#PHP" expanded="false" />
+            <element signature="e#2992#4284#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/cinemalist.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="44" column="536" lean-forward="false" selection-start-line="44" selection-start-column="536" selection-end-line="44" selection-end-column="536" />
+        <state relative-caret-position="429">
+          <caret line="111" column="56" lean-forward="true" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/AdminMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/HomeMiddleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <element signature="e#4327#4333#0#HTML" expanded="true" />
-            <element signature="e#4333#4339#0#HTML" expanded="true" />
-            <marker date="1500431092764" expanded="true" signature="7765:7923" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="7973:8101" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8010:8090" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8029:8089" ph="..." />
-            <marker date="1500431092764" expanded="true" signature="8427:8442" ph="..." />
+            <element signature="e#45#73#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="73" column="53" lean-forward="false" selection-start-line="73" selection-start-column="53" selection-end-line="73" selection-end-column="53" />
+        <state relative-caret-position="598">
+          <caret line="93" column="43" lean-forward="true" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
+          <folding>
+            <element signature="e#676#1908#1#PHP" expanded="false" />
+            <element signature="e#1968#2358#1#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="e#45#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/parent.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
           <folding />
         </state>
       </provider>

@@ -21,6 +21,8 @@ print_r($arr);
 //水印，把制定图片复制到目标上，并加上透明效果
 //缩略图:把大尺寸图片复制到小尺寸图片上
 namespace App\Org;
+
+use Session;
 class ImageTool{
     //image info 分析图片的信息，返回信息数组
     public static function imageInfo($image){
@@ -169,7 +171,8 @@ class ImageTool{
         //在画布上写字
         $text = substr(str_shuffle('abcdefghijkmnpqrstuvwxyzABCDEFGHIJKMNPQRSTUVWXYZ23456789'),0,1);
         //session_start();
-        $_SESSION['vc'] = $text;
+//        $_SESSION['vc'] = $text;
+        Session::put('vc',$text);
         imagestring($image,5,7,5,$text,$color);
 
         for($i = 0; $i<60; $i++){

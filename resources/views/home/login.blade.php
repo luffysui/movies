@@ -33,7 +33,20 @@
 			</div>
 			<div class="input" id="login-wrapper">
 				<div class="login">
-					
+	@if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <script>
+        if( "{{ session('msg') }}" ){
+            alert("{{ session('msg') }}");
+        }
+    </script>				
 <form action="{{ url('dologin') }}" method="post" id="password-form" novalidate="novalidate" class="username-requiredinput-focus">
 	{{ csrf_field() }}
 	<div id="login-input-container" class="">

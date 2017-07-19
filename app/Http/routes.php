@@ -72,17 +72,24 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/cinemalist', 'Home\CinemaListController@index');
     //影院详情页面
     Route::get('/cinema/{cinemaId}', 'Home\CinemaController@index');
-
 });
 
 //前台修改城市
 Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
-//前台登陆
-Route::get('/login','Home\LoginController@login');
-//注册
-Route::get('/register','Home\LoginController@register');
-//执行登陆
-Route::post('/dologin','Home\LoginController@dologin');
-//执行注册
-Route::post('/doregister','Home\LoginController@doregister');
 
+        //前台登陆
+        Route::get('/login','Home\LoginController@login');
+        //注册
+        Route::get('/register','Home\LoginController@register');
+        //执行登陆
+        Route::post('/dologin','Home\LoginController@dologin');
+        //执行注册
+        Route::post('/doregister','Home\LoginController@doregister');
+        //验证码
+        Route::get('/vc','Home\LoginController@vc');
+
+//前台中间件
+Route::group(['prefix' => 'home', 'middleware' => 'home'], function(){
+    //用户修改个人资料
+    Route::resource('user/{user_id}','Home\UserController');
+});

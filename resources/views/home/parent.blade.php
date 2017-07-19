@@ -45,8 +45,12 @@
     <nav id="topNav">
         <div id="topNavWrap">
              <div id="topNavLeft">
-                <a href="{{ url('/login') }}">登录</a>
-                <a href="{{ url('/register') }}">注册</a>
+                @if(Session::get('homeuser'))
+                     <a href="{{ url('home/user').'/'.Session::get('homeuser')['user_id'].'/edit' }}">个人信息</a>
+                 @else
+                     <a href="{{ url('/login') }}">登录</a>
+                     <a href="{{ url('/register') }}">注册</a>
+                 @endif
             </div>
             <ul id="topNavRight">
                 <li><a href="http://order.mall.163.com/movie/list.html" rel="nofollow"  id="myEpay" notice="false" user="y" target="_blank">我的订单</a>&nbsp;&nbsp;<span id="topEpayInfo"></span>|</li>
