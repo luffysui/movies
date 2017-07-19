@@ -1,0 +1,26 @@
+﻿/* IE8 does not support RGBA color codes. */
+.uneditable-input,
+select,
+textarea,
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  color: #b3b3b3;
+  border-color: #565d66;
+  background-color: #0b1924;
+}
+/* Placeholder color override */
+.placeholder {
+  color: #808080;
+}

@@ -1,0 +1,530 @@
+﻿/**
+ * @fileOverview    Global BAM styles (for Toolkit-based layouts)
+ */
+/**
+ * @fileOverview	BAM global style variables
+ */
+/**
+ * @fileOverview    Global layout styles (for Toolkit-based pages)
+ */
+html,
+body {
+  height: 100%;
+  background-color: transparent;
+}
+body {
+  background-image: url("../Images/login-background-640-2x.0tw0k.jpg");
+  background-color: #0d1e30;
+  min-width: 0;
+}
+body.transparent {
+  background-color: transparent;
+  background-image: none;
+}
+a.dropdown-toggle {
+  cursor: pointer;
+}
+.body-content {
+  background: none;
+  margin-top: 20px;
+}
+.logo {
+  margin: 45px auto 10px;
+}
+.grid-container {
+  padding: 10px;
+}
+.grid-container.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+#nav-client-bar .grid-container {
+  padding: 0 20px;
+}
+.account-wrapper {
+  width: 500px;
+  margin: 0 auto 115px;
+}
+.btn-response {
+  display: block;
+  float: left;
+  width: 240px;
+}
+a.btn-response {
+  margin-right: 0;
+}
+.btn-primary.btn-response {
+  margin-right: 20px;
+}
+input,
+label.checkbox,
+button.btn,
+a.btn {
+  margin-bottom: 15px;
+}
+label.control-label {
+  display: none;
+}
+h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+h1.with-email {
+  margin-bottom: 5px;
+}
+h2 {
+  margin-bottom: 5px;
+}
+h2.email {
+  color: #86939d;
+}
+h3 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 15px;
+}
+p {
+  margin-bottom: 10px;
+}
+p [class^="icon-"],
+p [class*=" icon-"] {
+  margin-top: 4px;
+}
+.text-highlight {
+  color: #75e900;
+  font-size: 20px;
+  font-style: normal;
+}
+.icon-center {
+  display: block;
+  margin: 0 auto;
+}
+.control-group {
+  margin-bottom: 5px;
+}
+.control-group.separated {
+  margin-top: 2em;
+}
+.captcha {
+  position: relative;
+  margin-bottom: 5px;
+}
+.captcha #captcha-anchor {
+  cursor: pointer;
+  display: block;
+}
+.captcha .icon-48-refresh {
+  position: absolute;
+  right: 10px;
+  top: 19px;
+}
+.captcha .captcha-image {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  padding: 10px 0;
+  margin: 10px auto 0;
+  height: 70px;
+}
+.captcha .captcha-image img {
+  display: block;
+  margin: 0 auto;
+}
+#help-links {
+  list-style-type: none;
+  margin-left: 0;
+  text-align: left;
+}
+#help-links li {
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+.alert {
+  margin-bottom: 20px;
+}
+.icon-128-orange {
+  background-image: url("../Images/sprite-128-orange.3pwbs.png");
+  background-size: inherit;
+}
+.icon-128-green {
+  background-image: url("../Images/sprite-128-green.4pldb.png");
+  background-size: inherit;
+}
+/**
+ * @fileOverview    Global header styles (for Toolkit-based pages)
+ */
+.navbar-static .navbar.header,
+.navbar-fixed .navbar.header {
+  height: auto;
+  min-height: 80px;
+}
+.navbar-static .navbar.header .grid-container,
+.navbar-fixed .navbar.header .grid-container {
+  position: relative;
+}
+.navbar-static .navbar.header #service,
+.navbar-fixed .navbar.header #service {
+  font-size: 12px;
+  right: 40px;
+}
+.navbar-static #bam-navigation,
+.navbar-fixed #bam-navigation {
+  line-height: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+/**
+ * @fileOverview    Global footer styles: Many of these rules are to make Common's footer look
+ *                  better in Toolkit-based pages
+ */
+.footer {
+  margin-top: 75px;
+}
+.footer .lower-footer-wrapper {
+  position: absolute;
+  bottom: 35px;
+  width: 99%;
+}
+.footer #legal-kr {
+  display: none;
+}
+.footer.footer-cn {
+  margin-top: 100px;
+}
+.lower-footer #copyright {
+  padding: 0;
+  font-size: 13px;
+  color: #505359;
+  text-align: center;
+}
+.lower-footer #copyright span {
+  margin: 0 10px 0 0;
+}
+.lower-footer #copyright a {
+  margin: 0 10px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+.lower-footer #copyright a:focus,
+.lower-footer #copyright a:hover {
+  color: #ffffff;
+}
+.lower-footer #legal {
+  display: none;
+}
+/**
+ * @fileOverview    Global responsive styles
+ */
+body {
+  background-image: url("../Images/account-background-1920.3f7pb.jpg");
+}
+body .headless-account-landing {
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+body .headless-account-landing .btn-response {
+  width: 48%;
+  margin-right: 0 !important;
+}
+body .headless-account-landing .btn-response#create {
+  float: left;
+}
+body .headless-account-landing .btn-response#skip {
+  float: right;
+}
+@media (max-width: 1280px) {
+  body {
+    background-image: url("../Images/account-background-1280.4jlng.jpg");
+  }
+}
+@media (max-width: 768px) {
+  .lower-footer #copyright span {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  body {
+    background-image: url("../Images/account-background-640-2x.0tw0k.jpg");
+    min-width: 320px;
+  }
+  body .logo {
+    margin: 20px auto;
+  }
+  body .account-wrapper {
+    width: 290px;
+  }
+  body .headless-account-landing img.murloc {
+    width: 55%;
+  }
+  h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    line-height: 28px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h5 {
+    margin-bottom: 5px;
+  }
+  .btn-response {
+    display: block;
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .control-group.separated {
+    margin-top: 1em;
+  }
+  .lower-footer #copyright {
+    font-size: 11px;
+  }
+  p {
+    line-height: 20px;
+  }
+}
+@media (max-width: 350px) {
+  body .headless-account-landing img.murloc {
+    width: 50%;
+  }
+  body .headless-account-landing .btn-response {
+    display: block;
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  body .headless-account-landing .btn-response#create {
+    margin-bottom: 10px;
+  }
+}
+/**
+ * @fileOverview    Account mobile responsive grids.
+ */
+@media screen and (max-width: 481px) {
+  .grid-container .mobile-100 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/**
+ * @fileOverview    theme support styles
+ */
+body.app-template,
+body.bsap-template {
+  background-image: none;
+  background-color: transparent !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body.app-template #account-creation,
+body.bsap-template #account-creation {
+  padding-bottom: 0px !important;
+}
+body.app-template #call-to-action,
+body.bsap-template #call-to-action {
+  display: none;
+}
+body.app-template .Navbar,
+body.bsap-template .Navbar,
+body.app-template .NavbarFooter,
+body.bsap-template .NavbarFooter {
+  display: none;
+}
+body.app-template .logo,
+body.bsap-template .logo {
+  display: none;
+}
+body.app-template.sms-setup,
+body.bsap-template.sms-setup {
+  min-width: 0!important;
+  margin: 10px!important;
+}
+body.app-template.sms-setup .account-wrapper,
+body.bsap-template.sms-setup .account-wrapper {
+  width: 100%!important;
+  margin: 0!important;
+}
+body.app-template.sms-setup h1,
+body.bsap-template.sms-setup h1,
+body.app-template.sms-setup p,
+body.bsap-template.sms-setup p {
+  margin: 0 0 10px 0!important;
+}
+body.app-template.sms-setup li,
+body.bsap-template.sms-setup li {
+  margin: 0 0 5px 0!important;
+}
+body.app-template.sms-setup ul,
+body.bsap-template.sms-setup ul {
+  margin: 0 0 5px 30px!important;
+}
+body.app-template.sms-setup .btn-primary.btn-response,
+body.bsap-template.sms-setup .btn-primary.btn-response {
+  margin-right: 0!important;
+}
+body.app-template #eu-cookie-compliance,
+body.bsap-template #eu-cookie-compliance {
+  display: none;
+}
+@media (max-width: 599px) {
+  body.app-template .creation-container,
+  body.bsap-template .creation-container {
+    padding-bottom: 0px !important;
+  }
+}
+body.app-template ::-webkit-scrollbar,
+body.bsap-template ::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+body.app-template ::-webkit-scrollbar-button,
+body.bsap-template ::-webkit-scrollbar-button {
+  display: none;
+}
+body.app-template ::-webkit-scrollbar-track,
+body.bsap-template ::-webkit-scrollbar-track,
+body.app-template ::-webkit-scrollbar-track-piece,
+body.bsap-template ::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+body.app-template ::-webkit-scrollbar-thumb,
+body.bsap-template ::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 7px 6px 7px 5px;
+  -webkit-border-image: url("../Images/border-image.1lqpc.png") 7 7 repeat;
+}
+body.app-template ::-webkit-scrollbar-thumb:vertical,
+body.bsap-template ::-webkit-scrollbar-thumb:vertical {
+  min-height: 50px;
+}
+body.app-template ::-webkit-scrollbar-thumb:horizontal,
+body.bsap-template ::-webkit-scrollbar-thumb:horizontal {
+  min-width: 50px;
+}
+body.app-template ::-webkit-scrollbar-thumb:hover,
+body.bsap-template ::-webkit-scrollbar-thumb:hover {
+  -webkit-border-image: url("../../../images/toolkit/themes/bnet/scrollbars/border-image-hover.png") 7 7 repeat;
+}
+body.app-template ::-webkit-scrollbar-corner,
+body.bsap-template ::-webkit-scrollbar-corner,
+body.app-template ::-webkit-resizer,
+body.bsap-template ::-webkit-resizer {
+  background-color: transparent;
+}
+body.d3-template {
+  background: url("../Images/d3.0m3ew.jpg") #0c1a1a center -200px no-repeat;
+}
+body.hearthstone-template {
+  background: url("../Images/hearthstone.2jltk.jpg") #2c1913 center -200px no-repeat;
+}
+body.heroes-template {
+  background: url("../Images/hots.1kpzp.jpg") #1c1a32 center -200px no-repeat;
+}
+body.overwatch-template {
+  background: url("../Images/overwatch.1obwp.jpg") #161616 center -200px no-repeat;
+}
+body.sc2-template {
+  background: url("../Images/sc2.4wpgh.jpg") #11203d center -200px no-repeat;
+}
+body.wtcg-template .Navbar,
+body.wtcg-template .NavbarFooter {
+  display: none;
+}
+body.wtcg-template .logo {
+  display: none;
+}
+body.wtcg-template #form-container {
+  background: none!important;
+}
+body.wtcg-template .dropdown .dropdown-menu {
+  background-color: #f7eedc;
+}
+body.wtcg-template .dropdown .dropdown-menu li > a {
+  color: #241500;
+}
+body.wtcg-template .popover {
+  background-color: #f7eedc;
+}
+body.wtcg-template .popover ul {
+  margin-left: 0;
+  list-style-type: none;
+}
+body.wtcg-template .popover ul li {
+  padding-left: 0;
+  margin-bottom: 5px;
+}
+body.wtcg-template .popover .muted {
+  color: #b72f00;
+}
+body.wow-template {
+  background: url("../Images/wow-trial.0rtzs.jpg") #361e11 center -200px no-repeat;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+body.wow-template select.css-input option {
+  color: #fff;
+}
+body.wow-template .logo {
+  width: 344px;
+  height: 140px;
+  background: url("../Images/wow.2qtny.png") -5px 0 no-repeat;
+  top: 0;
+  margin: 30px auto;
+}
+body.wow-template .wow-well {
+  background: url("../Images/top-light.1x8jo.png") center top no-repeat rgba(29, 34, 44, 0.95);
+  padding: 50px 40px;
+  margin: 0 auto;
+}
+body.wow-template .creation-container {
+  background: url("../Images/top-light.1x8jo.png") center top no-repeat rgba(29, 34, 44, 0.95);
+  padding: 50px 40px;
+  margin: 0 auto;
+  max-width: 580px;
+}
+body.wow-template #account-creation {
+  padding-bottom: 0px;
+}
+body.wow-template .row-password input {
+  width: 49.5%;
+}
+body.wow-template .row-password #rePassword {
+  float: right;
+}
+body.wow-template.zh-cn .logo {
+  background: url("../Images/wow-cn.0z8mb.png") -5px 0 no-repeat;
+}
+body.wow-template.zh-tw .logo {
+  background: url("../Images/wow-tw.40tgp.png") -5px 0 no-repeat;
+}
+@media (max-width: 599px) {
+  body.wow-template div.creation-container {
+    padding: 40px 20px;
+    width: 89%;
+  }
+  body.wow-template div.body-content {
+    padding: 0;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  body.wow-template .grid-100 h1.logo {
+    background: url("../Images/wow2x.4sirl.png") no-repeat;
+    background-size: 220px 90px;
+  }
+}

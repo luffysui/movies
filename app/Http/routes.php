@@ -77,3 +77,12 @@ Route::group(['middleware' => 'getCity'], function(){
 
 //前台修改城市
 Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
+//前台登陆
+Route::get('/login','Home\LoginController@login');
+//注册
+Route::get('/register','Home\LoginController@register');
+//执行登陆
+Route::post('/dologin','Home\LoginController@dologin');
+//执行注册
+Route::post('/doregister','Home\LoginController@doregister');
+

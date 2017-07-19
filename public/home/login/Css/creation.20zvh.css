@@ -1,0 +1,1069 @@
+﻿/**
+ * @fileOverview    Mobile/in-game account creation rules
+ */
+/**
+ * @fileOverview    Toolkit override rules for mobile/in-game account creation. These rules change
+ *                  the base properties of Toolkit's WTCG theme but are specific to this flow and so
+ *                  are included here rather than in Toolkit itself.
+ */
+body {
+  min-width: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body .headless-account-landing {
+  text-align: center;
+}
+.body-content {
+  padding-bottom: 0;
+}
+.alert {
+  margin-bottom: 25px;
+}
+.modal-backdrop,
+.modal-background.fade.in {
+  background-color: rgba(255, 255, 255, 0);
+}
+.modal ul,
+.modal ul:last-child {
+  margin: 0 0 10px 20px;
+}
+.modal ul li,
+.modal ul:last-child li {
+  margin-bottom: 0;
+}
+.modal .close {
+  opacity: 0.5;
+}
+.modal .close:focus,
+.modal .close:hover {
+  opacity: 1;
+}
+select.css-input option {
+  color: rgba(255, 255, 255, 0.7);
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 15px;
+  background-image: none;
+}
+.form-controls {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ul.errors {
+  list-style: none;
+}
+.app .creation-container {
+  margin: 0 34px;
+}
+.app .creation-container h1 {
+  margin: 0 0 18px;
+}
+.app .creation-container .social-divider {
+  margin: 4px 0;
+}
+.app .creation-container p {
+  margin: 0 0 4px;
+  line-height: 22px;
+}
+.app .creation-container .row-checkbox {
+  margin: 0;
+}
+.app .creation-container .form-controls {
+  margin: 0;
+}
+.app .creation-container fieldset {
+  padding-top: 4px;
+}
+.app .creation-container .fine-print {
+  padding-top: 0;
+}
+.app .body-content {
+  margin-top: 0;
+}
+.app .creation-container h1 {
+  line-height: 28px;
+}
+.app .creation-container a.btn {
+  margin-bottom: 10px;
+}
+/**
+ * @fileOverview    Mobile/in-game account creation page layout rules
+ */
+.small-header {
+  display: none;
+}
+#account-creation {
+  padding-bottom: 50px;
+}
+.creation-container {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.creation-container h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+.creation-container p {
+  margin-bottom: 22px;
+}
+.fine-print {
+  padding-top: 20px;
+}
+.success-content {
+  width: 800px;
+  max-width: 80%;
+  margin: 0px auto 40px;
+}
+.success-content .btn-block {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 300px;
+}
+.success-accountName {
+  font-size: 2.6em;
+  color: #5CB900;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+.battletag {
+  margin-bottom: 80px;
+}
+.battletag label button {
+  display: inline-block;
+  margin-left: 30px;
+}
+.battletag h6 {
+  color: #00aeff;
+  cursor: pointer;
+}
+.battletag h6:hover {
+  color: #fff;
+}
+.battletag h6 + p {
+  -webkit-transition: height 0.35s;
+  -moz-transition: height 0.35s;
+  -ms-transition: height 0.35s;
+  -o-transition: height 0.35s;
+  transition: height 0.35s;
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.battletag h6 + p.open {
+  height: auto;
+}
+#information-container > h1 {
+  text-align: center;
+}
+#information-container .dropdown {
+  top: -5px;
+  left: 5px;
+}
+#information-container .dropdown .dropdown-menu {
+  max-height: 200px;
+  overflow: auto;
+}
+.back-to-login {
+  display: block;
+  text-align: center;
+}
+.success-icon {
+  padding: 50px 0 40px 0;
+  display: block;
+  margin: 30px auto 0;
+  overflow: hidden;
+  width: 102px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+.green-circle-check-icon.success-icon {
+  background-image: url("../Images/green-circle-check.3glfa.png");
+}
+.facebook-check-icon.success-icon {
+  background-image: url("../Images/facebook-logo.0qpoz.png");
+  position: relative;
+  width: 100px;
+}
+.netease-check-icon.success-icon {
+  background-image: url("../Images/netease-logo.1wwzm.png");
+  position: relative;
+  width: 220px;
+}
+.popover-title {
+  padding-bottom: 0 !important;
+}
+/**
+ * @fileOverview    Mobile/in-game account creation form rules
+ */
+select,
+input {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+form .well {
+  display: none;
+}
+form .well.open {
+  display: block;
+}
+form .well ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+form .well ul li {
+  margin: 0;
+  padding: 0;
+}
+.control-group {
+  margin-bottom: 3px;
+}
+.mobile-dropdown .mobile-arrow {
+  background-image: url("../Images/sprite-32-blue.1yecu.png");
+  background-position: -128px -512px;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  pointer-events: none;
+  zoom: 0.5;
+  margin: 16px;
+}
+.row-country.mobile,
+.row-secret-question.mobile,
+.row-password {
+  position: relative;
+}
+.row-country.mobile,
+.row-secret-question.mobile {
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 3px 0;
+}
+select.css-input {
+  border: 0;
+  margin: 0;
+  padding: 0 30px 0 10px;
+}
+select.css-input + .icon-chevron-down {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.select-box .options .option.selected[data-value=""],
+option[value=""] {
+  display: none;
+}
+.us #firstname,
+.eu #firstname,
+.us #lastname,
+.eu #lastname {
+  width: 99%;
+}
+.us #lastname,
+.eu #lastname {
+  float: right;
+}
+.password-rating {
+  font-style: italic;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.password-rating.short {
+  color: #730202;
+}
+.password-rating.weak {
+  color: #f00;
+}
+.password-rating.fair {
+  color: #ffc000;
+}
+.password-rating.strong {
+  color: #00b050;
+}
+.row-checkbox,
+label.checkbox-label {
+  margin-bottom: 5px;
+}
+.row-checkbox {
+  margin-top: 5px;
+}
+label.checkbox-label {
+  padding-left: 26px;
+}
+.alert-error {
+  color: #f00;
+}
+.alert-error ul {
+  padding-left: 20px;
+}
+.help-block {
+  color: #cd0606;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.row-country.mobile.control-group.control-error,
+.row-secret-question.mobile.control-group.control-error,
+.control-group.control-error input,
+.control-group.control-error .select-box {
+  border-color: #ba2300;
+  border-width: 2px;
+}
+.country.grid-15 {
+  width: 200px;
+  max-width: 50%;
+}
+.uneditable-input {
+  width: 100%;
+}
+.optional {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -ms-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
+}
+.optional.optionalHidden {
+  border: 0;
+  height: 0;
+}
+.show-password {
+  background: rgba(0, 0, 0, 0.9);
+}
+.show-password:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+  cursor: pointer;
+}
+.creation-container #generate-random-battletag {
+  width: 97%;
+  float: right;
+}
+/* Birth date boxes need minor adjustment for first and second fields */
+.birth-date-inline {
+  width: 32.33333333%;
+  margin-right: 1%;
+}
+/**
+ * @fileOverview    Mobile/in-game account creation icon and spinner rules
+ *
+ */
+/**
+ * @fileOverview	BAM global style variables
+ */
+/**
+ * @fileOverview Icon sprites used by the Battle.net theme.
+ */
+/**
+ * Sprite utilities
+ */
+.icon-spacer {
+  background-image: none !important;
+}
+/**
+ * Sprite helpers transform grid coordinates to background offset positions for a given grid size.
+ *
+ * @param col     (int) column number (from 0)
+ * @param row     (int) row number (from 0)
+ * @param size-x  (css dimension) sprite width, must specify units
+ * @param size-y  (css dimension) sprite height, must specify units
+ */
+/**
+ * All icons receive the styles of the `i` tag with a base class of `.icon-` and are then given a unique class to add
+ * width, height, and background-position.
+ *
+ * @example <i class="icon-inbox"></i>.
+ *
+ * For the white version of the icons, just add the .icon-white class.
+
+ * @example <i class="icon-inbox icon-white"></i>
+ */
+/**
+ * CSS3 animations
+ */
+[class^="icon-32-"],
+[class*=" icon-32-"] {
+  background-image: url("../Images/sprite-32-blue.1yecu.png");
+}
+[class^="icon-64-"],
+[class*=" icon-64-"] {
+  background-image: url("../Images/sprite-64-blue.15dn8.png");
+}
+.icon-32-remove {
+  background-position: -224px -192px;
+}
+.icon-64-remove {
+  background-position: -448px -384px;
+}
+.help-block [class^="icon-"],
+.help-block [class*=" icon-"] {
+  cursor: pointer;
+}
+/**
+ * CAPTCHA reload icon
+ *
+ * This lives here rather than using the existing Toolkit setup due to a bug in iOS
+ * 5 and some earlier versions of iOS 6 where the browser renders the wrong styles
+ * when too many [class="icon"] type rules are stacked: iOS will tell you on
+ * inspection and via JS that it's rendering what it should but the actual display
+ * follows earlier rules (i.e., it's not a bug related to selector weight).
+ */
+.captcha-reloader {
+  background-image: url("../Images/sprite-64-blue.15dn8.png");
+  background-position: -384px -256px;
+  cursor: pointer;
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  vertical-align: top;
+}
+.captcha-reloader.loading {
+  -webkit-animation: reloading 0.5s steps(21) infinite;
+  -moz-animation: reloading 0.5s steps(21) infinite;
+  -ms-animation: reloading 0.5s steps(21) infinite;
+  animation: reloading 0.5s steps(21) infinite;
+}
+@-webkit-keyframes reloading {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes reloading {
+  from {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes reloading {
+  from {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes reloading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner-battlenet,
+.processing .button-text,
+.templates {
+  display: none;
+}
+.processing .spinner-battlenet {
+  display: inline-block;
+}
+/**
+ * @fileOverivew    Styles for B and C scenarios for Hearthstone account creation A/B(/C) testing.
+ *                  Converts <select/> and Toolkit presentation elements that replicate <select/> to
+ *                  look like an in-line text link in closed state.
+ */
+body.js-enabled #change-country.deprioritized {
+  display: inline-block;
+  max-height: 20px;
+  vertical-align: bottom;
+}
+body.js-enabled #change-country.deprioritized .select-box {
+  max-height: 20px;
+  text-indent: 0;
+}
+body.js-enabled #change-country.deprioritized .row-country.mobile {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+body.js-enabled #change-country.deprioritized .row-country .select-box.grid-100,
+body.js-enabled #change-country.deprioritized .row-country.mobile select.grid-100 {
+  border: 0;
+  font-size: 15px;
+  margin: 0;
+  max-height: 20px;
+  padding: 0;
+  width: 200px;
+}
+body.js-enabled #change-country.deprioritized .row-country .select-box.grid-100 .current {
+  display: inline-block;
+  height: auto;
+  line-height: 20px;
+  width: auto;
+}
+body.js-enabled #change-country.deprioritized .row-country.mobile select.grid-100 {
+  margin-left: -5px;
+  margin-top: -3px;
+}
+body.js-enabled #change-country.deprioritized .icon-chevron-down,
+body.js-enabled #change-country.deprioritized .arrow {
+  display: none;
+}
+body.js-enabled.bnet-template .deprioritized .row-country.mobile select.grid-100,
+body.js-enabled.bnet-template .deprioritized .row-country .select-box.grid-100 {
+  background-color: transparent;
+  color: #00aeff;
+}
+body.js-enabled.wtcg-template .deprioritized .row-country.mobile select.grid-100,
+body.js-enabled.wtcg-template .deprioritized .row-country .select-box.grid-100 {
+  color: #9c4900;
+}
+body.js-enabled.wtcg-template .deprioritized .dropdown {
+  top: 0;
+}
+body {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.8);
+}
+.reward-title {
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 40px;
+}
+.disclaimer {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 40px;
+}
+.cta h2 strong {
+  font-size: 23px;
+  font-weight: 100;
+}
+.cta-accept {
+  max-width: 500px;
+  margin: 0 auto;
+}
+article.raf-container {
+  max-width: 500px;
+  margin: 10px auto;
+}
+article.raf-container > h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+article.raf-container > h2 .battletag {
+  font-weight: 400;
+}
+article.raf-container > h2 .text-success {
+  font-weight: 100;
+  color: #42d800;
+}
+article.raf-container > p {
+  margin: 30px 0;
+}
+article.raf-container .app-screen {
+  width: 199px;
+  height: 127px;
+  background-image: url("../Images/app-screen-small.png");
+  background-position: -27px -28px;
+  margin-bottom: 10px;
+}
+article.raf-container ul {
+  margin: 0 -10px;
+}
+article.raf-container ul li {
+  float: left;
+  padding: 0 10px;
+}
+article.raf-container ul li span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+article.raf-container ul li img {
+  width: 100%;
+  height: auto;
+}
+article.raf-container ul li p {
+  color: #b3b3b3;
+  color: rgba(255, 255, 255, 0.7);
+}
+article.raf-container ul li .thumbnail {
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+article.raf-container ul li .reward-name {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+article.raf-container ul li .reward-desc {
+  border: 0;
+  padding: 0;
+}
+article.raf-container ul li .reward-desc::after {
+  box-shadow: none;
+}
+@media (max-width: 719px) {
+  article.raf-container ul {
+    margin: 0;
+  }
+  article.raf-container ul li {
+    width: 100%;
+    max-width: 500px;
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 0 auto 30px;
+  }
+}
+@media (max-width: 499px) {
+  h1.logo {
+    top: 30px;
+  }
+  article.raf-container {
+    padding: 0 15px;
+  }
+  article.raf-container > h2 {
+    font-size: 23px;
+  }
+  .cta h2 {
+    margin-bottom: 20px;
+  }
+}
+/* Hearthstone RAF overrides */
+body.hearthstone-template h1.logo {
+  background-image: url("../Images/hearthstone-logo.14ezt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 90%;
+  height: 185px;
+  margin-bottom: 0;
+  top: 36px;
+  width: 500px;
+}
+body.hearthstone-template .raf-container .cta > h2 {
+  text-align: center;
+}
+body.hearthstone-template article.raf-container > div.cta,
+body.hearthstone-template article.raf-container > h2,
+body.hearthstone-template article.raf-container > h3 {
+  text-align: center;
+}
+body.hearthstone-template article.raf-container > h2 {
+  padding-top: 60px;
+}
+body.hearthstone-template article.raf-container > h2 .text-success {
+  color: #ffffff;
+  font-weight: 400;
+}
+body.hearthstone-template article.raf-container .disclaimer {
+  font-size: 11px;
+}
+body.hearthstone-template article.raf-container ul.thumbnails > li {
+  margin-bottom: 0;
+}
+body.hearthstone-template .get-started-message {
+  display: none;
+}
+body.hearthstone-template.account-creation-success div.logo {
+  position: relative;
+  background: url("../Images/hearthstone-logo.14ezt.png") 0 0 no-repeat;
+  background-size: contain;
+  height: 185px;
+  width: 500px;
+  max-width: 90%;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body.hearthstone-template.account-creation-success div.success-content {
+  text-align: center;
+}
+body.hearthstone-template.account-creation-success div.success-content div.success-accountName {
+  margin: -5px auto 10px;
+}
+body.hearthstone-template.ja-jp h1.logo,
+body.hearthstone-template.ja-jp.account-creation-success div.logo {
+  background-image: url("../Images/hearthstone-logo-jp.3ane4.png");
+}
+body.hearthstone-template.zh-cn h1.logo,
+body.hearthstone-template.zh-cn.account-creation-success div.logo {
+  background-image: url("../Images/hearthstone-logo-cn.3ctnx.png");
+}
+body.hearthstone-template.zh-tw h1.logo,
+body.hearthstone-template.zh-tw.account-creation-success div.logo {
+  background-image: url("../Images/hearthstone-logo-tw.0uwqm.png");
+}
+@media (max-width: 500px) {
+  body.hearthstone-template article.raf-container > h2 {
+    padding-top: 0;
+  }
+  body.hearthstone-template h1.logo {
+    height: 155px;
+  }
+}
+.hearthstone-raf-success {
+  height: 225px;
+}
+.hearthstone-raf-success img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 225px;
+}
+.raf-mobile-download-option {
+  text-align: center;
+}
+.raf-mobile-download-option.secondary {
+  font-size: 90%;
+  margin-bottom: 5px;
+}
+.raf-more-info {
+  margin-top: 10px;
+  text-align: center;
+}
+div.raf-mobile-download-option-divider {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px 0;
+  font-size: 80%;
+}
+div.raf-mobile-download-option-divider span {
+  position: relative;
+  display: inline-block;
+}
+div.raf-mobile-download-option-divider span:before,
+div.raf-mobile-download-option-divider span:after {
+  content: "";
+  width: 500px;
+  height: 1px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 50%;
+}
+div.raf-mobile-download-option-divider span:before {
+  right: 100%;
+  margin-right: 20px;
+}
+div.raf-mobile-download-option-divider span:after {
+  left: 100%;
+  margin-left: 20px;
+}
+/**
+ * @fileOverview    Small screen responsive design overrides for mobile/in-game account creation
+ */
+@media (max-width: 599px) {
+  .body-content {
+    padding: 0 5px;
+  }
+  .creation-container {
+    margin: 20px 20px 0;
+    min-width: 280px;
+  }
+  .small-header {
+    display: block;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .modal {
+    max-width: 96%;
+    margin-left: 0;
+    transform: translatex(-50%);
+  }
+  #passwordGuidelines .modal-body ul {
+    font-size: 0.8em;
+    position: relative;
+    top: -20px;
+  }
+  .modal {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  div.social-divider {
+    margin: 12px 0 8px;
+  }
+}
+/**
+ * @fileOverview    Project-specific stylesheet overrides for WTCG theme for in-game/mobile account
+ *                  creation. These changes are currently minor enough it doesn't warrant a separate
+ *                  stylesheet per Toolkit theme in BAM itself. If this file starts getting big in
+ *                  the future, it's probably time to use separate project-specific styles per
+ *                  theme, like Toolkit's base styles do.
+ *
+ * Note that these rules operate under the assumption that the <body/> tag will
+ * contain the class name "wtcg-template" when using the WTCG theme from Toolkit.
+ */
+/**
+ * @fileOverview	BAM global style variables
+ */
+body.wtcg-template {
+  background-color: transparent;
+  background-image: none;
+  color: rgba(36, 21, 0, 0.7);
+}
+body.wtcg-template .landing-desc {
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Palatino Linotype", "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic ProN W3", Osaka, "������������", Meiryo, "������ ���������������", Asadong, Times, serif;
+  line-height: 1.2em;
+  text-align: center;
+}
+body.wtcg-template [class^="icon-32-"],
+body.wtcg-template [class*=" icon-32-"] {
+  background-image: url("../Images/sprite-32-hsorange.1j5ex.png");
+}
+body.wtcg-template [class^="icon-64-"],
+body.wtcg-template [class*=" icon-64-"],
+body.wtcg-template .captcha-reloader {
+  background-image: url("../Images/sprite-64-hsorange.2vipm.png");
+}
+body.wtcg-template .btn.two-line {
+  text-overflow: clip;
+  white-space: normal;
+  height: auto;
+}
+body.wtcg-template h1 {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 20px;
+}
+body.wtcg-template .social-divider {
+  margin: 10px 0;
+}
+body.wtcg-template .social-divider span {
+  color: rgba(36, 21, 0, 0.7);
+}
+body.wtcg-template .social-divider span:before,
+body.wtcg-template .social-divider span:after {
+  background-color: rgba(36, 21, 0, 0.7);
+}
+body.wtcg-template .mobile-dropdown .mobile-arrow {
+  background-image: url("../Images/sprite-32-hsorange.1j5ex.png");
+}
+body.wtcg-template .text-error {
+  color: #cd0606;
+}
+body.wtcg-template.ru-ru {
+  font-family: Blizzard;
+}
+.headless-account-landing img.murloc {
+  width: 100%;
+}
+/* Fix modals since toolkit guys dont want this in TK */
+@media (max-width: 768px) {
+  .modal#passwordGuidelines {
+    max-width: 90%;
+    margin-left: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    max-height: 90%;
+    top: 50%;
+  }
+  .modal#passwordGuidelines .modal-body {
+    overflow: auto;
+    padding: 0px;
+    padding-bottom: 20px;
+  }
+  .modal#passwordGuidelines [class^="icon-32-"] {
+    background-size: auto !important;
+  }
+}
+/* fix toolkit issues with dropdown */
+.dropdown {
+  -ms-transform: translate3d(0px, 0px, 0px);
+  z-index: 1100;
+}
+input[name=emailAddress],
+input[name=password] {
+  -ms-transform: translate3d(0px 0px 0px);
+}
+h1 {
+  margin-bottom: 28px;
+}
+fieldset {
+  padding-top: 10px;
+  margin: 0;
+}
+fieldset.first {
+  padding-top: 0;
+}
+.password-input {
+  width: 100%;
+  margin-right: 1%;
+  float: left;
+}
+.password-input + .password-input {
+  margin-right: 0;
+}
+.account-creation-success .splash {
+  margin-bottom: 30px;
+}
+.success-content {
+  width: 500px;
+}
+.success-content label {
+  text-transform: uppercase;
+}
+.success-content .btn {
+  width: 100%;
+}
+body.wow-template .success-content {
+  background-color: rgba(29, 34, 44, 0.952941);
+  padding: 50px 40px;
+  margin-top: 60px;
+}
+body.wow-template h1.logo {
+  width: 344px;
+  height: 140px;
+  background: url("../Images/wow.2qtny.png") -5px 0 no-repeat;
+  top: 0;
+  margin: 30px auto;
+}
+@media (max-width: 500px) {
+  .password-input {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  .password-rating {
+    right: 10px;
+  }
+}
+/* Fixing the Email Overflow */
+.success-accountName {
+  max-width: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.5em;
+  line-height: 40px;
+  white-space: nowrap;
+}
+/* FIXME: Hack fix for the EU cookie disclaimer modal display error on iOS. Remove when Toolkit/Navbar finally agree on how to do centered modals. */
+@media (max-width: 599px) {
+  .modal.eu-cookie-compliance {
+    transform: none;
+  }
+}
+/* HTTP 404 fix */
+.modal.eu-cookie-compliance {
+  background-image: -webkit-linear-gradient(top, #263145 0%, #1d222c 70%), -webkit-radial-gradient(50% 100px, closest-side, #263145, #1d222c);
+  background-image: linear-gradient(top, #263145 0%, #1d222c 70%), radial-gradient(50% 100px, closest-side, #263145, #1d222c);
+}
+.creation-logo {
+  position: relative;
+  top: 40px;
+}
+/* Account Completion overrides */
+#account-completion #select-box-question1 {
+  width: 100%;
+}
+html {
+  background: none;
+}
+#length-info {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+.battle-tag-container .control-group {
+  position: relative;
+}
+.validation-errors .alert {
+  border-width: 0;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  -webkit-transition: all, 0.4s, ease-in-out, 0.4s;
+  transition: all 0.4s ease-in-out 0.4s;
+}
+.validation-errors .alert.active {
+  border-width: 1px;
+  max-height: 150px;
+  margin: 0 0 20px;
+  padding: 4px 20px;
+}
+.third-party-email {
+  color: #5CB900;
+}
+.third-party-container {
+  margin: 20px auto 30px;
+}
+.third-party-creation-visualizer {
+  height: 130px;
+}
+.third-party-creation-visualizer p.icon-blizzard-user {
+  background: url("../Images/icon-blizzard-user.3apfk.png") no-repeat;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.third-party-creation-visualizer .section {
+  float: left;
+  text-align: center;
+  height: inherit;
+  width: 33%;
+}
+.third-party-creation-visualizer .section .image {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+}
+.third-party-creation-visualizer .section .email {
+  color: #5CB900;
+  font-size: .7em;
+}
+.third-party-creation-visualizer .section .name {
+  font-size: .8em;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.third-party-creation-visualizer .section.arrow {
+  width: 33%;
+}
+.third-party-creation-visualizer .section.arrow i {
+  position: relative;
+  top: -30px;
+}
+.third-party-creation-visualizer .section.blizzard {
+  float: right;
+}
+.app {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.page-error-icon {
+  margin: 50px auto 40px;
+  display: block;
+  background-image: url("../Images/triangle-alert.0fysw.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 102px;
+  height: 90px;
+}
