@@ -105,11 +105,11 @@
 	</fieldset>
 	<fieldset>
 		<div class="grid-100 row-captcha">
-			<a href="{{ url('/register') }}"><img src="{{ url('/vc') }}" alt="看不清楚，换一张" align="absmiddle" id="code_img"  style="cursor: pointer;"></a>
+			<a href="{{ url('/register') }}"><img src="{{ url('/vc') }}"></a>
 			<i class="captcha-reloader"></i>
 		</div>
 		<div class="control-group row-captchaInput">
-			<input type="text" id="captchaInput" name="vcode" value="" placeholder="输入验证码" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="captchaInput-error-inline" class="help-block"></span>
+			<input type="text" id="captchaInput" name="vc" placeholder="输入验证码" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="captchaInput-error-inline" class="help-block"></span>
 		</div>
 	</fieldset>
 	<fieldset>
