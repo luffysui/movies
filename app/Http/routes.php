@@ -76,10 +76,16 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/movie/{movieId}', 'Home\MovieController@index');
     //影片详情+影院详情页面---不同影院
     Route::get('/movie/{movieId}/{cinemaId}', 'Home\MovieController@index');
+    //展示下订单页面
+    Route::get('/order/{roundId}', 'Home\OrderController@showRound');
+    //检查座位情况页面
+    Route::post('/check', 'Home\OrderController@checkOrder');
+
 
 
 });
-
+//处理订单
+Route::post('/doorder','Home\OrderController@doOrder');
 //前台修改城市
 Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
 
