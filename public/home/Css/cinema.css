@@ -1,0 +1,137 @@
+/*
+* @Author: Liang Xiaohua
+* @Date:   2017-07-20 09:30:30
+* @Last Modified by:   Liang Xiaohua
+* @Last Modified time: 2017-07-20 09:49:50
+*/
+/* Code tidied up by ScrapBook */
+.searchBoxInd { margin-bottom: 0px; }
+body { background: rgb(250, 244, 244) none repeat scroll 0% 0%; }
+.star_bg { display: inline-block; width: 151px; height: 24px; background: rgba(0, 0, 0, 0) url("../Images/icon_1.png") no-repeat scroll 0px -26px; }
+.star { display: inline-block; width: 90%; height: 24px; background: rgba(0, 0, 0, 0) url("../Images/icon_1.png") no-repeat scroll 2px 0px; }
+.score_big { display: inline-block; font: italic 30px Arial; color: rgb(255, 192, 65); }
+.score_big .s { font-size: 24px; font-style: italic; }
+i.sanD { width: 57px; height: 57px; background: rgba(0, 0, 0, 0) url("../Images/icon.png") no-repeat scroll 0px -171px; }
+.mainContent { width: 748px; border: 1px solid rgb(230, 230, 230); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+#pq { height: 42px; }
+.mv_detail_tab { height: 40px; width: 748px; border-bottom: 2px solid rgb(227, 69, 81); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.mv_detail_tab li { float: left; width: 144px; height: 40px; font: 18px/40px "Microsoft YaHei"; color: rgb(44, 44, 44); border-right: 1px solid rgb(233, 233, 233); background: rgb(255, 255, 255) none repeat scroll 0% 0%; cursor: pointer; text-align: center; }
+.mv_detail_tab li.active { background: rgb(227, 69, 81) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.movieTabC { border: medium none; }
+#subPart1, #subPart2 { display: none; }
+.mv_comment_box { padding: 0px 38px 37px; min-height: 655px; }
+.mv_comm_plot .title { border-left: 3px solid rgb(207, 66, 77); margin: 33px 0px 14px; height: 20px; line-height: 20px; }
+.mv_comm_plot p { font-family: "SimSun"; line-height: 27px; color: rgb(84, 84, 84); text-indent: 2em; }
+.mv_comm_plot .couponInfo { font-family: "SimSun"; color: rgb(84, 84, 84); line-height: 25px; }
+.pop a.btn:hover, a.btn:visited { color: rgb(255, 255, 255); text-decoration: none; }
+.sHotMovie { padding: 0px 10px; overflow: hidden; }
+.sHotMovie ul { margin-top: -1px; }
+.sHotMovie ul li { padding: 15px 5px 13px 0px; background: rgba(0, 0, 0, 0) url("../Images/s_hot_split.gif") repeat-x scroll 0px top; }
+.sHotMovie ul li .name { height: 26px; line-height: 26px; color: rgb(51, 51, 51); position: relative; }
+.sHotMovie ul li .name a:link, .sHotMovie ul li .name a:visited { color: rgb(51, 51, 51); }
+.sHotMovie ul li .name .score_big { font-size: 18px; font-style: normal; position: relative; left: 0px; top: 2px; }
+.sHotMovie ul li .name .score_big em { font-size: 16px; }
+.sHotMovie ul li .add { line-height: 20px; overflow: hidden; color: rgb(133, 133, 133); }
+.sHotMovie ul li .tel { height: 20px; line-height: 20px; overflow: hidden; color: rgb(133, 133, 133); }
+.cinemaInfo { color: rgb(51, 51, 51); padding: 12px 20px 20px; position: relative; margin-bottom: 10px; }
+.cinemaInfo .title { position: relative; height: 36px; line-height: 36px; padding-right: 74px; display: inline-block; overflow: hidden; }
+.cinemaInfo .title .mv_name { font: 28px "Microsoft YaHei"; float: left; width: auto; position: relative; display: inline-block; }
+.cinemaInfo .title .mv_name h1 { display: inline; margin-right: 4px; }
+.cinemaInfo .title .mv_name i { margin-left: 4px; margin-top: 10px; }
+.cinemaInfo .title .star_bg { margin-left: 4px; }
+.cinemaInfo .title .score_big { margin-top: 4px; }
+.cinemaInfo .title .collect { display: inline-block; text-align: center; background-color: rgb(255, 255, 255); color: rgb(102, 102, 102); border: 1px solid rgb(208, 208, 208); border-radius: 4px; height: 22px; line-height: 20px; width: 56px; position: absolute; top: 10px; right: 0px; }
+.cinemaInfo .feedback { position: absolute; right: 20px; top: 25px; }
+.cinemaInfo .details { padding-top: 12px; position: relative; }
+.cinemaInfo .details .poster { float: left; width: 200px; height: 174px; }
+.cinemaInfo .details .poster img { width: 200px; height: 174px; border: medium none; }
+.cinemaInfo .details dl { padding: 0px 40px 0px 24px; width: 464px; float: left; }
+.cinemaInfo .details dl dd.des { color: rgb(102, 102, 102); height: auto; line-height: 22px; position: relative; }
+.cinemaInfo .details dl dd.des p { width: 420px; position: relative; left: 36px; top: -22px; }
+.cinemaInfo .details dl dd.des p a.more { display: inline-block; position: relative; right: 0px; bottom: 0px; }
+.cinemaInfo .details dl dd.traffic p { max-height: 42px; overflow: hidden; }
+.cinemaInfo .details dl dd.more { background: rgba(0, 0, 0, 0) url("../Images/border_line.gif") repeat-x scroll left top; }
+.cinemaInfo .details dl dd.more span { margin: 4px 0px 10px; display: inline-block; width: 100%; }
+.cinemaInfo .details dl dd.more a { margin-right: 36px; display: inline-block; }
+.cinemaInfo .details dl dd.more a h2 { display: inline; vertical-align: middle; }
+.cinemaInfo .details dl dd.more a, .cinemaInfo .details dl dd.more a:hover, .cinemaInfo .details dl dd.more a:active { color: rgb(102, 102, 102); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.cinemaInfo .details dl dd.more a i { display: inline-block; vertical-align: middle; background: rgb(255, 255, 255) url("../Images/icon_2.png") no-repeat scroll 0px 0px; width: 20px; height: 20px; margin-right: 4px; }
+.cinemaInfo .details dl dd.more a i.ticket { background-position: 0px -20px; }
+.cinemaInfo .details dl dd.more a i.special { background-position: 0px -60px; }
+.cinemaInfo .details dl dd.more a i.coupon { background-position: 0px -40px; }
+.cinema .movieTabC { width: 748px; border-top: 1px solid rgb(235, 235, 235); }
+.c_detail_movie { padding: 13px 20px 13px 30px; background: rgb(248, 248, 248) url("../Images/mv_comm_split.png") repeat-x scroll left bottom; }
+.c_detail_movie .c_detail_title {  }
+.c_detail_movie .c_detail_title h2 { color: rgb(84, 84, 84); font-size: 18px; float: left; height: 26px; line-height: 26px; }
+.c_detail_movie .c_detail_poster { background: rgb(251, 250, 250) none repeat scroll 0% 0%; height: 200px; padding: 12px 0px 0px; position: relative; }
+.c_detail_movie .c_detail_poster .photo_list_box { float: left; width: 670px; height: 200px; margin: 0px 3px; position: relative; overflow: hidden; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list { height: 200px; width: 10000px; padding-top: 1px; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li { float: left; width: 139px; height: 184px; padding: 0px 5px; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a { border: 3px solid rgb(251, 250, 250); display: inline-block; position: relative; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li img { vertical-align: top; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover, .c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a { border-color: rgb(227, 69, 81); }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a i { position: absolute; left: -5px; top: -5px; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a:hover em, .c_detail_movie .c_detail_poster .photo_list_box .photo_list li.active a em { position: absolute; left: 60px; bottom: -10px; overflow: hidden; width: 0px; height: 0px; border-width: 8px 8px 0px; border-color: rgb(255, 90, 41) transparent transparent; border-style: solid; }
+.c_detail_movie .c_detail_poster .photo_list_box .photo_list li a img { width: 135px; height: 180px; }
+.movie_detail { padding: 20px 30px; }
+.movie_detail .left { float: left; width: 440px; padding-right: 10px; }
+.movie_detail dt { position: relative; }
+.movie_detail dt h2 { display: inline-block; height: 30px; font: bold 16px/26px "微软雅黑","Microsoft YaHei","黑体"; color: rgb(232, 58, 24); background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; vertical-align: middle; }
+.movie_detail dt h2 a { color: rgb(44, 44, 44); }
+.movie_detail dt .star_bg { margin-bottom: 8px; vertical-align: middle; }
+.movie_detail dt .score_big { font-size: 27px; position: relative; top: 4px; }
+.movie_detail dt .score_big .s { font-size: 20px; }
+.movie_detail .summary { font: 16px/23px "微软雅黑","Microsoft YaHei","黑体"; height: 23px; margin: 8px 0px; color: rgb(153, 153, 153); overflow: hidden; }
+.movie_detail .des { font-size: 12px; height: 24px; line-height: 24px; color: rgb(102, 102, 102); overflow: hidden; }
+.cinema .docBody { width: 990px; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.cinema .mainContent { background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; border: medium none; width: 750px; }
+.mainContent .groupCoupon { padding-bottom: 10px; }
+.groupCoupon .boxWrap { position: relative; }
+.groupCoupon .boxs { height: 82px; width: 748px; margin-bottom: 0px; overflow: hidden; position: relative; transition: all 0.5s ease 0s; }
+.groupCoupon .box { position: relative; padding: 16px 0px 16px 70px; border-right: 1px solid rgb(219, 219, 219); border-bottom: 1px solid rgb(219, 219, 219); float: left; width: 303px; height: 50px; background-color: rgb(255, 255, 255); }
+.groupCoupon .box_noborderB { border-bottom: medium none; }
+.groupCoupon .box_right { float: left; border-right: medium none; }
+.groupCoupon .box i { display: inline-block; background: rgba(0, 0, 0, 0) url("../Images/icon_1_001.png") no-repeat scroll 0px -477px; width: 38px; height: 38px; position: absolute; left: 20px; top: 18px; }
+.groupCoupon .box p { height: 24px; width: 292px; line-height: 24px; }
+.groupCoupon .box p.title { font-size: 14px; font-weight: bold; color: rgb(84, 84, 84); position: relative; }
+.groupCoupon .box p.title span.couponHelp { display: inline-block; background: rgba(0, 0, 0, 0) url("../Images/icon_1_001.png") no-repeat scroll -89px -463px; width: 14px; height: 14px; position: relative; right: 0px; top: 1px; cursor: pointer; }
+.groupCoupon .box span.desc { color: rgb(153, 153, 153); display: block; position: relative; height: 24px; line-height: 24px; }
+.groupCoupon a.btn { display: inline-block; text-align: center; border: 1px solid rgb(219, 219, 219); border-radius: 2px; background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , rgb(255, 255, 255), rgb(241, 241, 241)) repeat scroll 0% 0%; color: rgb(102, 102, 102); height: 22px; line-height: 20px; width: 60px; position: relative; left: 10px; top: 0px; }
+.groupCoupon a.btn:hover, .groupCoupon a.btn:link, .groupCoupon a.btn:visited, .groupCoupon a.btn:active { text-decoration: none; color: rgb(102, 102, 102); }
+.groupCoupon .couponIntro { position: absolute; left: 0px; bottom: 0px; width: 496px; border: 1px solid rgb(215, 177, 121); background-color: rgb(255, 254, 228); font-size: 12px; font-family: "SimSun"; font-weight: normal; color: rgb(62, 62, 62); z-index: 100; padding: 8px 20px; }
+.groupCoupon .couponIntro p {  }
+.groupCoupon .couponIntro ul { list-style: outside none disc; padding-left: 16px; }
+.groupCoupon .couponIntro ul li.first { font-weight: bold; }
+.groupCoupon .couponIntro i { display: inline-block; background: rgba(0, 0, 0, 0) url("../Images/icon_1_002.png") no-repeat scroll -88px -322px; width: 13px; height: 7px; position: absolute; left: 0px; bottom: -6px; overflow: hidden; }
+.recentMovie {  }
+.recentMovie .noTicket { position: relative; }
+.recentMovie .noTicket i { display: inline-block; background: rgba(0, 0, 0, 0) url("../Images/noTicket1.jpg") no-repeat scroll 0px 0px; width: 87px; height: 59px; position: absolute; left: 200px; top: 16px; }
+.recentMovie .noTicket p { font-size: 14px; color: rgb(102, 102, 102); padding: 20px 0px 20px 300px; }
+.siderBox { width: 230px; }
+.sider_hot { border-top: 1px solid rgb(233, 233, 233); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.sider_hot .titleLine, .sider_hot .titlenoLine { height: 36px; line-height: 36px; }
+.sider_hot .titleLine h2, .sider_hot .titlenoLine h2 { font: 16px/36px "微软雅黑","Microsoft YaHei","黑体"; color: rgb(0, 0, 0); background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.sider_hot .titleLine { padding-left: 10px; height: 28px; overflow: hidden; }
+.sider_hot .titleLine h2 { height: 21px; line-height: 21px; overflow: hidden; padding-top: 5px; font-weight: bold; color: rgb(51, 51, 51); }
+.sider_hot dd { padding-bottom: 7px; overflow: hidden; }
+.cinema .mv_comm_plot { padding-top: 46px; overflow: hidden; }
+.cinema .mv_comm_plot_first { padding-top: 30px; }
+.cinema .mv_comm_plot .title { margin-top: 0px; }
+.cinema .mv_comm_plot .title strong { font-size: 16px; font-weight: bold; color: rgb(84, 84, 84); float: left; font-family: "Microsoft YaHei"; padding-left: 8px; }
+.cinema .mv_comm_plot p { text-indent: 0px; }
+.cinema .special p { position: relative; line-height: 24px; padding-left: 30px; margin: 10px 0px; }
+.cinema .special p b { position: absolute; left: 0px; top: 0px; width: 24px; height: 24px; overflow: hidden; background: rgba(0, 0, 0, 0) url("../Images/icon_2_001.png") no-repeat scroll 0px -80px; }
+.cinema .special p.p2 b { background-position: 0px -104px; }
+.cinema .special p.p5 b { background-position: 0px -128px; }
+.aboutBox { line-height: 26px; padding: 14px 14px 24px 16px; border: 1px solid rgb(217, 217, 217); font-size: 14px; color: rgb(102, 102, 102); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.aboutBox .aLine { font-size: 0px; }
+.aboutBox .aLine a, .aboutBox .aLine i { color: rgb(255, 102, 102); font-size: 14px; }
+.ti { text-indent: 2em; }
+.relTitle { margin-bottom: 6px; font-size: 16px; font-weight: bold; text-align: left; }
+.relTitle .relCinemaBar { float: right; font-size: 14px; font-weight: normal; outline: medium none; color: rgb(255, 102, 102); cursor: pointer; }
+.relCinemaBox { height: 26px; overflow: hidden; }
+.relCinemaBox a, .relCinemaBox a:hover { color: rgb(102, 102, 102); }
+a, a:link, a:visited, a:hover, a:active { text-decoration: none; }
+.wrap { width: 990px; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.box_gray { background-color: rgb(255, 255, 255); border: 1px solid rgb(219, 219, 219); }
+.sanD { width: 33px; height: 33px; background: rgba(0, 0, 0, 0) url("../Images/icon_001.png") no-repeat scroll -33px -286px; }
