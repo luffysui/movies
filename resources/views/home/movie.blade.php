@@ -137,9 +137,9 @@
 			                        <td>{{ $movie->language }}</td>
 			                        <td>{{ $v->roomName}}</td>
 
-                                    <td>¥<em class="old">{{ $v->oprice }}</em><em class="fav ml10"><i>¥</i>{{ $v->nprice }}</em></td>
+                                    <td>¥<em class="old">{{ $v->oprice/100 }}</em><em class="fav ml10"><i>¥</i>{{ $v->nprice/100 }}</em></td>
 			                        <td>
-			                                <a href="/order/seat.html?ticket_id=593407125&seatArea=1" class="btn_e34551 btn_89_29"  rBtn="buy">选座购票</a>
+			                                <a href="{{ url('order/'.$v->round_id) }}" class="btn_e34551 btn_89_29"  rBtn="buy">选座购票</a>
 			                        </td>
 			                    </tr>
                     @endforeach

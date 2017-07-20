@@ -31,8 +31,6 @@ class GetCityMiddleware
             }else{
                 $cityId = $res->content->address_detail->city_code;
             }
-//            dd($cityId);
-//            $cityIdCookie = Cookie::make('cityId', $cityId, time()+7*24*60*60);
             setcookie('cityId',$cityId,time()+7*24*60*60);
             $city_Id = $cityId;
             $request->attributes->add(compact('city_Id'));
