@@ -1,10 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" class="zh-cn cn">
 	<head>
-		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
 		<title>悦影注册</title>
-		<!--<link rel="shortcut icon" href="//www.battlenet.com.cn/account/static/images/meta/favicon.0gxnz.ico" />-->
-		<!--<link rel="search" type="application/opensearchdescription+xml" href="http://www.battlenet.com.cn/zh-cn/data/opensearch" title="暴雪游戏搜索" />-->
 		<script type="text/javascript" src="{{ asset('home/login/Scripts/polyfills.min.1syus.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('home/login/Scripts/core.min.3qhih.js') }}"></script>
 		<link rel="stylesheet" type="text/css" media="all" href="{{ asset('home/login/Css/navbar.css') }}" />
@@ -15,9 +12,6 @@
 <![endif]-->
 		<link rel="stylesheet" type="text/css" media="all" href="{{ asset('home/login/Css/social.0eh1b.css') }}" />
 		<link rel="stylesheet" type="text/css" media="all" href="{{ asset('home/login/Css/zh-cn.0vit0.css') }}" />
-		
-		<!--<meta name="viewport" content="width=device-width" />-->
-		<!--<og:image content="asd" />-->
 		<script type="text/javascript" src="{{ asset('home/login/Scripts/jquery-1.11.0.1aj0k.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('home/login/Scripts/core.299ql.js') }}"></script>
 		
@@ -56,30 +50,35 @@
 						        }
 						    </script>
 							<div class="grid-parent" id="form-container">
-<form action="{{ url('/doregister') }}" id="account-creation" method="post" name="account-creation" novalidate="novalidate">
+<form action="{{ url('/doregister') }}" id="account-creation" method="post">
 	{{ csrf_field() }}
 	
 	<fieldset class="first">
 		<div class="control-group row-firstname">
-			<input type="text" id="firstname" name="name" value="" maxlength="32" placeholder="用户名" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="firstname-error-inline" class="help-block"></span>
+			<input type="text" id="firstname" name="name" placeholder="用户名" class="grid-100"  />
+			<span id="firstname-error-inline" class="help-block"></span>
 		</div>
 		<div class="control-group row-firstname">
-			<input type="text" id="firstname" name="qq" value="" maxlength="32" placeholder="QQ" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="firstname-error-inline" class="help-block"></span> 
+			<input type="text" id="firstname" name="qq" placeholder="QQ"  class="grid-100"/>
+			<span id="firstname-error-inline" class="help-block"></span>
 		</div>
 		<div class="control-group row-firstname">
-			<input type="date" id="firstname" name="birthday" value="" maxlength="32" placeholder="QQ" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="firstname-error-inline" class="help-block"></span>
+			<input type="date" id="firstname" name="birthday" class="grid-100"  />
+			<span id="firstname-error-inline" class="help-block"></span>
 		</div>
 	</fieldset>
 	<fieldset>
 		<div class="control-group row-emailAddress">
-			<input type="email" id="emailAddress" name="phone" value="" placeholder="手机号码" maxlength="320" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="emailAddress-error-inline" class="help-block"></span>
+			<input type="text" id="emailAddress" name="phone" placeholder="手机号码" class="grid-100" />
+			<span id="emailAddress-error-inline" class="help-block"></span>
 		</div>
 		<div class="control-group row-emailAddressConfirmation">
-			<input type="email" id="emailAddressConfirmation" name="rphone" value="" placeholder="确认电手机号码" maxlength="320" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="emailAddressConfirmation-error-inline" class="help-block"></span>
+			<input type="text" id="emailAddressConfirmation" name="rphone" placeholder="确认电手机号码" class="grid-100" />
+			<span id="emailAddressConfirmation-error-inline" class="help-block"></span>
 		</div>
 		<div class="control-group row-password">
-			<input type="password" id="password" name="password" value="" maxlength="16" placeholder="密码" class="password-input showGuidelines" data-email_field="#emailAddress" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" required="true" />
-			<input type="password" id="rePassword" name="rpassword" value="" maxlength="16" placeholder="确认密码" class="password-input" />
+			<input type="password" id="password" name="password" placeholder="密码" class="password-input showGuidelines" />
+			<input type="password" id="rePassword" name="rpassword" placeholder="确认密码" class="password-input" />
 			<div class="password-rating"></div>
 			<span id="password-error-inline" class="help-block"></span>
 		</div>
@@ -109,7 +108,7 @@
 			<i class="captcha-reloader"></i>
 		</div>
 		<div class="control-group row-captchaInput">
-			<input type="text" id="captchaInput" name="vc" placeholder="输入验证码" autocapitalize="off" autocomplete="off" autocorrect="off" class="grid-100" spellcheck="false" required="true" /> <span id="captchaInput-error-inline" class="help-block"></span>
+			<input type="text" id="captchaInput" name="vc" placeholder="输入验证码"  class="grid-100" /> <span id="captchaInput-error-inline" class="help-block"></span>
 		</div>
 	</fieldset>
 	<fieldset>

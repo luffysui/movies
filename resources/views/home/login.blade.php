@@ -46,8 +46,9 @@
         if( "{{ session('msg') }}" ){
             alert("{{ session('msg') }}");
         }
-    </script>				
+    </script>
 <form action="{{ url('dologin') }}" method="post" id="password-form" novalidate="novalidate" class="username-requiredinput-focus">
+	<h1>登录</h1>
 	{{ csrf_field() }}
 	<div id="login-input-container" class="">
 		<div class="control-group">
@@ -58,6 +59,7 @@
 		</div>
 		<div class="control-group">
 			<label id="password-label" class="control-label" for="password">密码</label>
+			<input type="hidden" name="url" value="{{ $url }}">
 			<div class="controls">
 				<input aria-labelledby="password-label" id="password" name="password" title="密码" maxlength="16" type="password" tabindex="1" class="input-block input-large" autocomplete="off" placeholder="密码" autocorrect="off" spellcheck="false" />
 			</div>
@@ -75,7 +77,12 @@
 								<i class="spinner-battlenet"></i>
 							</a>
 						</li>
-
+						<li>
+							<a class="btn btn-block" id="creation-cancel-button" href="{{ url('/forgetpwd') }}">
+								<span class="button-text">忘记密码？</span>
+								<i class="spinner-battlenet"></i>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

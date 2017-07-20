@@ -22,7 +22,7 @@
         </form>
         <form style="float: left;margin-left: 30px" action="{{ url('admin/type') }}">
             <input type="hidden" name="condition" value="displayoff">
-            <button class="stdbtn btn_red"">显示所有禁用的类型</button>
+            <button class="stdbtn btn_red">显示所有禁用的类型</button>
         </form>
 
 

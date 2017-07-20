@@ -24,7 +24,9 @@
                     <em class="mvType mvType3d"></em>
                 @endif
 			
-			 <a href="{{ url('/movie/'.$v->movie_id) }}" title="{{ $v->name }}" target="_blank"><img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/></a>
+			 <a href="{{ url('/movie/'.$v->movie_id) }}" title="{{ $v->name }}" target="_blank">
+                 <img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/>
+             </a>
 			</div>
           </li>
 		  

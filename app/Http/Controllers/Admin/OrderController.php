@@ -25,7 +25,8 @@ class OrderController extends Controller
         //保存搜索条件
         $where = [];
         //实例化需要的表
-        $ob = DB::table('order');
+
+        $ob = DB::table('orderb');
 
         // 判断请求中是否含有user字段
         if($request->has('user')){
@@ -81,7 +82,8 @@ class OrderController extends Controller
         //保存搜索条件
         $where = [];
         //实例化需要的表
-        $ob = DB::table('order');
+        $ob = DB::table('orderb');
+
 
         // 判断请求中是否含有user字段
         if($request->has('user')){
@@ -122,9 +124,10 @@ class OrderController extends Controller
     public function update(Request $request, $id)
     {
         if($request->input('type') =='1'){
-            $res = DB::table('order')->where('order_id',$id)->update(['status'=>'5']);
+
+            $res = DB::table('orderb')->where('order_id',$id)->update(['status'=>'5']);
         }else{
-            $res = DB::table('order')->where('order_id',$id)->update(['status'=>'10']);
+            $res = DB::table('orderb')->where('order_id',$id)->update(['status'=>'10']);
         }
         if($res > 0){
             return redirect('/admin/order/refund')->with('msg', '处理成功');

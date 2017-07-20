@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 
+use Session;
+
+use DB;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use DB;
 
 class MovieController extends Controller
 {
@@ -19,7 +22,7 @@ class MovieController extends Controller
         }else{
             $ip= $_SERVER["REMOTE_ADDR"];
             $url = 'http://api.map.baidu.com/location/ip?ak=fh6jnG5ZP7soYck3vWuxqPeQLFH8LYjt&coor=bd09ll&ip='.$ip;
-            $ch = curl_init($url);
+            $ch = curlf_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//将返回结果进行转换
             $res = curl_exec($ch);//发送请求
             $res = json_decode($res);
@@ -61,8 +64,29 @@ class MovieController extends Controller
             }
         }
 
-        return  view('home.movie',['movie'=>$movie,'cinema'=>$cinema,'roomList'=>$roomList,'roundList'=>$roundList,'cinemaList'=>$cinemaList]);
+        return  view('home.movie',['movie'=>$movie,'cinema'=>$cinema,'roomList'=>$roomList,'roundList'=>$roundList,'cinemaList'=>$cinemaList,'movieId'=>$movieId]);
     }
+    //影评页面
+    public function showreply($movieId){
+        $count = DB::table('comment')->where('movie_id',$movieId)->count();
+        $coms = DB::table('comment')
+            ->join('user','user.user_id','=','comment.uid')
+            ->where('movie_id',$movieId)->orderBy('time', 'desc')->get();
+        $movie = DB::table('movie')->where('movie_id',$movieId)->first();
+        return view('home.moviereply',['movie'=>$movie,'movieId'=>$movieId,'count'=>$count,'coms'=>$coms]);
+    }
+    //添加评论操作
+    public function doreply(Request $request, $movieId){
 
+        $arr = $request->except('_token');
 
+        $arr['movie_id']=$movieId;
+        $arr['time'] = time();
+
+        $arr['uid'] = Session::get('homeuser')['user_id'];
+        $res = DB::table('comment')->insert($arr);
+        if($res){
+            return redirect()->back();
+        }
+    }
 }
