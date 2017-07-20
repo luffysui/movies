@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="{{ asset('home/Css/core.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/index2014.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/mv_list.css') }}"/>
+<link rel="stylesheet" href="{{ asset('home/Css/cinema.css') }}"/>
 {{--地图--}}
 
     {{--地图--}}
