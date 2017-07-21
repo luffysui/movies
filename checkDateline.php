@@ -15,7 +15,7 @@ while (1) {
         $listStr = $redis->rpop('list-order');
         $list = unserialize($listStr);
 //          var_dump($list);
-            if(time() - $list['dateline'] < 60*1){
+            if(time() - $list['dateline'] < 60*100){
                 $redis->lpush('list-order',$listStr);
             }else{
                 $sql = 'select * from orderb where order_id = '.$list['orderId'];

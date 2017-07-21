@@ -232,12 +232,20 @@
             seatsStr +=$(this).attr('id');
             seatsStr +=',';
         })
-        var url = "{{ url('doorder') }}";
+        var url = "{{ url('home/doorder') }}";
         var round = "{{ $round->round_id }}";
         $.post(url,{round:round,sid:seatsStr,'_token':"{{ csrf_token() }}"}, function(data){
-//            console.log(data);
+
+            if(data.length > 10){
+                alert('请登录~');
+                location.href= " {{ url('/login/order_'.$round->round_id) }} " ;
+
+            }else{
             alert(data);
-            location.reload();
+            location.href = '{{ url('home/user/order') }}';
+
+            }
+            console.log(data);
 
         })
     });

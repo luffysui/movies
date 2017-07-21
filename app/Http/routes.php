@@ -78,16 +78,21 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/movie/{movieId}/{cinemaId}', 'Home\MovieController@index');
     //展示下订单页面
     Route::get('/order/{roundId}', 'Home\OrderController@showRound');
-    //检查座位情况页面
-    Route::post('/check', 'Home\OrderController@checkOrder');
+
+
+
+
+    //影评页面
+    Route::get('/movieReply/{movieId}','Home\MovieController@showreply');
 
     //影评页面
     Route::get('/movieReply/{movieId}','Home\MovieController@showreply');
 
 
 });
-//处理订单
-Route::post('/doorder','Home\OrderController@doOrder');
+//检查座位情况
+Route::post('/check', 'Home\OrderController@checkOrder');
+
 //前台修改城市
 Route::get('/changeCity/{cityId}', 'Home\IndexController@changeCity');
 
@@ -116,11 +121,19 @@ Route::get('/vc','Home\LoginController@vc');
 
 Route::group(['prefix' => 'home', 'middleware' => 'home'], function(){
     //用户修改个人资料页面
-    Route::get('user/{id}','Home\UserController@index');
+    Route::get('/user','Home\UserController@index');
     //修稿用户资料操作
     Route::post('/userpost','Home\UserController@userpost');
     //提交评论
     Route::post('/doReply/{movieId}','Home\MovieController@doreply');
     //退出登陆
     Route::get('/outlogin','Home\LoginController@outlogin');
+    //用户订单页面
+    Route::get('user/order','Home\OrderController@userIndex');
+    //用户申请退款操作
+    Route::get('user/order/refund/{orderId}','Home\OrderController@userRefund');
+    //处理订单
+    Route::post('/doorder','Home\OrderController@doOrder');
+    //前台用户发送券码
+    Route::get('/dosend/{orderId}','Home\OrderController@doSend');
 });

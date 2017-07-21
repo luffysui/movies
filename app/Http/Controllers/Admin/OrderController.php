@@ -12,6 +12,9 @@ use DB;
 use App\Org\Send;
 use App\Org\REST;
 
+
+use Redis;
+
 class OrderController extends Controller
 {
     /**
@@ -121,6 +124,7 @@ class OrderController extends Controller
         return view('admin.refundlist',['refundList'=>$refundList,'where'=>$where]);
     }
 
+	//处理订单退款
     public function update(Request $request, $id)
     {
         if($request->input('type') =='1'){
@@ -130,12 +134,20 @@ class OrderController extends Controller
             $res = DB::table('orderb')->where('order_id',$id)->update(['status'=>'10']);
         }
         if($res > 0){
+            //同意退款后,将redis中座位释放掉
+            $orderDetail = DB::table('orderb')->where('order_id',$id)->first();
+            $seatsArr = explode(',',$orderDetail->seats);
+            foreach ($seatsArr as $v ){
+                Redis::srem('seats_'.$orderDetail->round_id,$v);
+                var_dump('seats_'.$orderDetail->round_id);
+            }
             return redirect('/admin/order/refund')->with('msg', '处理成功');
         }else{
             return redirect('/admin/order/refund')->with('error', '处理失败');
         }
     }
 
+    //发送券码短信
     public function send(Request $request)
     {
         $userCode = $request->input('user_code');

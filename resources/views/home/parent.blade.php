@@ -46,7 +46,9 @@
     <nav id="topNav">
         <div id="topNavWrap">
              <div id="topNavLeft">
-                @if(Session::get('homeuser'))
+
+                @if(Session::get('homeuser') !== null)
+
                      <a href="{{ url('home/user').'/'.Session::get('homeuser')['user_id'] }}">个人信息</a>
                      <a href="{{ url('home/outlogin') }}">退出登录</a>
                  @else
@@ -55,12 +57,15 @@
                  @endif
             </div>
             <ul id="topNavRight">
-                <li><a href="http://order.mall.163.com/movie/list.html" rel="nofollow"  id="myEpay" notice="false" user="y" target="_blank">我的订单</a>&nbsp;&nbsp;<span id="topEpayInfo"></span>|</li>
-                {{--<li><a href="http://piao.163.com/order/code_list.html" rel="nofollow"  target="_blank" user="y" rel="nofollow">我的优惠券</a>&nbsp;&nbsp;|</li>--}}
-                {{--<li><a href="http://mall.163.com/help/movie.html" rel="nofollow"  target="_blank">帮助</a>&nbsp;&nbsp;|</li>--}}
-                <li><a href="http://feedback.zxkf.163.com/movie/show.html?flag=1" rel="nofollow"  target="_blank">提意见</a>&nbsp;&nbsp;|</li>
-                {{--<li class="last"><a href="javascript:;" rel="nofollow"  target="_blank" onMouseOver="$(this).parent().addClass('kf');" onMouseOut="$(this).parent().removeClass('kf');">联系客服</a>&nbsp;&nbsp;--}}
-                    <div class="none">客服电话：0571-26201163</div>
+
+                @if(Session::get('homeuser') !== null)
+                <li>
+
+                    <a href="{{ url('home/user/order') }}" rel="nofollow"  id="myEpay" >我的订单</a>&nbsp;&nbsp;<span id="topEpayInfo"></span>|</li>
+                @endif
+                <li><a href="http://feedback.zxkf.163.com/movie/show.html?flag=1" rel="nofollow"  target="_blank">提意见</a>&nbsp;&nbsp;</li>
+
+
                 </li>
             </ul>
             <script>
@@ -71,7 +76,7 @@
 
 <section class="searchBoxInd clearfix2">
 	<div class="searchWrap">
-        <a href="http://piao.163.com" class="logo2014" title="网易电影"  style="float:left;"></a>
+        <a href="{{ url('/') }}" class="logo2014" title="网易电影"  style="float:left;"></a>
         <div id="switchTopCity" class="switchTopCity">
             <div class="curCity  "  id="curCity" pid="1006" pspell="beijing">
                 <span class="cityName myCityBar" id="myCity" pid="1006" pspell="beijing">

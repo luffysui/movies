@@ -19,7 +19,6 @@ class LoginController extends Controller
     public function login($url='_')
     {
 
-        Session::put('homeuser','');
         return view('home/login',['url'=>$url]);
 	}
 	public function dologin(Request $request)
