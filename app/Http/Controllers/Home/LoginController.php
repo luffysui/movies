@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 
 use DB;
 
-use Session;
-
 use App\Org\ImageTool;
 
+use Session;
+
 use App\Http\Requests;
+
 use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function login($url='_')
     {
-        Session::put('homeuser','');
-        return view('home/login');
+        return view('home/login',['url'=>$url]);
 	}
 	public function dologin(Request $request)
     {
@@ -42,27 +42,29 @@ class LoginController extends Controller
                 'password'=>md5($info['password'])
             );
 		    Session::put('homeuser',$session);
+		    $url = $request->input('url');
+		    $url = str_replace('_','/',$url);
 //		    跳转首页
-			return redirect('/');
+			return redirect($url);
 		}else{
 			return redirect('/login')->with('msg','登录失败');
 		}
 	}
+
+	//退出登录
+    public function outlogin(){
+        Session::flush();
+        return redirect()->back();
+    }
 	//生成验证码图片儿
 	public function vc(){
-		$a = new ImageTool();
+		new ImageTool();
 	}
 	public function register(){
         return view('home/register');
-//        $a = Session:get('vc');
-//        dd($a);
-//		echo $_COOKIE['vc'];
 	}
 	public function doregister(Request $request)
     {
-    	//dd($_SESSION['vc']);
-//		dd($request->except('_token'));
-
 		//表单验证
         $messages = [
             'name.required'=>'必须填写用户名',
@@ -86,7 +88,9 @@ class LoginController extends Controller
         ],$messages);
         //取得所有表单数据
         $info = $request->except('_token');
-        if(Session::get('vc') != $info['vc']){
+//        dd($info);
+        //验证码
+        if(strtolower(Session::get('vc')) != strtolower($info['vc'])){
             return redirect()->back()->with('msg','验证码不对');
         }
         //判断两个确认字段是否满足要求
@@ -111,7 +115,7 @@ class LoginController extends Controller
 				'creat_time'=>time(),
 				'qq'=>$info['qq'],
 				'birthday'=>$info['birthday']
-			); 
+			);
 			$res2 = DB::table('user_info')->insert($userinfo_info);
 			if($res2){
 				//如果user_info也成功则注册成功跳转登录界面
@@ -124,9 +128,71 @@ class LoginController extends Controller
 		}
 		
 	}
+    //找回密码
+//获取用户的手机号
+//ajax获取用户的密保问题
+//ajax获取答案是否正确
+    public function forgetpwd(){
+        return view('home.forgetpwd');
+    }
+    public function getquestion(){
+        $phone = $_GET['phone'];
+        $uid = DB::table('user')->where('phone',$phone)->value('user_id');
+        return DB::table('user_info')->where('userid',$uid)->value('question');
+    }
+    public function getanswer(){
+        $uid = DB::table('user')->where('phone',$_GET['phone'])->value('user_id');
+        $res = DB::table('user_info')
+            ->where('userid',$uid)
+            ->where('question',$_GET['question'])
+            ->where('answer',$_GET['answer'])
+            ->get();
+        if($res){
+            return "正确";
+        }else{
+            return "错误";
+        }
+    }
 
+    public function findpwd(Request $request){
+        $messages = [
+            'phone.required'=>'手机号码有误',
+            'question.required'=>'请勿手动修改密保问题',
+            'answer.required'=>'验证答案后请勿修改答案',
+            'root.required'=>'请勿手动修改获取的权限',
+            'password.required'=>'请填写密码',
+            'rpassword.required'=>'确认密码与密码不同'
+        ];
+        $this->validate($request, [
+            'phone' => 'required|integer',
+            'question' => 'required',
+            'answer' => 'required',
+            'root' => 'required',
+            'password' => 'required',
+            'rpassword' => 'required'
+        ],$messages);
 
+        $info = $request->except('_token');
+//        dd($info);
+        if($info['password'] != $info['rpassword']){
+            return redirect()->back()->with('msg','确认密码与密码不符');
+        }elseif($info['root'] != "正确"){
+            return redirect()->back()->with('msg','未获取权限，（请勿手动修改获取的权限）');
+        }else{
+            $rrr = DB::table('user')
+                ->join('user_info','user.user_id','=','user_info.userid')
+                ->where('user.phone',$info['phone'])
+                ->where('user_info.question',$info['question'])
+                ->where('user_info.answer',$info['answer'])
+                ->update(['password'=>md5($info['password'])]);
+            if($rrr){
+                return redirect('/login');
+            }else{
+                return redirect()->back()->with('msg','修改失败');
+            }
+        }
 
+    }
 
 
 

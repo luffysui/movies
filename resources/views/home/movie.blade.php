@@ -8,7 +8,7 @@
     <section class="mv_info_box clearfix">
         <div id="share" class="share" >
         	<div class="share_inner">影片分享到<b></b>
-        		<div class="shareDiv" id="shareDiv"></div>   
+        		<div class="shareDiv" id="shareDiv"></div>
             </div> 
         </div>
         
@@ -46,8 +46,8 @@
     	<section class="mainContent"> 
 				<div id="pq">
 					<ul class="mv_detail_tab" id="mvTabs">
-						<li rel="#part2" class="active">影院排期</li>
-						<li rel="#part1" id="commentTab">剧情影评</li>
+						<li rel="#part2" class="active"><a href="{{ url('/movie').'/'.$movieId }}">影院排期</a></li>
+						<li rel="#part1" id="commentTab"><a href="{{ url('/movieReply').'/'.$movieId }}">剧情影评</a></li>
 					</ul>
 				</div> 
             

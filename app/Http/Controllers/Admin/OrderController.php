@@ -12,6 +12,8 @@ use DB;
 use App\Org\Send;
 use App\Org\REST;
 
+use Redis;
+
 class OrderController extends Controller
 {
     /**
@@ -25,7 +27,8 @@ class OrderController extends Controller
         //保存搜索条件
         $where = [];
         //实例化需要的表
-        $ob = DB::table('order');
+
+        $ob = DB::table('orderb');
 
         // 判断请求中是否含有user字段
         if($request->has('user')){
@@ -81,7 +84,8 @@ class OrderController extends Controller
         //保存搜索条件
         $where = [];
         //实例化需要的表
-        $ob = DB::table('order');
+        $ob = DB::table('orderb');
+
 
         // 判断请求中是否含有user字段
         if($request->has('user')){
@@ -119,20 +123,30 @@ class OrderController extends Controller
         return view('admin.refundlist',['refundList'=>$refundList,'where'=>$where]);
     }
 
+
+    //处理订单退款
     public function update(Request $request, $id)
     {
         if($request->input('type') =='1'){
-            $res = DB::table('order')->where('order_id',$id)->update(['status'=>'5']);
+
+            $res = DB::table('orderb')->where('order_id',$id)->update(['status'=>'5']);
         }else{
-            $res = DB::table('order')->where('order_id',$id)->update(['status'=>'10']);
+            $res = DB::table('orderb')->where('order_id',$id)->update(['status'=>'10']);
         }
         if($res > 0){
+            //同意退款后,将redis中座位释放掉
+            $orderDetail = DB::table('orderb')->where('order_id',$id)->first();
+            $seatsArr = explode(',',$orderDetail->seats);
+            foreach ($seatsArr as $v ){
+                Redis::srem('seats_'.$orderDetail->round_id,$v);
+                var_dump('seats_'.$orderDetail->round_id);
+            }
             return redirect('/admin/order/refund')->with('msg', '处理成功');
         }else{
             return redirect('/admin/order/refund')->with('error', '处理失败');
         }
     }
-
+    //发送券码短信
     public function send(Request $request)
     {
         $userCode = $request->input('user_code');

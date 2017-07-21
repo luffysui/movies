@@ -52,7 +52,6 @@
                 <th class="head0" style="width:2%">场次</th>
                 <th class="head1" style="width:2%">验证码</th>
                 <th class="head0" style="width:4%">订单总金额</th>
-                <th class="head1" style="width:4%">支付总金额</th>
                 <th class="head0" style="width:4%">座位信息</th>
                 <th class="head1" style="width:4%">订票时间</th>
                 <th class="head0" style="width:5%">订单状态</th>
@@ -71,7 +70,6 @@
                     <td>{{ $v->round_id }}</td>
                     <td>{{ $v->code }}</td>
                     <td class="center">{{ $v->total_money/100 }}</td>
-                    <td class="center">{{ $v->pay_money/100 }}</td>
                     <td class="center">{{ $v->seats }}</td>
                     <td class="center">{{ date('Y-m-d H:i:s',$v->dateline) }}</td>
                     <td class="center">
