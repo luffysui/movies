@@ -31,8 +31,21 @@ class IndexController extends Controller
                         ->orderBy('start_time','desc')
                         ->take(4)->get();
         $cinemaList = DB::table('cinema')->take(5)->get();
+        // dd($movieComingList);
+         foreach ($movieList as $key => $value)
+        {
 
-        return view('home.index',['movieList'=>$movieList,'movieListSec'=>$movieListSec,'movieComingList'=>$movieComingList,'cinemaList'=>$cinemaList,'request'=>$request]);
+            //按照现价正序排列取最小值
+            $min = DB::table('round')->where('movie_id',$value->movie_id)->orderBy('nprice','asc')->value('nprice');
+            $movieList[$key]->min=$min;
+            $movieListSec[$key]->min=$min;
+            $cinemaList[$key]->min=$min;
+            // $cinemList[$key]->movie_id=$movieId;
+        }
+        // dd($movieListSec);
+        // dd($movieList);
+        // dd($min);
+        return  view('home.index',['movieList'=>$movieList,'movieListSec'=>$movieListSec,'movieComingList'=>$movieComingList,'cinemaList'=>$cinemaList,'request'=>$request,'min'=>$min]);
     }
 
     public function changeCity($cityId)
