@@ -4,9 +4,9 @@
  <div class="photo_box">
         <script>Core.autoBanner=true;</script>
         <a href="javascript:;" class="photo_big_bar photo_big_left"><b style="display: inline;"></b></a>
-        <a href="javascript:;" class="photo_big_bar photo_big_right"><b style="display: block;"></b></a> 
+        <a href="javascript:;" class="photo_big_bar photo_big_right"><b style="display: block;"></b></a>
     <div class="photo_b_box">
-        <ul class="photo_b_list "> 
+        <ul class="photo_b_list ">
                 <li  style="background-image: url(Images/20170626175251286_m_webp.jpg);background-color: #070709;">
                     <a href="http://piao.163.com/movie/48522.html" target="_blank"></a>
                 </li>
@@ -52,7 +52,12 @@
                             <p class="p2">{{ date('m',$movieList[0]->start_time) }}月{{ date('d',$movieList[0]->start_time) }}日上映</p>
                             <p class="p2" style="font-size:12px;">{{ $movieList[0]->description }}</p>
 
-                            <span class="lowPrice">31<i>元起</i></span>
+                            <span class="lowPrice">
+                                @if(isset ($movieList[0]->min))
+                                    {{ $movieList[0]->min }}<i>元起</i>
+                                @else
+                                    暂无排期
+                                @endif</span>
                             <a target="_blank" class="showBtn" href="/beijing/movie/48488.html#pq=1" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
@@ -76,7 +81,12 @@
                             <p class="p2">{{ date('m',$movieList[1]->start_time) }}月{{ date('d',$movieList[1]->start_time) }}日上映</p>
                             <p class="p2" style="font-size:12px;">{{ $movieList[1]->description }}</p>
 
-                            <span class="lowPrice">29<i>元起</i></span>
+                            <span class="lowPrice">
+                                @if(isset ($movieList[0]->min))
+                                    {{ $movieList[0]->min }}<i>元起</i>
+                                @else
+                                   <i> 暂无排期</i>
+                                @endif</span>
                             <a target="_blank" class="showBtn" href="/beijing/movie/48542.html#pq=1" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
@@ -93,8 +103,13 @@
                             </div>
                             <div class="m_con">
                                 <em>7.0</em>
-                                    <strong>29</strong>元起
-
+                                    <strong>
+                                    @if(isset ($v->min))
+                                        {{ $v->min }}<i>元起</i>
+                                    @else
+                                        <i>暂无排期</i>
+                                    @endif
+                                    </strong>
                             </div>
                             <p>
                                     <a target="_blank" class="showBtn" href="/beijing/movie/48485.html#pq=1" rel="nofollow">选座购票</a>
@@ -107,31 +122,24 @@
             </div>
 
             <div class="mainRight">
-<div class="side1">
-    <div class="side1Client"></div>
-    <dl class="side1Pro">
-        <dt>购票流程</dt>
-        <dd><b class="b1"></b>1.选择影院和场次</dd>
-        <dd><b class="b2"></b>2.在线选座位并支付</dd>
-        <dd><b class="b3"></b>3.短信获取取票码</dd>
-        <dd><b class="b4"></b>4.凭码自助取票</dd>
-    </dl>
-</div>
+                <div class="side1">
+                    <div class="side1Client"></div>
+                    <dl class="side1Pro">
+                        <dt>购票流程</dt>
+                        <dd><b class="b1"></b>1.选择影院和场次</dd>
+                        <dd><b class="b2"></b>2.在线选座位并支付</dd>
+                        <dd><b class="b3"></b>3.短信获取取票码</dd>
+                        <dd><b class="b4"></b>4.凭码自助取票</dd>
+                    </dl>
+                </div>
             </div>
     </section>
-    <section class="mainCont clearfix mt15">       
+    <section class="mainCont clearfix mt15">
         <div class="mainLeft upIndex">
             <h2 class="showTitle clearfix">
                 <a href="/movie/upComing.html" rel="nofollow" class="colMore" target="_blank">全部即将上映电影&gt;</a>
                 <a href="javascript:;" class="upMovieTab" rel="upMovie2">即将上映</a>
             </h2>
-
-
-
-
-
-
-
 
             <div class="upMovie" id="upMovie1">
                 <ul class="posterStyle clearfix">
@@ -157,17 +165,9 @@
                     @endforeach
                 </ul>
             </div>
-
-
-
-
-
-
-
-
         </div>
-
     </section>
+
     <section class="mainCont clearfix mt15">
         <div class="mainLeft" style="height:556px;">
             <h2 class="colTitle"><span class="colText">热门影院</span><a class="colMore" target="_blank" href="/beijing/cinema/category-ALL-area-0-type-0.html?keywords=" rel="nofollow">全部影院&gt;</a></h2>
@@ -175,7 +175,13 @@
                 @foreach( $cinemaList as $v)
                 <li >
                     <a href="/cinema/1448.html" rel="nofollow" class="showBtn btnView" target="_blank">查看</a>
-                    <span class="lowPrice">43.2<i>元起</i></span>
+                    <span class="lowPrice">
+                            @if(isset ($v->min))
+                                {{ $v->min }}<i>元起</i>
+                            @else
+                                <i>暂无排期</i>
+                            @endif
+                    <i>元起</i></span>
                     <div class="cName"><a href="/cinema/1448.html" target="_blank">{{ $v->cinema_name }}</a>
                         <em class="score ml20">{{ $v->cinema_score }}</em><em class="icon_z ml10">座</em><em class="icon_q ml10">券</em>
                     </div>
