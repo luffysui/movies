@@ -168,16 +168,14 @@
                     <li><a href="{{ url('admin/order/refund') }}">处理退款</a></li>
                 </ul>
             </li>
-            <li><a href="#asd" class="editor">榜单管理</a>
+            <li><a href="#idea" class="editor">用户回馈管理</a>
                 <span class="arrow"></span>
-                <ul id="asd">
-                    <li><a href="{{ url('admin/list')  }}">列表</a></li>
-                    <li><a href="{{ url('admin/list/create') }}">添加</a></li>
+                <ul id="idea">
+                    <li><a href="{{ url('admin/idea')  }}">列表</a></li>
                 </ul>
             </li>
         </ul>
-        {{--缩回去--}}
-        {{--<a class="togglemenu"></a>--}}
+        <a class="togglemenu"></a>
         <br /><br />
     </div><!--leftmenu-->
 

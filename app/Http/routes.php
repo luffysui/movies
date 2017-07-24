@@ -58,6 +58,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     //榜单管理
     Route::resource('/list', 'Admin\ListController');
 
+    //用户反馈列表
+    Route::resource('/idea','Admin\IdeaController');
+
 });
 
 //获取所在城市的路由群组
@@ -114,13 +117,19 @@ Route::post('/doregister','Home\LoginController@doregister');
 Route::get('/vc','Home\LoginController@vc');
 //前台中间件
 
-Route::group(['prefix' => 'home', 'middleware' => 'home'], function(){
+Route::group(['prefix' => 'home', 'middleware' => ['home']], function(){
     //用户修改个人资料页面
-    Route::get('user/{id}','Home\UserController@index');
-    //修稿用户资料操作
+    Route::get('/user','Home\UserController@index');
+    //修改用户资料操作
     Route::post('/userpost','Home\UserController@userpost');
     //提交评论
     Route::post('/doReply/{movieId}','Home\MovieController@doreply');
     //退出登陆
     Route::get('/outlogin','Home\LoginController@outlogin');
+    //用户意见反馈
+    Route::get('/idea','Home\UserController@idea');
+    //提交反馈信息
+    Route::post('/doidea','Home\UserController@doidea');
+    //用户赞同建议
+    Route::get('/zan','Home\UserController@zan');
 });

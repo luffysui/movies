@@ -32,5 +32,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\AdminMiddleware::class,
         'getCity' => \App\Http\Middleware\GetCityMiddleware::class,
         'home'=>\App\Http\Middleware\HomeMiddleware::class
+
     ];
 }
