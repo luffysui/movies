@@ -84,7 +84,7 @@ class UserController extends Controller
             ->join('user','user.user_id','=','idea.userid')
             ->get();
 //        dd($allidea);
-        //用户自己的建议和反馈
+        //用户自己的建议和反馈s
         $useridea = DB::table('idea')
             ->join('ridea','ridea.toid','=','idea.idea_id')
             ->where('userid',Session::get('homeuser')['user_id'])
@@ -97,7 +97,6 @@ class UserController extends Controller
     public function doidea(Request $request){
         $idea = $request->except('_token');
         $idea['userid'] = Session::get('homeuser')['user_id'];
-        $idea['sendto'] = 0;
         $idea['time'] = time();
         $idea['zan'] = 0;
         $res = DB::table('idea')->insert($idea);
