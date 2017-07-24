@@ -53,11 +53,11 @@
                             <p class="p2" style="font-size:12px;">{{ $movieList[0]->description }}</p>
 
                             <span class="lowPrice">
-                                @if(isset ($movieList[0]->min))
-                                    {{ $movieList[0]->min }}<i>元起</i>
-                                @else
-                                    暂无排期
-                                @endif</span>
+                            @if(isset ($movieList[0]->min))
+                                {{ $movieList[0]->min }}<i>元起</i>
+                            @else
+                                <i> 暂无排期</i>
+                            @endif</span>
                             <a target="_blank" class="showBtn" href="/beijing/movie/48488.html#pq=1" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
@@ -82,11 +82,11 @@
                             <p class="p2" style="font-size:12px;">{{ $movieList[1]->description }}</p>
 
                             <span class="lowPrice">
-                                @if(isset ($movieList[0]->min))
-                                    {{ $movieList[0]->min }}<i>元起</i>
-                                @else
-                                   <i> 暂无排期</i>
-                                @endif</span>
+                            @if(isset ($movieList[0]->min))
+                                {{ $movieList[0]->min }}<i>元起</i>
+                            @else
+                               <i> 暂无排期</i>
+                            @endif</span>
                             <a target="_blank" class="showBtn" href="/beijing/movie/48542.html#pq=1" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
@@ -101,14 +101,14 @@
                                 @endif
                                 <a target="_blank" title="{{ $v->name }}" href="/beijing/movie/48485.html" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
                             </div>
-                            <div class="m_con">
+                            <div class="m_con"><div class="cName"><strong>{{ $v->name }} </strong></div>
                                 <em>7.0</em>
                                     <strong>
                                     @if(isset ($v->min))
-                                        {{ $v->min }}<i>元起</i>
-                                    @else
-                                        <i>暂无排期</i>
-                                    @endif
+                                            {{ $v->min }}<i>元起</i>
+                                        @else
+                                            <i>暂无排期</i>
+                                        @endif
                                     </strong>
                             </div>
                             <p>
@@ -122,16 +122,16 @@
             </div>
 
             <div class="mainRight">
-                <div class="side1">
-                    <div class="side1Client"></div>
-                    <dl class="side1Pro">
-                        <dt>购票流程</dt>
-                        <dd><b class="b1"></b>1.选择影院和场次</dd>
-                        <dd><b class="b2"></b>2.在线选座位并支付</dd>
-                        <dd><b class="b3"></b>3.短信获取取票码</dd>
-                        <dd><b class="b4"></b>4.凭码自助取票</dd>
-                    </dl>
-                </div>
+<div class="side1">
+    <div class="side1Client"></div>
+    <dl class="side1Pro">
+        <dt>购票流程</dt>
+        <dd><b class="b1"></b>1.选择影院和场次</dd>
+        <dd><b class="b2"></b>2.在线选座位并支付</dd>
+        <dd><b class="b3"></b>3.短信获取取票码</dd>
+        <dd><b class="b4"></b>4.凭码自助取票</dd>
+    </dl>
+</div>
             </div>
     </section>
     <section class="mainCont clearfix mt15">
@@ -166,11 +166,11 @@
                 </ul>
             </div>
         </div>
-    </section>
 
+    </section>
     <section class="mainCont clearfix mt15">
         <div class="mainLeft" style="height:556px;">
-            <h2 class="colTitle"><span class="colText">热门影院</span><a class="colMore" target="_blank" href="/beijing/cinema/category-ALL-area-0-type-0.html?keywords=" rel="nofollow">全部影院&gt;</a></h2>
+            <h2 class="colTitle"><span class="colText">热门影院</span><a class="colMore" target="_blank" href=" /cinemalist " rel="nofollow">全部影院&gt;</a></h2>
             <ul class="hotCinema">
                 @foreach( $cinemaList as $v)
                 <li >
