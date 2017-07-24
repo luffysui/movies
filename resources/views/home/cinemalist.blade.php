@@ -40,6 +40,11 @@
                     <li class="active" t="0"><a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=">全部</a></li>
                 </ul>
                 <div id="cinema_left_overflow" class="cinema_left_overflow">
+                <!-- 滚动条 -->
+                <div class="jspVerticalBar"><div class="jspCap jspCapTop"></div>
+                 <div class="jspTrack" style="height: 602px;"><div class="jspDrag" style="height: 94px; top: 13.8924px;"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div>
+                 <div class="jspCap jspCapBottom"></div></div>
+                <!-- 滚动条 -->
                     <ul id="cinema_list" class="cinema_list">
                         @foreach( $cinemaList as $v)
                             <li cid="1448" class=""><div class="c_name"><span class="bubble_red">1</span><a target="_blank" href="/cinema/1448.html#from=cinema.enter">{{ $v->cinema_name }}</a><span class="score_s ml5">8.<em class="s">3</em></span></div><div class="c_price"><span><em>¥43.2</em><i>起</i></span><span class="icon_z"></span><span class="icon_q"></span></div><div class="c_add">地址：{{ $v->cinema_address }}</div><div class="c_tel">电话：{{ $v->cinema_phone }}</div><div class="c_btn mt8"><a href="{{ url('/cinema/'.$v->cinema_id) }}" class="btn_e34551 btn_89_29" target="_blank">购&nbsp;&nbsp;票</a></div></li>
