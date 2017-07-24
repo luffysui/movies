@@ -12,12 +12,14 @@ use DB;
 class UserController extends Controller
 {
 
-    public function index($id)
+
+    public function index()
     {
-        $in = DB::table('user')->where('user_id',$id)->first();
-        $fo = DB::table('user_info')->where('userid',$id)->first();
-        return view('home/userinfo',['in'=>$in,'fo'=>$fo,'id'=>$id]);
+        $in = DB::table('user')->where('user_id',Session::get('homeuser')['user_id'])->first();
+        $fo = DB::table('user_info')->where('userid',Session::get('homeuser')['user_id'])->first();
+        return view('home/userinfo',['in'=>$in,'fo'=>$fo,'id'=>Session::get('homeuser')['user_id']]);
     }
+
 
 
     public function userpost(Request $request){
@@ -26,8 +28,6 @@ class UserController extends Controller
             'name.required'=>'必须填写用户名',
             'phone.required'=>'必须填写手机号',
             'password.required'=>'必须填写原密码',
-//            'question.required'=>'必须选择密保问题',
-//            'answer.required'=>'必须填写密保答案',
             'npass.required'=>'必须填写新密码',
             'rnpass.required'=>'必须填写新密码',
         ];
@@ -35,8 +35,6 @@ class UserController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'password' => 'required',
-//            'question' => 'required',
-//            'answer' => 'required',
             'npass' => 'required',
             'rnpass' => 'required'
         ],$messages);
@@ -50,8 +48,6 @@ class UserController extends Controller
         $uid = Session::get('homeuser')['user_id'];
 
         $old = DB::table('user')->where('user_id',$uid)->get();
-//        dd(md5($info['pass']));
-//        dd($old);
         if(md5($info['password']) != $old[0]->password){
             return redirect()->back()->with('msg','原密码验证失败');
         }
@@ -65,8 +61,6 @@ class UserController extends Controller
             //如果user表入库成功则继续入user_info表
             $userinfo_info = [
                 'userid'=>$uid,
-//                'question'=>$info['question'],
-//                'answer'=>$info['answer'],
                 'qq'=>$info['qq'],
                 'sex'=>$info['sex']
             ];
@@ -79,6 +73,46 @@ class UserController extends Controller
             }
         }else{
             return redirect()->back()->with('msg','手机号码已经注册');
+        }
+    }
+
+
+    //用户反馈界面
+    public function idea(){
+        //所有的建议和反馈
+        $allidea = DB::table('idea')
+            ->join('user','user.user_id','=','idea.userid')
+            ->get();
+//        dd($allidea);
+        //用户自己的建议和反馈
+        $useridea = DB::table('idea')
+            ->join('ridea','ridea.toid','=','idea.idea_id')
+            ->where('userid',Session::get('homeuser')['user_id'])
+            ->select('idea.*','ridea.content','ridea.time as rtime')
+            ->get();
+//        dd($useridea);
+        return view('home.idea',['allidea'=>$allidea,'useridea'=>$useridea]);
+    }
+    //提交反馈
+    public function doidea(Request $request){
+        $idea = $request->except('_token');
+        $idea['userid'] = Session::get('homeuser')['user_id'];
+        $idea['sendto'] = 0;
+        $idea['time'] = time();
+        $idea['zan'] = 0;
+        $res = DB::table('idea')->insert($idea);
+        if($res){
+            return redirect()->back()->with('msg','提交意见成功，请等待官方回复');
+        }
+    }
+
+    public function zan(){
+        $zan = DB::table('idea')->where('idea_id',$_GET['ideaid'])->value('zan');
+        $res = DB::table('idea')->where('idea_id',$_GET['ideaid'])->update(['zan'=>$zan+1]);
+        if($res){
+            return 'ok';
+        }else{
+            return 'no';
         }
     }
 }

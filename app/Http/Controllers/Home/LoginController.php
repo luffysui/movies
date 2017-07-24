@@ -14,11 +14,14 @@ use App\Http\Requests;
 
 use App\Http\Controllers\Controller;
 
+use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
 class LoginController extends Controller
 {
+
+
     public function login($url='_')
     {
-
         return view('home/login',['url'=>$url]);
 	}
 	public function dologin(Request $request)
