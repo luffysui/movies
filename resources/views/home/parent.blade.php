@@ -63,7 +63,7 @@
                 <li>
                     <a href="{{ url('home/user/order') }}" rel="nofollow"  id="myEpay" >我的订单</a>&nbsp;&nbsp;<span id="topEpayInfo"></span>|</li>
                 @endif
-                <li><a href="{{ asset('home/Scripts/wb.js') }}" rel="nofollow"  target="_blank">提意见</a>&nbsp;&nbsp;</li>
+                <li><a href="{{ asset('home/idea') }}" rel="nofollow"  target="_blank">提意见</a>&nbsp;&nbsp;</li>
                 </li>
             </ul>
         </div>
