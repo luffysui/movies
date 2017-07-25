@@ -179,18 +179,10 @@
 				<a  class=""  href="{{ url('cinemalist') }}" rel="nofollow">影院</a>
 			</li>
             <li>
-            	<a target="_blank" class="" href="/beijing/client.html#from=daohang" rel="nofollow">客户端</a>
+            	<a target="_blank" class="" href="{{ url('/download') }}" rel="nofollow">客户端</a>
             </li>
     	</ul>
-        <div class="search">
-            <div class="ie6">
-                <form action="/search.html#from=search" id="top_sform">
-                    <input type="text" value="请输入影片或影院" class="text textGray" name="keywords" id="mvTopSearch" autocomplete="off" maxlength="20"/>
-                    <input type="hidden" name="city" value="beijing" />
-                    <input type="submit" value=""  class="sub" id="topSearchBtn" title=""/>
-                </form>
-            </div>
-        </div>
+
     </div>
 </section>
 
