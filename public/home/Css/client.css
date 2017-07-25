@@ -1,0 +1,359 @@
+﻿/**************************************************************************************************************
+	*@Description: 客户端下载改版
+	*@Author:xy 
+	*@Update:2013-10-22
+*/
+/* 客户端下载改版 */
+body{
+	background:#fff url(../Images/header.jpg) center top no-repeat;}
+.header{
+	height:637px;}
+	
+.topBg{ 	
+	background:#000; 
+	background:rgba(0,0,0,0.7); /* IE9 IE10 及所有支持css3的浏览器 */
+	*filter:alpha(opacity=70); /* IE7 IE8 */
+	filter:alpha(opacity=70)\0; /* IE8 IE9 */
+	
+	min-width:1240px; 
+	margin:0 auto; 
+	height:44px;
+	line-height:44px;}
+/*IE9重设*/
+:root .topBg{filter:none;}
+.topBg *{ position:relative;}
+
+.topNav{
+	width:980px;
+	margin:0 auto;}
+.topNav .logo{
+	position:absolute;
+	left:24px;
+	top:11px;
+	width:126px;
+	height:28px;
+	background:url(../Images/logo.png) left top no-repeat;}
+	
+.topNavList{
+	float:right;}
+.topNavList li{
+	float:left;
+	width:143px;
+	font-size:14px;
+	color:#fff;
+	text-align:center;}
+.topNavList li a{
+	display:inline-block;
+	width:100%;
+	height:41px;
+	color:#fff;
+	line-height:41px;
+	padding-bottom:3px;
+	vertical-align:top;
+	text-decoration:none;}
+.topNavList li a:link,
+.topNavList li a:visited{
+	color:#fff;}
+.topNavList li a:hover{
+	color:#fff;
+	text-decoration:none;
+	border-bottom:3px solid #c32929;
+	padding-bottom:0;}
+	
+.downBox{
+	position:absolute;
+	left:;}
+	
+	
+	
+/*图片轮播*/
+ul{list-style:none;margin:0;padding:0}
+img{border:none;margin:0;padding:0}
+
+.photo_box{
+	position:relative;
+	width:1240px;
+	margin:0 auto;
+}
+.photo_box .photo_b_box{
+	width:1240px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.photo_box .photo_b_list{
+	width:95300px;
+	height:600px;
+	overflow:hidden;}
+.photo_box .photo_b_list li{
+	float:left;
+}
+.photo_box .photo_b_list li span{
+	display:inline-block;
+	width:1240px;
+	height:600px;}
+.photo_box .photo_b_list li span.img1{
+	background: url(../Images/show_img1.jpg) 0 0 no-repeat;
+	
+}
+.photo_box .photo_b_list li span.img2{
+	background: url(../Images/show_img2.jpg) 0 0 no-repeat;
+	
+}
+.photo_box .photo_b_list li span.img3{
+	background: url(../Images/show_img3.jpg)  0 0 no-repeat;
+	
+}
+.photo_box .photo_b_list li span.img4{
+	background: url(../Images/show_img4.jpg)  0 0 no-repeat;
+	
+}
+.photo_box .photo_b_list_fixed{
+	/*position:relative;*/
+	width:1240px;
+}
+.photo_box .photo_b_list_fixed li{
+	float:none;
+	position:absolute;
+	left:0;
+	top:0;
+	display:none;
+	opacity:1;
+	z-index:1;
+}
+.photo_box .photo_b_list_fixed li.active{
+	display:block;
+	z-index:2;
+}
+
+
+/*导航点样式*/
+.photo_box .photo_bar_list{
+	position:absolute;
+	left:756px;
+	top:495px;
+	text-align:center;
+	z-index:5;}
+.photo_box .photo_bar_list a{ 
+	display:inline-block;
+	margin:0 5px;
+	width: 15px;
+	height: 15px;
+	border-radius:10px;
+	background:#989898;
+	background: url(../Images/icon.png) -377px -22px no-repeat\9;
+}
+.photo_box .photo_bar_list a.active{
+	border-radius:10px;
+	background:#000;
+	background: url(../Images/icon.png) -377px -42px no-repeat\9;}
+.down_box{
+	position:absolute;
+	left:682px;
+	top:140px;
+	width:392px;
+	height:253px;
+	z-index:10;
+	background:url(../Images/down_bg_26.png) 0 0 no-repeat;}
+.down_box .pop_ios{
+	position:absolute;
+	left:0;
+	top:109px;
+	width:258px;
+	height:65px;
+	zoom:1;
+	overflow:hidden;
+	z-index:10;}
+.down_box .pop_android{
+	position:absolute;
+	left:0;
+	top:188px;
+	width:258px;
+	height:65px;
+	z-index:10;}
+.down_box .code{
+	position:absolute;
+	left:282px;
+	top:116px;
+	width:110px;
+	height:110px;
+	z-index:10;}
+.step{
+	position:relative;
+	width:1240px;
+	height:372px;
+	margin:0 auto;
+	z-index:2;
+	background: url(../Images/step_bg.jpg) 0 0 no-repeat;}
+#aboutNEST{
+	width:100%;
+	height:112px;
+	padding-top:70px;
+	margin:0 auto;
+	margin-top:-10px;
+	z-index:0;
+	background:#101010;}
+	
+/*弹框*/
+.client_pop{
+	position:relative;
+	overflow:hidden;
+	_zoom:1;
+	background:#fff;}
+.client_pop .close{
+	position:absolute;
+	right:18px;
+	top:18px;
+	width:15px;
+	height:15px;
+	cursor:pointer;
+	background: url(../Images/icon.png) -377px 0 no-repeat;}
+.client_pop_left{
+	float:left;
+	width:478px;
+	height:312px;
+	border-right:1px dashed #d2d2d2;}
+.client_pop_right{
+	float:left;
+	width:317px;}
+.client_pop_right2{
+	position:relative;
+	float:left;
+	width:477px;}
+.client_pop_title {
+	height:97px;
+	line-height:97px;
+	_height:70px;
+	_line-height:70px;
+	_padding-top:27px;
+	color:#666;
+	font-size:16px;
+	font-weight:bold;
+	background:#f2f2f2;
+	text-align:center;}
+.client_pop_title b.phone{
+	display:inline-block;
+	width:32px;
+	height:46px;
+	margin-right:13px;
+	vertical-align:middle;
+	background: url(../Images/icon.png) -48px -95px no-repeat;}
+.client_pop_title b.pc{
+	display:inline-block;
+	width:46px;
+	height:41px;
+	margin-right:13px;
+	vertical-align:middle;
+	background: url(../Images/icon.png) 0 -96px no-repeat;}
+.client_pop_left ul{
+	margin-left:43px;
+	margin-top:32px;}
+.client_pop_left ul li{
+	position:relative;
+	zoom:1;
+	line-height:24px;
+	padding-left:23px;
+	color:#a9a9a9;	}
+.client_pop_left ul li b.num{
+	position:absolute;
+	left:0;
+	top:5px;
+	
+	width:15px;
+	height:15px;
+	line-height:15px;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+	vertical-align:middle;
+	background: url(../Images/icon.png) -377px -61px no-repeat;}
+.client_pop_left ul li b.num1{
+	background-position:-377px -61px;}
+.client_pop_left ul li b.num2{
+	background-position:-377px -77px;}
+.client_pop_left ul li a,
+.client_pop_left ul li a:link,
+.client_pop_left ul li a:visited,
+.client_pop_left ul li a:hover{
+	color:#666;
+	cursor:default;
+	text-decoration:underline;}
+.install_ios{
+	display:block;
+	width:349px;
+	height:46px;
+	background: url(../Images/icon.png) 0 0 no-repeat;}
+.install_android{
+	display:block;
+	width:354px;
+	height:46px;
+	background: url(../Images/icon.png) 0 -48px no-repeat;}
+.link_ios,
+.link_ios:link,
+.link_ios:visited,
+.link_ios:hover{
+	display:inline-block;
+	width:225px;
+	height:54px;
+	line-height:54px;
+	margin-top:80px;
+	margin-left:47px;
+	font-family:"Microsoft YaHei", "黑体";
+	font-size:20px;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	background:#e72727;}
+	
+.link_android,
+.link_android:link,
+.link_android:visited,
+.link_android:hover{
+	position:absolute;
+	left:55px;
+	top:181px;
+	width:162px;
+	height:31px;
+	line-height:31px;
+	font-family:"Microsoft YaHei", "黑体";
+	font-size:16px;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	background:#e72727;}
+.link_android_other,
+.link_android_other:link,
+.link_android_other:visited,
+.link_android_other:hover{
+	display:inline-block;
+	width:127px;
+	height:27px;
+	line-height:27px;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	background: url(../Images/icon.png) 0 -142px no-repeat;}
+.client_pop_right2 em{
+	position:absolute;
+	left:255px;
+	top:185px;
+	font-size:16px;
+	font-weight:bold;
+	color:#666;}
+.client_pop_right2 ul{
+	position:absolute;
+	left:300px;
+	top:135px;}
+.client_pop_right2 ul li{
+	height:27px;
+	line-height:27px;
+	margin-top:12px;}
+
+
+
+
+
+
+
+
+
+

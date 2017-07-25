@@ -148,3 +148,5 @@ Route::group(['prefix' => 'home', 'middleware' => ['home']], function(){
     //用户赞同建议
     Route::get('/zan','Home\UserController@zan');
 });
+//下载
+Route::get('/download','Home\DownController@index');

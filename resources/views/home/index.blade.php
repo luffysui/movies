@@ -16,12 +16,12 @@
     </div>
 </div>
 <section class="bodyMain mainCont1">
-<a class="fastBuyNav " id="fastBuyNav" href="{{ url('/cinemalist')}}"></a>
+<a class="fastBuyNav " id="" href="{{ url('/cinemalist')}}"></a>
     <section class="mainCont clearfix">
             <div class="mainLeft">
                 <h2 class="colTitle">
                     <span class="colText">热映电影推荐</span>
-                    <span class="colTip">北京共有25部热映电影，104家影院支持购票</span>
+                    {{--<span class="colTip">北京共有25部热映电影，104家影院支持购票</span>--}}
                     <a href="{{ url('/onshow')}}" rel="nofollow" target="_blank" class="colMore">全部热映电影&gt;</a>
                 </h2>
                 <div class="hotMovie clearfix">
@@ -157,6 +157,15 @@
                     </li>
                     @endforeach
                 </ul>
+
+            </div>
+
+        </div>
+        <div class="mainRight" style="">
+            <h2 class="colTitle"><span class="colText">广告位</span></h2>
+            <div class="followMe">
+                <a href="#" target="_blank" class="followTitle">广告微博</a>
+                <span class="followBtn"><wb:follow-button uid="3084971975" type="red_1" width="67" height="24"></wb:follow-button></span>
             </div>
         </div>
 
