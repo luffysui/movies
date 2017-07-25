@@ -23,13 +23,13 @@
     </div>
 </div>
 <section class="bodyMain mainCont1">
-<a class="fastBuyNav " id="fastBuyNav" href="javascript:;"></a>
+<a class="fastBuyNav " id="fastBuyNav" href="{{ url('/cinemalist')}}"></a>
     <section class="mainCont clearfix">
             <div class="mainLeft">
                 <h2 class="colTitle">
                     <span class="colText">热映电影推荐</span>
                     <span class="colTip">北京共有25部热映电影，104家影院支持购票</span>
-                    <a href="/movie/onshow.html" rel="nofollow" target="_blank" class="colMore">全部热映电影&gt;</a>
+                    <a href="{{ url('/onshow')}}" rel="nofollow" target="_blank" class="colMore">全部热映电影&gt;</a>
                 </h2>
                 <div class="hotMovie clearfix">
                     <ul class="movie_con" >
@@ -38,12 +38,12 @@
                                 @if( $movieList[0]->d3)
                                     <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $movieList[0]->name }}" href="/beijing/movie/48488.html" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[0]->name }}" src="{{ asset('upload/admin').'/'.$movieList[0]->poster }}"></a>
+                                <a target="_blank" title="{{ $movieList[0]->name }}" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[0]->name }}" src="{{ asset('upload/admin').'/'.$movieList[0]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  >
                             <h3>
-                                <a target="_blank" title="{{ $movieList[0]->name }}" href="/beijing/movie/48488.html" rel="nofollow">{{ $movieList[0]->name }}</a>
+                                <a target="_blank" title="{{ $movieList[0]->name }}" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow">{{ $movieList[0]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:72%" class="star"></b></span>
@@ -58,7 +58,7 @@
                             @else
                                 <i> 暂无排期</i>
                             @endif</span>
-                            <a target="_blank" class="showBtn" href="/beijing/movie/48488.html#pq=1" rel="nofollow">选座购票</a>
+                            <a target="_blank" class="showBtn" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
                     <ul class="movie_con"  style="width:452px;">
@@ -67,12 +67,12 @@
                                 @if( $movieList[1]->d3)
                                 <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $movieList[1]->name }}" href="/beijing/movie/48542.html" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[1]->name }}" src="{{ asset('upload/admin').'/'.$movieList[1]->poster }}"></a>
+                                <a target="_blank" title="{{ $movieList[1]->name }}" href="{{ url('/movie/'.$movieList[1]->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[1]->name }}" src="{{ asset('upload/admin').'/'.$movieList[1]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  style="width:212px;padding-right:0;" >
                             <h3>
-                                <a target="_blank" title="{{ $movieList[1]->name }}" href="/beijing/movie/48542.html" rel="nofollow">{{ $movieList[1]->name }}</a>
+                                <a target="_blank" title="{{ $movieList[1]->name }}" href="{{ url('/movie/'.$movieList[1]->movie_id)}}" rel="nofollow">{{ $movieList[1]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:75%" class="star"></b></span>
@@ -87,7 +87,7 @@
                             @else
                                <i> 暂无排期</i>
                             @endif</span>
-                            <a target="_blank" class="showBtn" href="/beijing/movie/48542.html#pq=1" rel="nofollow">选座购票</a>
+                            <a target="_blank" class="showBtn" href="{{ url('/movie/'.$movieList[1]->movie_id)}}" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +99,7 @@
                                 @if( $movieList[1]->d3)
                                     <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $v->name }}" href="/beijing/movie/48485.html" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
+                                <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
                             </div>
                             <div class="m_con"><div class="cName"><strong>{{ $v->name }} </strong></div>
                                 <em>7.0</em>
@@ -112,7 +112,7 @@
                                     </strong>
                             </div>
                             <p>
-                                    <a target="_blank" class="showBtn" href="/beijing/movie/48485.html#pq=1" rel="nofollow">选座购票</a>
+                                    <a target="_blank" class="showBtn" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">选座购票</a>
                             </p>
                         </li>
                         @endforeach
@@ -137,7 +137,7 @@
     <section class="mainCont clearfix mt15">
         <div class="mainLeft upIndex">
             <h2 class="showTitle clearfix">
-                <a href="/movie/upComing.html" rel="nofollow" class="colMore" target="_blank">全部即将上映电影&gt;</a>
+                <a href="{{ url('/upcoming')}}" rel="nofollow" class="colMore" target="_blank">全部即将上映电影&gt;</a>
                 <a href="javascript:;" class="upMovieTab" rel="upMovie2">即将上映</a>
             </h2>
 
@@ -156,11 +156,11 @@
                         <div class="title">
                             <span class="playTime2">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</span>
                             <p class="t1">
-                                <a target="_blank" title="{{ $v->name }}" href="/beijing/movie/48492.html" rel="nofollow">{{ $v->name }}</a>
+                                <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">{{ $v->name }}</a>
                             </p>
                         </div>
                         <p>
-                        <a href="javascript:;" class="want_see " pid="48492">想看</a></p>
+                        <b  class="showBtn " >想看</b></p>
                     </li>
                     @endforeach
                 </ul>
@@ -174,7 +174,7 @@
             <ul class="hotCinema">
                 @foreach( $cinemaList as $v)
                 <li >
-                    <a href="/cinema/1448.html" rel="nofollow" class="showBtn btnView" target="_blank">查看</a>
+                    <a href="{{ url('/cinema/'.$v->cinema_id)}}l" rel="nofollow" class="showBtn btnView" target="_blank">查看</a>
                     <span class="lowPrice">
                             @if(isset ($v->min))
                                 {{ $v->min }}<i>元起</i>
@@ -182,7 +182,7 @@
                                 <i>暂无排期</i>
                             @endif
                     <i>元起</i></span>
-                    <div class="cName"><a href="/cinema/1448.html" target="_blank">{{ $v->cinema_name }}</a>
+                    <div class="cName"><a href="{{ url('/cinema/'.$v->cinema_id)}}" target="_blank">{{ $v->cinema_name }}</a>
                         <em class="score ml20">{{ $v->cinema_score }}</em><em class="icon_z ml10">座</em><em class="icon_q ml10">券</em>
                     </div>
                     <div class="cAdd"><b></b>地址：{{ $v->cinema_address }}电话：{{ $v->cinema_phone }}</div>
@@ -194,7 +194,7 @@
         <div class="mainRight">
             <h2 class="colTitle"><span class="colText">关注我们</span></h2>
             <div class="followMe">
-                <a href="http://weibo.com/dianyingpiao163" target="_blank" class="followTitle">官方微博</a>
+                <a href="#" target="_blank" class="followTitle">官方微博</a>
                 <span class="followBtn"><wb:follow-button uid="3084971975" type="red_1" width="67" height="24"></wb:follow-button></span>
             </div>
         </div>

@@ -52,18 +52,18 @@
                           </p>
                       </li>
 
-                      <li class="l3">
+<!--                       <li class="l3">
                           <div class="res">
                               <p class="price">
-                                                                              @if(isset ($v->min))
-                                                                                {{ $v->min }}<i>元起</i>
-                                                                              @else
-                                                                                <i> 暂无排期</i>
-                                                                              @endif
-                                                                           </p>
+                                @if(isset ($v->min))
+                                  {{ $v->min }}<i>元起</i>
+                                 @else
+                                  <i> 暂无排期</i>
+                                @endif
+                             </p>
                               <a href="/beijing/movie/48488.html#pq=1.buy" class="showBtn" target="_blank">选座购票</a>
                           </div>
-                      </li>
+                      </li> -->
                   </ul>
               @endforeach
 

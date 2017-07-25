@@ -63,7 +63,7 @@
                           @endif
 
                         </p>
-                    <a href="/beijing/movie/48488.html#pq=1.buy" class="showBtn" target="_blank">选座购票</a>
+                    <a href="/order" class="showBtn" target="_blank">选座购票</a>
                   </div>
           </li>
       </ul>
