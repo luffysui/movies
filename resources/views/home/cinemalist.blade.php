@@ -5,19 +5,19 @@
     <link rel="stylesheet" href="{{ asset('home/Css/detail_new.css') }}">
     <style type="text/css">@-webkit-keyframes loginPopAni{0%{opacity:0;-webkit-transform:scale(0);}15%{-webkit-transform:scale(0.667);}25%{-webkit-transform:scale(0.867);}40%{-webkit-transform:scale(1);}55%{-webkit-transform:scale(1.05);}70%{-webkit-transform:scale(1.08);}85%{opacity:1;-webkit-transform:scale(1.05);}100%{opacity:1;-webkit-transform:scale(1);}}@keyframes loginPopAni{0%{opacity:0;transform:scale(0);}15%{transform:scale(0.667);}25%{transform:scale(0.867);}40%{transform:scale(1);}55%{transform:scale(1.05);}70%{transform:scale(1.08);}85%{opacity:1;transform:scale(1.05);}100%{opacity:1;transform:scale(1);}}</style>
     <div class="wrap990">
-        <section class="cinema_search">
-            <h3>影院搜索：</h3>
-            <input style="height: 35px"  type="text" id="cinema_search_input" autocomplete="off" class="cinema_search_input textGray" placeholder="请输入影院名称" maxlength="20"><a href="javascript:;" id="cinema_search_btn" class="cinema_search_btn">搜索</a>
-            <div id="cinema_search_hot" class="cinema_search_hot">
-                <span>热门搜索：</span>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=IMAX#from=cinema.search">IMAX</a>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E4%B8%87%E8%BE%BE#from=cinema.search">万达</a>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E9%87%91%E9%80%B8#from=cinema.search">金逸</a>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E6%98%9F%E7%BE%8E#from=cinema.search">星美</a>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E6%A9%99%E5%A4%A9%E5%98%89%E7%A6%BE#from=cinema.search">橙天嘉禾</a>
-                <a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E5%A4%A7%E5%9C%B0#from=cinema.search">大地</a>
-            </div>
-        </section>
+        {{--<section class="cinema_search">--}}
+            {{--<h3>影院搜索：</h3>--}}
+            {{--<input style="height: 35px"  type="text" id="cinema_search_input" autocomplete="off" class="cinema_search_input textGray" placeholder="请输入影院名称" maxlength="20"><a href="javascript:;" id="cinema_search_btn" class="cinema_search_btn">搜索</a>--}}
+            {{--<div id="cinema_search_hot" class="cinema_search_hot">--}}
+                {{--<span>热门搜索：</span>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=IMAX#from=cinema.search">IMAX</a>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E4%B8%87%E8%BE%BE#from=cinema.search">万达</a>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E9%87%91%E9%80%B8#from=cinema.search">金逸</a>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E6%98%9F%E7%BE%8E#from=cinema.search">星美</a>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E6%A9%99%E5%A4%A9%E5%98%89%E7%A6%BE#from=cinema.search">橙天嘉禾</a>--}}
+                {{--<a href="file:///C:/beijing/cinema/category-ALL-area-0-type-0.html?keywords=%E5%A4%A7%E5%9C%B0#from=cinema.search">大地</a>--}}
+            {{--</div>--}}
+        {{--</section>--}}
         <section class="cinema_cont clearfix">
             <section class="cinema_left">
                 <div class="cinema_sel clearfix">
@@ -84,8 +84,8 @@
 
 
     <div id="sideBar" class="none">
-        <a id="feedback" href="http://feedback.zxkf.163.com/movie/show.html?flag=1" rel="nofollow" target="_blank" title="提意见" hidefocus="true"></a>
-        <a id="toTop" href="javascript:;" rel="nofollow" title="回到顶部" hidefocus="true"></a>
+        <a id="feedback"  rel="nofollow" target="_blank" title="提意见" hidefocus="true"></a>
+        <a id="toTop"  rel="nofollow" title="回到顶部" hidefocus="true"></a>
     </div>
     <style>
         .BMap_bubble_title{
