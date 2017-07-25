@@ -10,6 +10,7 @@ use Storage;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class MovieController extends Controller
 {
@@ -153,6 +154,24 @@ class MovieController extends Controller
                 //写入数据
                 $res = DB::table('movie')->insert($arr);
                 if($res){
+                    $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                        ->orderBy('start_time','desc')
+                        ->take(2)->get();
+                    $movieListSec = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                        ->orderBy('start_time','desc')
+                        ->skip(2)->take(4)->get();
+                    $movieComingList = DB::table('movie')->where('start_time','>',time())
+                        ->orderBy('start_time','desc')
+                        ->take(4)->get();
+                    $cinemaList = DB::table('cinema')->take(5)->get();
+
+                    $home['movieList'] = $movieList;
+                    $home['movieListSec'] = $movieListSec;
+                    $home['movieComingList'] = $movieComingList;
+                    $home['cinemaList'] = $cinemaList;
+
+//                    dd($home);
+                    Cache::forever('staticPageCache_home', $home);
                     return redirect('admin/movie')->with('msg','添加成功');
                 }else{
                     return redirect('admin/movie')->with('msg','添加失败');
@@ -293,6 +312,24 @@ class MovieController extends Controller
         $res = DB::table('movie')->where('movie_id',$id)->update($arr);
 
         if($res){
+            $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                ->orderBy('start_time','desc')
+                ->take(2)->get();
+            $movieListSec = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                ->orderBy('start_time','desc')
+                ->skip(2)->take(4)->get();
+            $movieComingList = DB::table('movie')->where('start_time','>',time())
+                ->orderBy('start_time','desc')
+                ->take(4)->get();
+            $cinemaList = DB::table('cinema')->take(5)->get();
+
+            $home['movieList'] = $movieList;
+            $home['movieListSec'] = $movieListSec;
+            $home['movieComingList'] = $movieComingList;
+            $home['cinemaList'] = $cinemaList;
+
+//                    dd($home);
+            Cache::forever('staticPageCache_home', $home);
             return redirect('admin/movie')->with('msg','修改成功');
         }else{
             return redirect('admin/movie')->with('msg','修改失败，内容没有改变');
@@ -307,6 +344,24 @@ class MovieController extends Controller
         }else{
             $res = DB::table('movie')->where('movie_id',$id)->delete();
             if($res > 0){
+                $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                    ->orderBy('start_time','desc')
+                    ->take(2)->get();
+                $movieListSec = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                    ->orderBy('start_time','desc')
+                    ->skip(2)->take(4)->get();
+                $movieComingList = DB::table('movie')->where('start_time','>',time())
+                    ->orderBy('start_time','desc')
+                    ->take(4)->get();
+                $cinemaList = DB::table('cinema')->take(5)->get();
+
+                $home['movieList'] = $movieList;
+                $home['movieListSec'] = $movieListSec;
+                $home['movieComingList'] = $movieComingList;
+                $home['cinemaList'] = $cinemaList;
+
+//                    dd($home);
+                Cache::forever('staticPageCache_home', $home);
                 return redirect('admin/movie')->with('msg', '删除成功');
             }else{
                 return redirect('admin/movie')->with('msg', '删除失败');

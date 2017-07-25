@@ -57,6 +57,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function(){
     Route::resource('/cinema', 'Admin\CinemaController');
     //榜单管理
     Route::resource('/list', 'Admin\ListController');
+    //验证券码
+    Route::resource('/code', 'Admin\CodeController');
 
     //用户反馈列表
     Route::resource('/idea','Admin\IdeaController');

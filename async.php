@@ -59,7 +59,7 @@ while (1) {
                 'seats'=>$seatsArr,
                 'roundId'=>$roundId
             );
-            var_dump($listOrder);
+//            var_dump($listOrder);
             $listOrderStr = serialize($listOrder);
             $redis->lpush('list-order',$listOrderStr);
         }

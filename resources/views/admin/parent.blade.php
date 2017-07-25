@@ -174,6 +174,9 @@
                     <li><a href="{{ url('admin/idea')  }}">列表</a></li>
                 </ul>
             </li>
+            <li><a href="{{ url('admin/code')}}">验证券码</a>
+
+            </li>
         </ul>
         <a class="togglemenu"></a>
         <br /><br />

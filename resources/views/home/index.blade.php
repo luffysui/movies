@@ -28,22 +28,22 @@
                     <ul class="movie_con" >
                         <li class="l1">
                             <div class="showImg">
-                                @if( $movieList[0]->d3)
+                                @if( $home['movieList'][0]->d3)
                                     <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $movieList[0]->name }}" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[0]->name }}" src="{{ asset('upload/admin').'/'.$movieList[0]->poster }}"></a>
+                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="/beijing/movie/48488.html" rel="nofollow"><img width="220" height="300" alt="{{ $home['movieList'][0]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][0]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  >
                             <h3>
-                                <a target="_blank" title="{{ $movieList[0]->name }}" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow">{{ $movieList[0]->name }}</a>
+                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="/beijing/movie/48488.html" rel="nofollow">{{ $home['movieList'][0]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:72%" class="star"></b></span>
                                 <em>7.2</em>
                             </p>
-                            <p class="p2">{{ date('m',$movieList[0]->start_time) }}月{{ date('d',$movieList[0]->start_time) }}日上映</p>
-                            <p class="p2" style="font-size:12px;">{{ $movieList[0]->description }}</p>
+                            <p class="p2">{{ date('m',$home['movieList'][0]->start_time) }}月{{ date('d',$home['movieList'][0]->start_time) }}日上映</p>
+                            <p class="p2" style="font-size:12px;">{{ $home['movieList'][0]->description }}</p>
 
                             <span class="lowPrice">
                             @if(isset ($movieList[0]->min))
@@ -57,22 +57,22 @@
                     <ul class="movie_con"  style="width:452px;">
                         <li class="l1">
                             <div class="showImg">
-                                @if( $movieList[1]->d3)
+                                @if( $home['movieList'][1]->d3)
                                 <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $movieList[1]->name }}" href="{{ url('/movie/'.$movieList[1]->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $movieList[1]->name }}" src="{{ asset('upload/admin').'/'.$movieList[1]->poster }}"></a>
+                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="/beijing/movie/48542.html" rel="nofollow"><img width="220" height="300" alt="{{ $home['movieList'][1]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][1]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  style="width:212px;padding-right:0;" >
                             <h3>
-                                <a target="_blank" title="{{ $movieList[1]->name }}" href="{{ url('/movie/'.$movieList[1]->movie_id)}}" rel="nofollow">{{ $movieList[1]->name }}</a>
+                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="/beijing/movie/48542.html" rel="nofollow">{{ $home['movieList'][1]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:75%" class="star"></b></span>
                                 <em>7.5</em>
                             </p>
-                            <p class="p2">{{ date('m',$movieList[1]->start_time) }}月{{ date('d',$movieList[1]->start_time) }}日上映</p>
-                            <p class="p2" style="font-size:12px;">{{ $movieList[1]->description }}</p>
+                            <p class="p2">{{ date('m',$home['movieList'][1]->start_time) }}月{{ date('d',$home['movieList'][1]->start_time) }}日上映</p>
+                            <p class="p2" style="font-size:12px;">{{ $home['movieList'][1]->description }}</p>
 
                             <span class="lowPrice">
                             @if(isset ($movieList[0]->min))
@@ -86,10 +86,10 @@
                 </div>
                 <div class="hotMovie2 clearfix">
                     <ul class="posterStyle clearfix">
-                        @foreach($movieListSec as $v)
+                        @foreach($home['movieListSec'] as $v)
                         <li>
                             <div class="showImg">
-                                @if( $movieList[1]->d3)
+                                @if( $home['movieListSec'][1]->d3)
                                     <em class="mvType mvType3d"></em>
                                 @endif
                                 <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
@@ -136,12 +136,12 @@
 
             <div class="upMovie" id="upMovie1">
                 <ul class="posterStyle clearfix">
-                    @foreach( $movieComingList as $v)
+                    @foreach( $home['movieComingList'] as $v)
                     <li>
                         <i class="dot"></i>
                         <div class="wantNum">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</div>
                         <div class="showImg">
-                            @if( $movieList[1]->d3)
+                            @if( $home['movieList'][1]->d3)
                                 <em class="mvType mvType3d"></em>
                             @endif
                             <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
@@ -165,7 +165,7 @@
         <div class="mainLeft" style="height:556px;">
             <h2 class="colTitle"><span class="colText">热门影院</span><a class="colMore" target="_blank" href=" /cinemalist " rel="nofollow">全部影院&gt;</a></h2>
             <ul class="hotCinema">
-                @foreach( $cinemaList as $v)
+                @foreach( $home['cinemaList'] as $v)
                 <li >
                     <a href="{{ url('/cinema/'.$v->cinema_id)}}l" rel="nofollow" class="showBtn btnView" target="_blank">查看</a>
                     <span class="lowPrice">
