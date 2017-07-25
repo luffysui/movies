@@ -26,6 +26,8 @@ class CinemaController extends Controller
         // $movies = DB::table('movie')->whereIn('movie_id',$round)->lists('typeid');
         // dd($movie);
         // dd($type);
+        $cinemaList = DB::table('cinema')->take(8)->get();
+        // dd($cinemaList);
         foreach ($movie as $key => $value) {
 
             $typeId = explode(',',$movie[$key]->typeid);
@@ -35,8 +37,9 @@ class CinemaController extends Controller
             $typeName  = implode(',',$typeName);
             $movie[$key]->typeName= $typeName;
         }
+
         // 加载修改页面并把个人信息传到模板上
-        return view('home.cinemadet', ['cinema'=>$cinema,'cinema_id'=>$cinemaId,'movie'=>$movie]);
+        return view('home.cinemadet', ['cinema'=>$cinema,'cinema_id'=>$cinemaId,'movie'=>$movie,'cinemaList'=>$cinemaList]);
         // return 1111;
 
     }
