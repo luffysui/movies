@@ -46,12 +46,12 @@
                             <p class="p2" style="font-size:12px;">{{ $home['movieList'][0]->description }}</p>
 
                             <span class="lowPrice">
-                            @if(isset ($movieList[0]->min))
-                                {{ $movieList[0]->min }}<i>元起</i>
+                            @if(isset ($home['movieList'][0]->min))
+                                {{ $home['movieList'][0]->min }}<i>元起</i>
                             @else
                                 <i> 暂无排期</i>
                             @endif</span>
-                            <a target="_blank" class="showBtn" href="{{ url('/movie/'.$movieList[0]->movie_id)}}" rel="nofollow">选座购票</a>
+                            <a target="_blank" class="showBtn" href="{{ url('/movie/'.$home['movieList'][0]->movie_id)}}" rel="nofollow">选座购票</a>
                         </li>
                     </ul>
                     <ul class="movie_con"  style="width:452px;">
