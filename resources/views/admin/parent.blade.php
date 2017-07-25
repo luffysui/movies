@@ -175,6 +175,9 @@
                     <li><a href="{{ url('admin/list/create') }}">添加</a></li>
                 </ul>
             </li>
+            <li><a href="{{ url('admin/code')}}">验证券码</a>
+
+            </li>
         </ul>
         {{--缩回去--}}
         {{--<a class="togglemenu"></a>--}}

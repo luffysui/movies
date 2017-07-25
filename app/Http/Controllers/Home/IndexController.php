@@ -11,28 +11,39 @@ use App\Http\Controllers\Controller;
 use DB;
 
 use Cookie;
+use Illuminate\Support\Facades\Cache;
+
 
 class IndexController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    //展示首页
     public function index(Request $request)
     {
-        $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
-                    ->orderBy('start_time','desc')
-                    ->take(2)->get();
-        $movieListSec = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
-                        ->orderBy('start_time','desc')
-                        ->skip(2)->take(4)->get();
-        $movieComingList = DB::table('movie')->where('start_time','>',time())
-                        ->orderBy('start_time','desc')
-                        ->take(4)->get();
-        $cinemaList = DB::table('cinema')->take(5)->get();
+        if(!Cache::has('staticPageCache_home')){
+            $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                ->orderBy('start_time','desc')
+                ->take(2)->get();
+            $movieListSec = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
+                ->orderBy('start_time','desc')
+                ->skip(2)->take(4)->get();
+            $movieComingList = DB::table('movie')->where('start_time','>',time())
+                ->orderBy('start_time','asc')
+                ->take(4)->get();
+            $cinemaList = DB::table('cinema')->take(5)->get();
 
-        return view('home.index',['movieList'=>$movieList,'movieListSec'=>$movieListSec,'movieComingList'=>$movieComingList,'cinemaList'=>$cinemaList,'request'=>$request]);
+            $home['movieList'] = $movieList;
+            $home['movieListSec'] = $movieListSec;
+            $home['movieComingList'] = $movieComingList;
+            $home['cinemaList'] = $cinemaList;
+
+
+            Cache::forever('staticPageCache_home', $home);
+
+        }
+
+        $home = Cache::get('staticPageCache_home');
+        return view('home.index',['home'=>$home,'request'=>$request]);
     }
 
     public function changeCity($cityId)

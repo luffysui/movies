@@ -19,8 +19,6 @@
 <link rel="stylesheet" href="{{ asset('home/Css/cinema.css') }}"/>
 {{--地图--}}
 
-    {{--地图--}}
-
 <script src="{{ asset('home/Scripts/jquery-1.4.2.js') }}"></script>
 
 	<script src="{{ asset('home/Scripts/easycore.js') }}"></script><script src="{{ asset('home/Scripts/dialog.js') }}"></script><script src="{{ asset('home/Scripts/autocomplete.js') }}"></script>
