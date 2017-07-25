@@ -9,7 +9,7 @@
         <ul class="photo_b_list ">
             @foreach($car as $v)
                 <li  style="background-image: url('{{ asset('upload/carousel').'/'.$v->photo }}');background-size:1500px 500px;background-color: #070709;">
-                    {{--<a href="" target="_blank"></a>--}}
+                    <a href="{{ url('movie').'/'.$v->movie_id }}" target="_blank"></a>
                 </li>
             @endforeach
         </ul>
