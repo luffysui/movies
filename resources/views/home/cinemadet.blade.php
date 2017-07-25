@@ -54,13 +54,13 @@
     <div class="docBody clearfix">
         <section id="mainContent" class="mainContent">
                 <div class="groupCoupon" t="2" >
-                <div class="c_detail_movie">
+<!--                 <div class="c_detail_movie">
                       <div class="c_detail_title clearfix">
                           <h2><span class="fb">优惠信息</span></h2>
                       </div>
-                 </div>
+                 </div> -->
                     <div class="boxWrap clearfix">
-                        <div class="boxs box_gray">
+<!--                         <div class="boxs box_gray">
 
 
                                 <div class="box   box_noborderB  ">
@@ -92,7 +92,7 @@
                                             <a href="http://piao.163.com/order/buy_coupon.html?coupon_id=28009" class="btn" title="" target="_blank">购买</a>
                                     </span>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="couponIntro hide">
                             <p>使用说明：</p>
                             <ul>
@@ -114,7 +114,7 @@
 <div id="pq" style="height: 42px;">
     <ul id="mvTabs" class="mv_detail_tab tab_fixed">
         <li class="active" rel="#subPart1" onmouseover="change('subPart1',this)" onmouseout="change2(this)">
-            <h2> 影讯排期 </h2>
+            <h2> 热映电影</h2>
         </li>
         <li id="commentTab" onmouseover="change('subPart2',this)" onmouseout="change2(this)"><h2>影院详情</h2></li>
     </ul>
@@ -122,10 +122,10 @@
 <div class="movieTabC pos_r " id="today">
     <div id="subPart1" style="display: block;">
             <div class="recentMovie">
-                <div class="noTicket">
+<!--                 <div class="noTicket">
                     <i></i>
                     <p>影院暂未提供排期，可参考近期热映电影<br>更多详情可咨询影院</p>
-                </div>
+                </div> -->
                 <div class="c_detail_movie">
                       <div class="c_detail_title clearfix">
                           <h2><span class="fb">近期热映电影</span></h2>
@@ -165,7 +165,7 @@
         <div class="title">
             <strong>影院介绍：</strong>
         </div>
-        <p>五星级数字影院——隋奕国际影城位于在北京南城的南三环，隋奕国际影城是隋奕影业继成功运营深圳、佛山、郑州、重庆等影城项目之后，在京建设的五星级影院旗舰店，也填补了北京影院发展不平衡的空白。&nbsp;隋奕国际影城在2010年8月28日正式开业，“75231828”八位视听密码的开启环节是影城最大亮点，其中，“7”代表影城7个顶级的独立观影厅，可同时容纳近1500人观影；“5”是其南城首家五星级影院的象征；“2”彰显了影院作为隋奕在京城第二家影院的重要地位；“3”则展示了保利影城紧邻南3环的便捷交通位置。</p>
+        <p>五星级数字影院——{{ $cinema->cinema_name}}位于在北京南城的南三环，{{ $cinema->cinema_name}}是继成功运营深圳、佛山、郑州、重庆等影城项目之后，在京建设的五星级影院旗舰店，也填补了北京影院发展不平衡的空白。&nbsp;{{ $cinema->cinema_name}}在2010年8月28日正式开业，“75231828”八位视听密码的开启环节是影城最大亮点，其中，“7”代表影城7个顶级的独立观影厅，可同时容纳近1500人观影；“5”是其南城首家五星级影院的象征；“2”彰显了影院作为{{ $cinema->cinema_name}}的重要地位；“3”则展示了保利影城紧邻南3环的便捷交通位置。</p>
     </div>
     <div class="mv_comm_plot" id="info2">
         <div class="title">
@@ -178,7 +178,7 @@
             <strong>特色信息：</strong>
         </div>
                 <p class="p2"><b></b>3D眼镜：免押金</p>
-                <p class="p5"><b></b>可停车：在购物中心消费满200元可以享受3个小时的免费停车.影城会员卡持当日影票可免费3小时停车。</p>
+                <p class="p5"><b></b>{{ $cinema->cinema_features}}</p>
     </div>
     <div class="mv_comm_plot" id="info4">
         <div class="title">
@@ -205,93 +205,42 @@
         </section>
         <section class="siderBox ">
             <dl class="sider_hot box_gray">
-                <dt class="titleLine"><h2>周边影院</h2></dt>
+                <dt class="titleLine"><h2>全部影院</h2></dt>
                 <dd>
+                @foreach ($cinemaList as $v)
                     <div class="sHotMovie">
                         <ul>
                                 <li>
                                     <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">北京马家堡影城</a>
-                                            <span class="score_big">8.<em class="s">0</em></span>
+                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">{{ $v->cinema_name}}</a>
+                                            <span class="score_big"><em class="s">{{ $v->cinema_score}}</em></span>
                                     </div>
-                                    <div class="add">地址：北京市丰台区南三环西路16号凯德MALL大峡谷5层</div>
-                                    <div class="tel">电话：010-87578551</div>
+                                    <div class="add">地址：{{ $v->cinema_address }}</div>
+                                    <div class="tel">电话：{{$v->cinema_phone }}</div>
                                 </li>
                         </ul>
                     </div>
+            @endforeach
                 </dd>
-                <dd>
-                    <div class="sHotMovie">
-                        <ul>
-                                <li>
-                                    <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">新影联华谊兄弟影院(洋桥...</a>
-                                            <span class="score_big">8.<em class="s">0</em></span>
-                                    </div>
-                                    <div class="add">地址：北京市丰台区南三环西路16号凯德MALL大峡谷5层</div>
-                                    <div class="tel">电话：010-87578551</div>
-                                </li>
-                        </ul>
-                    </div>
-                </dd>
-                <dd>
-                    <div class="sHotMovie">
-                        <ul>
-                                <li>
-                                    <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">北京幸福蓝海影城(公益桥...</a>
-                                            <span class="score_big">8.<em class="s">0</em></span>
-                                    </div>
-                                    <div class="add">地址：北京市丰台区南三环西路16号凯德MALL大峡谷5层</div>
-                                    <div class="tel">电话：010-87578551</div>
-                                </li>
-                        </ul>
-                    </div>
-                </dd>
-                <dd>
-                    <div class="sHotMovie">
-                        <ul>
-                                <li>
-                                    <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">大地影院-丰台欣雅汇</a>
-                                            <span class="score_big">8.<em class="s">0</em></span>
-                                    </div>
-                                    <div class="add">地址：北京市丰台区南三环西路16号凯德MALL大峡谷5层</div>
-                                    <div class="tel">电话：010-87578551</div>
-                                </li>
-                        </ul>
-                    </div>
-                </dd>
-                <dd>
-                    <div class="sHotMovie">
-                        <ul>
-                                <li>
-                                    <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">北京幸福蓝海影城</a>
-                                            <span class="score_big">8.<em class="s">0</em></span>
-                                    </div>
-                                    <div class="add">地址：北京市丰台区南三环西路16号凯德MALL大峡谷5层</div>
-                                    <div class="tel">电话：010-87578551</div>
-                                </li>
-                        </ul>
-                    </div>
-                </dd>
+
+
+
             </dl>
         </section>
     </div>
     <section class="aboutBox ti mt10">
-        悦影电影是一个能够让您在线购买电影票的在线选座平台，这里有隋奕国际影城(首地大峡谷店)<span class="aLine">
-            <a href="#pq" class="seatSub" title="影讯排期">影讯排期</a>
-            <i>、</i><a href="#pq" class="commentSub" title="影院详情">影院详情</a>
-            <i>、</i><a href="#info3" class="commentSub" title="特色信息">特色信息</a>
-            <i>、</i><a href="#info5" class="commentSub" title="优惠信息">优惠信息</a>
-            <i>、</i><a href="#info4" class="commentSub" title="交通信息">交通信息</a>
+        悦影电影是一个能够让您在线购买电影票的在线选座平台，这里有{{ $cinema->cinema_name}}<span class="aLine">
+            <a href="/onshow" class="seatSub" title="热映电影">热映电影</a>
+            <i>、</i><a href="" class="commentSub" title="影院列表">影院详情</a>
+            <i>、</i><a  class="commentSub" title="特色信息">特色信息</a>
+            <i>、</i><a  class="commentSub" title="优惠信息">优惠信息</a>
+            <i>、</i><a  class="commentSub" title="交通信息">交通信息</a>
         </span>
         等，便捷的购票系统，第一时间更新北京保利国际影城(首地大峡谷店)影讯、排期表、团购优惠券信息。
     </section>
         <section class="aboutBox mt10">
             <div class="relTitle">
-                <a hidefocus="true" class="relCinemaBar" data-show="0">展开&gt;&gt;</a>相关影院：
+                <!-- <a hidefocus="true" class="relCinemaBar" data-show="0"></a> -->相关影院：
             </div>
             <div class="relCinemaBox">
                 <div class="relCinema">
@@ -301,7 +250,7 @@
                         <a href="#" target="_blank">首都国际影城天桥店</a>、
                         <a href="#“ target="_blank">中华电影娱乐宫影城</a>、
                         <a href="#" target="_blank">博纳国际影城(方庄店)</a>、
-                        <a href="#" target="_blank">繁星戏剧村</a>、
+                        <a href="#" target="_blank">繁星戏剧村</a>..
                         <a href="#" target="_blank">糖人街影院</a>、
                         <a href="#" target="_blank">大观楼影城</a>、
                         <a href="#" target="_blank">西单文化广场电影院</a>、
