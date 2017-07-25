@@ -24,12 +24,12 @@
                     <em class="mvType mvType3d"></em>
                 @endif
 
-             <a href="/beijing/movie/48488.html" title="{{ $v->name }}" target="_blank"><img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/></a>
+             <a href="{{ url('/movie/'.$v->movie_id)}}" title="{{ $v->name }}" target="_blank"><img src="{{ asset('upload/admin').'/'.$v->poster }}" alt="{{ $v->name }}" width="220" height="300"/></a>
             </div>
           </li>
 
           <li class="l2">
-            <h3><a href="/beijing/movie/48488.html" title="{{ $v->name }}" target="_blank">{{ $v->name }}</a>
+            <h3><a href="{{ url('/movie/'.$v->movie_id)}}" title="{{ $v->name }}" target="_blank">{{ $v->name }}</a>
 
              <span class="star_bg ml20"><b class="star" style="width:72%"></b></span>
              <em>7.2</em>
@@ -63,7 +63,7 @@
                           @endif
 
                         </p>
-                    <a href="/order" class="showBtn" target="_blank">选座购票</a>
+                    <a href="{{ url('/movie/'.$v->movie_id)}}" class="showBtn" target="_blank">选座购票</a>
                   </div>
           </li>
       </ul>

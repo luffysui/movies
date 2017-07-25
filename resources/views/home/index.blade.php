@@ -151,7 +151,7 @@
                             @if( $movieList[1]->d3)
                                 <em class="mvType mvType3d"></em>
                             @endif
-                            <a target="_blank" title="{{ $v->name }}" href="/beijing/movie/48492.html" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
+                            <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
                         </div>
                         <div class="title">
                             <span class="playTime2">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</span>
