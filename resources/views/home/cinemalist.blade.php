@@ -18,6 +18,7 @@
                 <a href="">大地</a>
             </div>
         </section>
+
         <section class="cinema_cont clearfix">
             <section class="cinema_left">
                 <div class="cinema_sel clearfix">
@@ -36,9 +37,6 @@
                         </div>
                     </div>
                 </div>
-<!--                 <ul id="cinema_tab" class="cinema_tab clearfix">
-                    <li class="active" t="0"><a href="">全部</a></li>
-                </ul> -->
                 <div id="cinema_left_overflow" class="cinema_left_overflow" style="overflow: auto;">
 
                     <ul id="cinema_list" class="cinema_list">
@@ -49,7 +47,6 @@
                     </ul>
                 </div>
             </section>
-
             <section id="cinema_right" class="cinema_right" style="position:relative;">
                 <div class="shadow_top"></div>
                 <div class="shadow_left"></div>
@@ -80,8 +77,8 @@
 
 
     <div id="sideBar" class="none">
-        <a id="feedback" href="http://feedback.zxkf.163.com/movie/show.html?flag=1" rel="nofollow" target="_blank" title="提意见" hidefocus="true"></a>
-        <a id="toTop" href="javascript:;" rel="nofollow" title="回到顶部" hidefocus="true"></a>
+        <a id="feedback"  rel="nofollow" target="_blank" title="提意见" hidefocus="true"></a>
+        <a id="toTop"  rel="nofollow" title="回到顶部" hidefocus="true"></a>
     </div>
     <style>
         .BMap_bubble_title{
@@ -135,12 +132,7 @@
                 target.openInfoWindow(window);
             });
         }
-
         function addMapOverlay(){
-
-
-
-
             var markers = [
                     <?php
                     foreach ($cinemaList as $v){
