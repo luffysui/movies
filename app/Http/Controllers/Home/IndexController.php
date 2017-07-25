@@ -45,7 +45,11 @@ class IndexController extends Controller
         // dd($movieListSec);
         // dd($movieList);
         // dd($min);
-        return  view('home.index',['movieList'=>$movieList,'movieListSec'=>$movieListSec,'movieComingList'=>$movieComingList,'cinemaList'=>$cinemaList,'request'=>$request,'min'=>$min]);
+        //轮播图
+        $car = DB::table('carousel')->where('display',1)->get();
+//        dd($car);
+
+        return  view('home.index',['car'=>$car,'movieList'=>$movieList,'movieListSec'=>$movieListSec,'movieComingList'=>$movieComingList,'cinemaList'=>$cinemaList,'request'=>$request,'min'=>$min]);
     }
 
     public function changeCity($cityId)

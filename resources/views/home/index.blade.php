@@ -3,22 +3,15 @@
 @section('content')
  <div class="photo_box">
         <script>Core.autoBanner=true;</script>
-        <a href="javascript:;" class="photo_big_bar photo_big_left"><b style="display: inline;"></b></a>
-        <a href="javascript:;" class="photo_big_bar photo_big_right"><b style="display: block;"></b></a>
+        <a class="photo_big_bar photo_big_left"><b style="display: inline;"></b></a>
+        <a class="photo_big_bar photo_big_right"><b style="display: block;"></b></a>
     <div class="photo_b_box">
         <ul class="photo_b_list ">
-                <li  style="background-image: url(Images/20170626175251286_m_webp.jpg);background-color: #070709;">
-                    <a href="http://piao.163.com/movie/48522.html" target="_blank"></a>
+            @foreach($car as $v)
+                <li  style="background-image: url('{{ asset('upload/carousel').'/'.$v->photo }}');background-size:1500px 500px;background-color: #070709;">
+                    {{--<a href="" target="_blank"></a>--}}
                 </li>
-                <li  style="background-image: url(Images/20170626175447224_m_webp.jpg);background-color: #f1cf4a;">
-                    <a href="http://piao.163.com/beijing/movie/48507.html#from=searchout.movie" target="_blank"></a>
-                </li>
-                <li  style="background-image: url(Images/20170614150442964_m_webp.jpg);background-color: #020001;">
-                    <a href="http://piao.163.com/movie/48451.html" target="_blank"></a>
-                </li>
-                <li  style="background-image: url(Images/20170605145037487_m_webp.jpg);background-color: #02020a;">
-                    <a href="http://piao.163.com/movie/48445.html" target="_blank"></a>
-                </li>
+            @endforeach
         </ul>
     </div>
 </div>
