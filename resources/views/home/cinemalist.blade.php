@@ -41,8 +41,10 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="cinema_left_overflow" class="cinema_left_overflow" style="overflow: auto;">
 
+               
                     <ul id="cinema_list" class="cinema_list">
                         @foreach( $cinemaList as $v)
                             <li cid="1448" class=""><div class="c_name"><span class="bubble_red">1</span><a target="_blank" href="{{ url('/cinema/'.$v->cinema_id) }}">{{ $v->cinema_name }}</a><span class="score_s ml5">8.<em class="s">3</em></span></div><div class="c_price"><span><em>{{ $v->min }}</em><i>起</i></span><span class="icon_z"></span><span class="icon_q"></span></div><div class="c_add">地址：{{ $v->cinema_address }}</div><div class="c_tel">电话：{{ $v->cinema_phone }}</div><div class="c_btn mt8"><a href="{{ url('/cinema/'.$v->cinema_id) }}" class="btn_e34551 btn_89_29" target="_blank">购&nbsp;&nbsp;票</a></div></li>
@@ -57,12 +59,12 @@
                 <div class="shadow_bottom"></div>
                 <div class="shadow_right"></div>
                 <div id="cinemaMapBox" style="width:720px;height:639px;z-index:10;">
-                    {{--百度地图--}}
+                {{--百度地图--}}
 
 
 
-                    <!--百度地图容器-->
-                        <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+                <!--百度地图容器-->
+                    <div style="width:720px;height:640px;border:#ccc solid 1px;font-size:12px" id="map"></div>
                 </div>
                 <div class="cinema_float hide">
                     <span class="cinema_float_left">&nbsp;</span><span id="cinema_float_mid" class="cinema_float_mid">搜索到“<em>嘉华国际</em>”影院共<em class="ml5 mr5">200</em>家</span><span class="cinema_float_right" style="font-size:12px;">&nbsp;</span>
@@ -71,11 +73,9 @@
         </section>
     </div>
 
-    <script type="text/javascript">
-        Core.postData={'city':'beijing','category':'ALL','area':0,'keywords':'','type':0};
-        Core.coord={lng:'116.396',lat:'39.93'};
-    </script>
-    <script type="text/javascript" src="./asd_files/1ec208539b2f459dadb39bb46677bbed.js"></script><script type="text/javascript" src="./asd_files/getscript"></script><link rel="stylesheet" type="text/css" href="./asd_files/bmap.css">
+
+
+    <link rel="stylesheet" type="text/css" href="http://api.map.baidu.com/res/12/bmap.css">
 
 
 
@@ -111,7 +111,7 @@
 
     <script src="{{ asset('home/Scripts/ntes.js') }}"></script>
     <script>_ntes_nacc = "dianying";neteaseTracker();</script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ni25Wa70RYc7TnTGGmkNAqmC1MOFN4DN"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XdEK80lIx3pYrnGLkBgGkBjYBdX3mvRW"></script>
     <script type="text/javascript"></script>
     <script type="text/javascript">
         //创建和初始化地图函数：

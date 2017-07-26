@@ -148,6 +148,10 @@ Route::group(['prefix' => 'home', 'middleware' => ['home']], function(){
     Route::post('/doidea','Home\UserController@doidea');
     //用户赞同建议
     Route::get('/zan','Home\UserController@zan');
+	//用户支付操作
+    Route::get('user/order/pay/{orderId}','Home\OrderController@userPay');
+
 });
 //下载
 Route::get('/download','Home\DownController@index');
+

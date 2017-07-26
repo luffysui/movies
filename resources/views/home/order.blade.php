@@ -112,7 +112,7 @@
                                     <div><?php $m = date('N',$round->starttime);  $weekArr=array("星期日","星期一","星期二","星期三","星期四","星期五","星期六"); echo $weekArr[$m];?></div>
                                 </div>
                                 <div class="time_box">
-                                    <div class="f20 fb">{{ date('H:i',$round->starttime) }}</div>
+                                    <div class="f20 fb" style="font-size:30px;padding-top: 10px ">{{ date('H:i',$round->starttime) }}</div>
                                     <div class="changeScreen" id="changeScreen">
                                         <a href="javascript:;" class="sBar" id="sBar" tid="593416468"></a>
                                         <div class="sList" id="sList">
@@ -129,32 +129,32 @@
                             </div>
                         </dd>
                     </dl>
-                    <dl class="selSeatBox">
-                        <dt>您选择的座位：</dt>
-                        <dd>
-                            未做
-                        </dd>
-                    </dl>
-                    <dl class="choose_cinema mt10 clearfix" >
-                        <dt style="padding-top:2px\9;">总价：</dt>
-                        <dd class="imp fb">¥<span class="f16" id="totalPrice">0</span> </dd>
-                    </dl>
+                    {{--<dl class="selSeatBox">--}}
+                        {{--<dt>您选择的座位：</dt>--}}
+                        {{--<dd>--}}
+                            {{--未做--}}
+                        {{--</dd>--}}
+                    {{--</dl>--}}
+                    {{--<dl class="choose_cinema mt10 clearfix" >--}}
+                        {{--<dt style="padding-top:2px\9;">总价：</dt>--}}
+                        {{--<dd class="imp fb">¥<span class="f16" id="totalPrice">0</span> </dd>--}}
+                    {{--</dl>--}}
                     <dl class="tel mt10">
-                        <dt>请输入您接收电子票的手机号码：</dt>
+                        {{--<dt>请输入您接收电子票的手机号码：</dt>--}}
                         <dd>
-                            <input type="hidden" value="593416468" name="ticketId" id="ticketId" />
-                            <input type="hidden" name="lockedSeatList" id="lockedSeatList" />
-                            <input type="hidden" name="isReserve" id="isReserve" />
+                            {{--<input type="hidden" value="593416468" name="ticketId" id="ticketId" />--}}
+                            {{--<input type="hidden" name="lockedSeatList" id="lockedSeatList" />--}}
+                            {{--<input type="hidden" name="isReserve" id="isReserve" />--}}
                             <div class="clearfix">
-                                <input type="text" name="mobileText" value='' id="mobileText"/>
-                                <input type="hidden" name="mobile" value="" id="mobile"/>
+                                {{--<input type="text" name="mobileText" value='' id="mobileText"/>--}}
+                                {{--<input type="hidden" name="mobile" value="" id="mobile"/>--}}
                             </div>
                             <div class="btn" style="position:relative;zoom:1;">
                                 <div class="tip">
                                     <div class="up"></div>
                                     点击"立即购票"后，将为您锁座15分钟！
                                 </div>
-                                <button>点击订票</button>
+                                <button class="btn_buy">立即购票</button>
                                 {{--<input type="submit" id="seatSub" class="btn_buy" autoComplete="off" value="立即购票"/>--}}
                             </div>
                         </dd>
@@ -225,7 +225,7 @@
 //        console.log(seats);
         if(seats.length < 1){
             alert('选个座位啊');
-            location.reload();
+//            location.reload();
         }
         var seatsStr='';
         seats.each(function(){

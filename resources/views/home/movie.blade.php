@@ -26,7 +26,7 @@
 
             </dt>
             <dd class="summary">{{ $movie->description }}</dd>
-            <dd class="des">上映：<em class="">{{ $movie->start_time }}</em></dd>
+            <dd class="des">上映：<em class="">{{ date('m',$movie->start_time) }}月{{ date('d',$movie->start_time) }}日</em></dd>
             <dd class="des">导演：{{ $movie->director }}</dd>
             <dd class="des role" id="role">
 	            <span style="float:left;">主演：</span>
@@ -78,8 +78,9 @@
 		@if($cinema == null)
 			@else
         <div class="orangeLine" id="ticketHead">
-            <h3><a><strong>{{ $cinema->cinema_name }}</strong></a>
-                	<span class="score" style="vertical-align:middle;">8.<em class="s">6</em></span>
+
+            <h3><a href="{{ url('/movie/'.$movie->movie_id.'/'.$cinema->cinema_id) }}" id="ticketCinemaName"><strong>{{ $cinema->cinema_name }}</strong></a>
+     	<span class="score" style="vertical-align:middle;">8.<em class="s">6</em></span>
                 <span class="icon_z"  ></span>
                 <span class="icon_q"  ></span>
                 <span class="icon_t" style="display:none;" ></span>
@@ -126,7 +127,7 @@
                     @foreach($roundList as $v)
 
 			                     <tr dm="3D" >
-			                        <td class="time">{{ date('Y-m-d H:i:s',$v->starttime) }}<br /><span class="time_end">{{ date('Y-m-d H:i:s',$v->overtime) }}</span></td>
+									 <td class="time"><span class="time_end">{{ date('Y-m-d H:i:s',$v->starttime) }}</span><br /><span class="time_end">{{ date('Y-m-d H:i:s',$v->overtime) }}</span></td>
 			                        <td>@if($v->imax)
                                             IMAX
                                         @elseif($movie->d3)
