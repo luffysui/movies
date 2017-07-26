@@ -9,7 +9,7 @@
         <section class="cinema_search">
             <h3>影院搜索：</h3>
             <form action="{{ url('/cinemaSelect') }}"  method="get">
-                    <input value="" placeholder="请输入影院名" class="text textGray" name="cinema_name" id="mvTopSearch" autocomplete="off" maxlength="20" type="text"  style="height:30px;width:300px">
+                    <input placeholder="请输入影院名" class="text textGray" name="cinema_name" id="" autocomplete="off" maxlength="20" type="text"  style="height:30px;width:300px">
                     <!-- <input name="city" value="beijing" type="hidden" style="height:100px;width:50px"> -->
                     <input value="搜索电影" class="btn_e34551 btn_89_29" id="topSearchBtn" title="" type="submit">
             </form>
