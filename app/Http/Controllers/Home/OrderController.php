@@ -167,7 +167,7 @@ class OrderController extends Controller
         if($status == 1 || $status == 3 || $status == 8 ||$status == 9 ){
             $res = DB::table('orderb')->where('order_id',$orderId)->update(['status'=>'4']);
             if($res > 0){
-                return redirect('/home/user/order')->with('msg', '处理成功');
+                return redirect('/home/user/order')->with('msg', '申请退款成功');
             }else{
                 return redirect('/home/user/order')->with('msg', '处理失败');
             }
@@ -193,6 +193,16 @@ class OrderController extends Controller
 
     }
 
-
+    public function userPay($orderId)
+    {
+        $res = DB::table('orderb')->where('order_id',$orderId)->update(['status'=>'1']);
+        if($res > 0){
+            //发送券码
+            $this->doSend($orderId);
+            return redirect('/home/user/order')->with('msg', '支付成功请查收短信');
+        }else{
+            return redirect('/home/user/order')->with('msg', '支付失败');
+        }
+    }
 
 }

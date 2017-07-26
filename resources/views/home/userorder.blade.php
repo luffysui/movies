@@ -194,7 +194,7 @@ www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E6%89%93%E5%BC%80Javascript%E5%8A%9F%E8%83
 
 										</th>
 										<th width="13%">
-											<a href="/">@if($v->status ==0) 去支付 @endif</a>
+											<a href="{{ url('home/user/order/pay/'.$v->order_id) }}">@if($v->status ==0) 去支付 @endif</a>
 											<a href="{{ url('home/dosend/'.$v->order_id) }}">@if($v->status == 1 || $v->status == 2|| $v->status == 3  || $v->status == 8 || $v->status == 9 || $v->status == 10) 发送券码@endif</a>
 											<a href="{{ url('home/user/order/refund/'.$v->order_id) }}">@if( ($v->status ==1 || $v->status == 3 || $v->status == 8|| $v->status == 9) && $v->starttime > time() ) 退款 @endif</a>
 

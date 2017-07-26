@@ -49,7 +49,7 @@ class MovieListController extends Controller
         // dd($min);
         foreach($movieList as $k=>$v){
             //类型查询
-            $min = DB::table('round')->where('movie_id',$v->movie_id)->orderBy('nprice','asc')->value('nprice');
+            $min = DB::table('round')->where('starttime','>',time())->where('movie_id',$v->movie_id)->orderBy('nprice','asc')->value('nprice');
             $typeId = $v->typeid;
             $typeIdArr = explode(',',$typeId);
             $typeName = DB::table('type')->whereIn('type_id',$typeIdArr)->lists('name');

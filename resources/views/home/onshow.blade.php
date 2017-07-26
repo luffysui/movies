@@ -2,7 +2,7 @@
 @section('title', '正在上映')
 @section('content')
 <div class="movieShow clearfix">
-<a class="fastBuyNav fastBuyNav2" id="fastBuyNav" href="javascript:;"></a>
+    <a class="fastBuyNav " id="" href="http://47.94.17.109/cinemalist"></a>
   <div class="showLeft">
       <h2 class="showTitle clearfix"><a class="on" href="javascript:;" style="font-size:30px;color:#000; ">正在热映</a><span class="fg">/</span><a href="{{ url('/upcoming') }}">即将上映</a></h2>
       <div class="showMain" id="playListBox">
@@ -10,7 +10,7 @@
       {{ $movieCount }}
       部</span>
 
-          <a class="styleBtn styleBtn_hb" href="http://piao.163.com/movie/onshow.html?isTable=0"><i></i>海报</a>
+
           <a class="styleBtn styleBtn_lb_on" href="javascript:;"><i></i>列表</a>
       </div>
 
@@ -31,8 +31,8 @@
           <li class="l2">
             <h3><a href="{{ url('/movie/'.$v->movie_id)}}" title="{{ $v->name }}" target="_blank">{{ $v->name }}</a>
 
-             <span class="star_bg ml20"><b class="star" style="width:72%"></b></span>
-             <em>7.2</em>
+             <span class="star_bg ml20"><b class="star" style="width:{{ ($v->score)*10 }}%"></b></span>
+             <em>{{ $v->score }}</em>
 
             </h3>
             <p class="p1">{{ $v->description }}</p>
@@ -57,7 +57,7 @@
                   <div class="res">
                     <p class="price">
                           @if(isset ($v->min))
-                                            {{ $v->min }}<i>元起</i>
+                                            {{ ($v->min)/100 }}<i>元起</i>
                                         @else
                                             <i> 暂无排期</i>
                           @endif
@@ -70,15 +70,25 @@
       @endforeach
 </div>
           <style>
+              .showList{
+                  padding-bottom: 0;
+              }
               .pagination li{
+
                   font-size: 20px;
                   float: left;
                   line-height:30px;
-                  padding-left: 20px;
+                  padding: 20px;
               }
               .paginate li a{
                   padding:10px;
 
+              }
+              .disabled{
+                  background-color: #ffffff;
+              }
+              .active{
+                  color:#E55862;
               }
           </style>
           {!! $movieList->render() !!}
@@ -100,11 +110,11 @@
         <div class="mt15" style="text-overflow: ellipsis;white-space: nowrap;">
                 <h2 class="colTitle"><span class="colText">热映排行榜</span></h2>
                     <ul  class="weeklyTop">
-                        <li><em class="score fr">{{ $list[0]->score }}</em><b class="b0"></b><a href="/beijing/movie/48542.html" target="_blank" title="">{{ $list[0]->name }}</a></li>
-                        <li><em class="score fr">{{ $list[1]->score }}</em><b class="b1"></b><a href="/beijing/movie/48489.html" target="_blank" title="">{{ $list[1]->name }}</a></li>
-                        <li><em class="score fr">{{ $list[2]->score }}</em><b class="b2"></b><a href="/beijing/movie/47722.html" target="_blank" title="">{{ $list[2]->name }}</a></li>
-                        <li><em class="score fr">{{ $list[3]->score }}</em><b class="b3"></b><a href="/beijing/movie/48488.html" target="_blank" title="">{{ $list[3]->name }}</a></li>
-                        <li><em class="score fr">{{ $list[4]->score }}</em><b class="b4"></b><a href="/beijing/movie/48522.html" target="_blank" title="">{{ $list[4]->name }}....</a></li>
+                        <li><em class="score fr">{{ $list[0]->score }}</em><b class="b0"></b><a href="{{ url('movie/'.$list[0]->movie_id) }}" target="_blank" title="">{{ $list[0]->name }}</a></li>
+                        <li><em class="score fr">{{ $list[1]->score }}</em><b class="b1"></b><a href="{{ url('movie/'.$list[1]->movie_id) }}" target="_blank" title="">{{ $list[1]->name }}</a></li>
+                        <li><em class="score fr">{{ $list[2]->score }}</em><b class="b2"></b><a href="{{ url('movie/'.$list[2]->movie_id) }}" target="_blank" title="">{{ $list[2]->name }}</a></li>
+                        <li><em class="score fr">{{ $list[3]->score }}</em><b class="b3"></b><a href="{{ url('movie/'.$list[3]->movie_id) }}" target="_blank" title="">{{ $list[3]->name }}</a></li>
+                        <li><em class="score fr">{{ $list[4]->score }}</em><b class="b4"></b><a href="{{ url('movie/'.$list[4]->movie_id) }}" target="_blank" title="">{{ $list[4]->name }}....</a></li>
 
                     </ul>
         </div>

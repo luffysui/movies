@@ -60,17 +60,17 @@
         </form>
     </div>
     <script>
-        function doDel(id)
-        {
-            if(confirm('确定要删除吗？')){
-                var form = document.myform;
-                form.action = "{{ url('admin/room') }}"+'/'+id;
-                form.submit();
-            }
-        }
+    function doDel(id)
+    {
+    if(confirm('确定要删除吗？')){
+    var form = document.myform;
+    form.action = "{{ url('admin/room') }}"+'/'+id;
+    form.submit();
+    }
+    }
     </script>
-    <script src='{{ asset("admin/js/jquery-1.8.3.min.js") }}'></script>
 
+    <script src='{{ asset("admin/js/jquery-1.8.3.min.js") }}'></script>
     <script>
         //取出省
         var url = "{{ url('/admin/roomajax') }}";
