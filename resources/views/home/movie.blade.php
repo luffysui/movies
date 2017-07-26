@@ -78,7 +78,7 @@
 		@if($cinema == null)
 			@else
         <div class="orangeLine" id="ticketHead">
-            <h3><a href="/cinema/3031.html" id="ticketCinemaName"><strong>{{ $cinema->cinema_name }}</strong></a>
+            <h3><a><strong>{{ $cinema->cinema_name }}</strong></a>
                 	<span class="score" style="vertical-align:middle;">8.<em class="s">6</em></span>
                 <span class="icon_z"  ></span>
                 <span class="icon_q"  ></span>
@@ -86,7 +86,7 @@
                 <span class="mtype_imax" style="display:none;"></span>
             </h3>
             <div class="add">地址：{{ $cinema->cinema_address }}
-                <a href="javascript:;" id='3031' title="查看地图" onClick="Core.cinemaMapDialog(this.id);"></a>
+                <a  title="查看地图" ></a>
             </div>
         </div>
 		@endif
@@ -100,7 +100,7 @@
 
 
                     @if(!$roundList)
-                        <div class="c_price"><span><em>{{ $movie->name }}没有场次</em></span></div>
+                        <div class="c_price"><span><em>《{{ $movie->name }}》没有场次</em></span></div>
                     @else
                         <thead>
                         <tr>

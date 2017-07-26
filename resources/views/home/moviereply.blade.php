@@ -15,9 +15,9 @@
     <div class="wrap990">
         <section class="mv_info_box clearfix">
             <div id="share" class="share" >
-                <div class="share_inner">影片分享到<b></b>
-                    <div class="shareDiv" id="shareDiv"></div>
-                </div>
+                {{--<div class="share_inner">影片分享到<b></b>--}}
+                    {{--<div class="shareDiv" id="shareDiv"></div>--}}
+                {{--</div>--}}
             </div>
 
             <div class="poster">

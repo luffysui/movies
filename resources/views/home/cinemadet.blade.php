@@ -134,7 +134,7 @@
                     @foreach($movie as $v )
                      <dl class="movie_detail clearfix ">
                         <dt>
-                            <h2><a href="http://piao.163.com/beijing/movie/48542.html">{{ $v->name }} </a>
+                            <h2><a href="{{ url('/movie/'.$v->movie_id)}}">{{ $v->name }} </a>
                                 <span class="star_bg ml10">
                                     <div class="star" style="width: 75%;"></div>
                                 </span>
@@ -216,7 +216,7 @@
                                             <span class="score_big"><em class="s">{{ $v->cinema_score}}</em></span>
                                     </div>
                                     <div class="add">地址：{{ $v->cinema_address }}</div>
-                                    <div class="tel">电话：{{$v->cinema_phone }}</div>
+                                    <div class="tel">电话：{{ $v->cinema_phone }}</div>
                                 </li>
                         </ul>
                     </div>
