@@ -1,0 +1,51 @@
+/* Code tidied up by ScrapBook */
+.playBox { width: 708px; border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentcolor rgb(233, 233, 233) rgb(233, 233, 233); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; overflow: hidden; }
+.movieTab { height: 34px; line-height: 34px; border-right: 1px solid rgb(233, 233, 233); background: rgba(0, 0, 0, 0) url("bg_repeat.png") repeat-x scroll 0px -406px; }
+.movieTab li { float: left; width: 165px; height: 34px; font: bold 14px/34px "宋体"; color: rgb(119, 119, 119); text-align: center; background: rgba(0, 0, 0, 0) url("tab_bg.gif") no-repeat scroll 0px -136px; cursor: pointer; }
+.movieTab li.first { background-position: 0px -170px; }
+.movieTab li.active { color: rgb(232, 58, 24); background-position: 0px -102px; }
+.movieTab .right { float: right; width: 1px; height: 32px; margin-top: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; overflow: hidden; }
+.cinemaList { padding: 0px 10px; border-top: 1px solid rgb(233, 233, 233); }
+.cinemaList li { padding: 0px 14px 24px; vertical-align: middle; background: rgba(0, 0, 0, 0) url("s_hot_split.gif") repeat-x scroll left bottom; }
+.cinemaList li ol.left { float: left; width: 480px; padding-top: 21px; }
+.cinemaList li ol.left li, .cinemaList li ol.right li { padding: 0px; margin: 0px; font-size: 12px; height: 18px; border: 0px none; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.cinemaList li ol.left li.name { height: 23px; line-height: 23px; overflow: hidden; font-size: 14px; font-weight: bold; font-family: "宋体"; color: rgb(0, 0, 0); }
+.cinemaList li ol.left li.name span { margin-top: 2px; margin-left: 5px; }
+.cinemaList a.cinema_name:link, .cinemaList a.cinema_name:visited, .cinemaList a.cinema_name:hover, .cinemaList a.cinema_name:active { color: rgb(0, 0, 0); margin-right: 5px; vertical-align: middle; }
+.cinemaList li ol.left li.name a em { font-weight: bold; color: rgb(232, 58, 24); }
+.cinemaList li ol.left li.add { height: 20px; line-height: 20px; overflow: hidden; font-size: 12px; font-weight: normal; font-family: "宋体"; color: rgb(0, 0, 0); }
+.cinemaList li ol.left li .icon_z, .cinemaList li ol.left li .icon_q { margin-left: 3px; }
+.cinemaList li ol.right { float: right; width: 76px; padding-top: 15px; }
+.cinemaList li ol.right li { height: 30px; }
+.cinemaList li ol.right li.price { width: 76px; height: 30px; line-height: 30px; color: rgb(51, 51, 51); text-align: center; white-space: nowrap; overflow: hidden; }
+.cinemaList li ol.right li.price em { font-family: Arial; font-size: 22px; color: rgb(232, 58, 24); }
+.cinemaList li ol.right li.price i { font-family: Arial; font-size: 12px; color: rgb(51, 51, 51); }
+.cinemaList li ol.right li.cinema_btn { position: relative; margin-top: 10px; border-bottom: 5px solid rgb(255, 255, 255); }
+.cinemaList li ol.right li dl { display: none; position: absolute; right: 0px; top: 34px; border: 1px solid rgb(255, 75, 41); width: 99px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.cinemaList li ol.right li dl .arr01 { position: absolute; left: 58px; top: -6px; height: 0px; line-height: 0; border-width: 0px 5px 5px; border-style: none solid solid; border-color: transparent transparent rgb(255, 75, 41); }
+.cinemaList li ol.right li dl .arr02 { position: absolute; left: -5px; top: 1px; height: 0px; line-height: 0; border-width: 0px 5px 5px; border-style: none solid solid; border-color: transparent transparent rgb(255, 255, 255); }
+.cinemaList li ol.right li dl dd { height: 28px; line-height: 28px; border-bottom: 1px solid rgb(250, 250, 250); color: rgb(51, 51, 51); }
+.cinemaList li ol.right li dl dd a { display: inline-block; width: 89px; height: 28px; line-height: 28px; padding-left: 10px; color: rgb(51, 51, 51); text-decoration: none; background: rgba(0, 0, 0, 0) url("icon_norepeat8.png") no-repeat scroll right -205px; }
+.cinemaList li ol.right li dl dd a:hover { color: rgb(255, 90, 41); background-position: right -241px; }
+.cinemaList li ol.left li.mov { height: auto; min-height: 18px; }
+.cinemaList li ol.left li.mov .t { float: left; width: 60px; height: 18px; line-height: 18px; }
+.cinemaList li ol.left li.mov .l { position: relative; float: left; width: 350px; height: 20px; line-height: 20px; overflow: hidden; padding-right: 60px; font-family: "宋体"; }
+.cinemaList li ol.left li.mov .l .bar { display: none; position: absolute; right: 0px; bottom: 4px; width: 25px; height: 16px; border: 0px none; outline: medium none; font-family: "宋体"; color: rgb(153, 153, 153); overflow: hidden; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.cinemaList li ol.left li.mov .l .c { display: none; }
+.cinemaList li ol.left li.mov .l .o { display: block; }
+.cinemaList li ol.left li.mov .l a { margin: 0px; padding: 0px 13px 0px 0px; display: inline-block; white-space: nowrap; color: rgb(232, 58, 24); }
+.searchTab li { width: 129px; background-position: 0px -34px; }
+.searchTab li.first { background-position: 0px -68px; }
+.searchTab li.active { background-position: 0px 0px; }
+.searchList h2 { height: 52px; line-height: 52px; padding-left: 10px; border-top: 1px dashed rgb(197, 196, 196); font-size: 14px; font-weight: normal; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.searchList h2 em { color: rgb(255, 75, 41); }
+.searchList h2 em.bold { font-weight: bold; }
+.searchList h2 em.res { font-weight: bold; margin: 0px 3px; }
+.searchList .bdtNone { margin-top: -1px; }
+.searchList #part1 { margin-top: -1px; }
+.searchList ul { overflow: hidden; }
+.searchList ul li { border: 0px none; }
+.searchList .cinemaList { width: 691px; margin: 0px auto; border: 0px none; }
+.searchList .cinemaList li { padding: 5px 14px 24px; margin-bottom: 10px; border: 1px solid rgb(197, 196, 196); background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; }
+.searchList .cinemaList li ol.left { width: 480px; padding: 21px 0px 0px; }
+.searchList .cinemaList li ol.right {  }

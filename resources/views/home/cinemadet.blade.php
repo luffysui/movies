@@ -54,45 +54,9 @@
     <div class="docBody clearfix">
         <section id="mainContent" class="mainContent">
                 <div class="groupCoupon" t="2" >
-<!--                 <div class="c_detail_movie">
-                      <div class="c_detail_title clearfix">
-                          <h2><span class="fb">优惠信息</span></h2>
-                      </div>
-                 </div> -->
+
                     <div class="boxWrap clearfix">
-<!--                         <div class="boxs box_gray">
 
-
-                                <div class="box   box_noborderB  ">
-                                    <i></i>
-                                    <p class="title" title="2D票">
-                                            2D票
-                                                (90天)
-                                            <span style="color: rgb(84, 84, 84); font-size: 12px;">¥<span style="text-decoration: line-through;">90 </span></span>
-                                            <span style="font-size: 16px; color: rgb(227, 69, 81);">¥43.2</span>
-                                            <span class="couponHelp" title="" partnerid="27" cid="1448"></span>
-                                    </p>
-                                    <span class="desc" title="购买前请点击黄色问号，阅读使用说明">
-                                            购买前请点击黄色问号，阅读使用说明
-                                            <a href="http://piao.163.com/order/buy_coupon.html?coupon_id=28008" class="btn" title="" target="_blank">购买</a>
-                                    </span>
-                                </div>
-
-
-                                <div class="box  box_right box_noborderB  ">
-                                    <i></i>
-                                    <p class="title" title="3D票">
-                                            3D票
-                                                (90天)
-                                            <span style="color: rgb(84, 84, 84); font-size: 12px;">¥<span style="text-decoration: line-through;">120&nbsp;</span></span><span style="font-size: 16px; color: rgb(227, 69, 81);">213</span><span style="font-size: 16px; color: rgb(227, 69, 81);"></span>
-                                            <span class="couponHelp" title="" partnerid="27" cid="1448"></span>
-                                    </p>
-                                    <span class="desc" title="购买前请点击黄色问号，阅读使用说明">
-                                            购买前请点击黄色问号，阅读使用说明
-                                            <a href="http://piao.163.com/order/buy_coupon.html?coupon_id=28009" class="btn" title="" target="_blank">购买</a>
-                                    </span>
-                                </div>
-                        </div> -->
                         <div class="couponIntro hide">
                             <p>使用说明：</p>
                             <ul>
@@ -134,7 +98,7 @@
                     @foreach($movie as $v )
                      <dl class="movie_detail clearfix ">
                         <dt>
-                            <h2><a href="http://piao.163.com/beijing/movie/48542.html">{{ $v->name }} </a>
+                            <h2><a href="{{ url('/movie/'.$v->movie_id)}}">{{ $v->name }} </a>
                                 <span class="star_bg ml10">
                                     <div class="star" style="width: 75%;"></div>
                                 </span>
@@ -149,7 +113,6 @@
                             <dd class="des left">导演：{{ $v->director }}</dd>
                             <dd class="des">上映：{{ $v->start_time }}</dd>
                             <dd class="des left">主演： {{ $v->star }}</dd>
-
                             <dd class="des">类型：{{ $v->typeName }}</dd>
 
                         </div>

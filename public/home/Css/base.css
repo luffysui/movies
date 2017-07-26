@@ -28,7 +28,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 }
 
 /* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
@@ -260,3 +260,11 @@ body .hide3{
 	color:#fff;
 	text-decoration:underline;
 }
+a:hover { text-decoration: underline; }
+ins, a { text-decoration: none; }
+.clearfix::after { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.clearfix {  }
+.clearfix2::before { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.clearfix2 {  }
+.none { display: none; }
+.wrap { white-space: normal; word-break: break-all; }
