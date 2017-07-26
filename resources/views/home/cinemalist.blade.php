@@ -5,9 +5,14 @@
     <link rel="stylesheet" href="{{ asset('home/Css/detail_new.css') }}">
     <style type="text/css">@-webkit-keyframes loginPopAni{0%{opacity:0;-webkit-transform:scale(0);}15%{-webkit-transform:scale(0.667);}25%{-webkit-transform:scale(0.867);}40%{-webkit-transform:scale(1);}55%{-webkit-transform:scale(1.05);}70%{-webkit-transform:scale(1.08);}85%{opacity:1;-webkit-transform:scale(1.05);}100%{opacity:1;-webkit-transform:scale(1);}}@keyframes loginPopAni{0%{opacity:0;transform:scale(0);}15%{transform:scale(0.667);}25%{transform:scale(0.867);}40%{transform:scale(1);}55%{transform:scale(1.05);}70%{transform:scale(1.08);}85%{opacity:1;transform:scale(1.05);}100%{opacity:1;transform:scale(1);}}</style>
     <div class="wrap990">
+
         <section class="cinema_search">
             <h3>影院搜索：</h3>
-            <input style="height: 35px"  type="text" id="cinema_search_input" autocomplete="off" class="cinema_search_input textGray" placeholder="请输入影院名称" maxlength="20"><a href="javascript:;" id="cinema_search_btn" class="cinema_search_btn">搜索</a>
+            <form action="{{ url('/cinemaSelect') }}"  method="get">
+                    <input value="" placeholder="请输入影院名" class="text textGray" name="cinema_name" id="mvTopSearch" autocomplete="off" maxlength="20" type="text"  style="height:30px;width:300px">
+                    <!-- <input name="city" value="beijing" type="hidden" style="height:100px;width:50px"> -->
+                    <input value="搜索电影" class="btn_e34551 btn_89_29" id="topSearchBtn" title="" type="submit">
+            </form>
             <div id="cinema_search_hot" class="cinema_search_hot">
                 <span>热门搜索：</span>
                 <a href="">IMAX</a>
@@ -18,7 +23,7 @@
                 <a href="">大地</a>
             </div>
         </section>
-
+        <!-- </form> -->
         <section class="cinema_cont clearfix">
             <section class="cinema_left">
                 <div class="cinema_sel clearfix">
@@ -30,7 +35,6 @@
                             <div class="type_module noBack clearfix " ctype="ALL">
                                 <div class="type_name">全部：</div>
                                 <div class="type_detail">
-                                    <!-- <a class="all active " typeid="1" href="/cinemalist"><span>全部影院</span><em>(203)</em></a> -->
                                 </div>
                             </div>
 

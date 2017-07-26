@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="{{ asset('home/Css/index2014.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/mv_list.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/cinema.css') }}"/>
+<link rel="stylesheet" href="{{ asset('home/Css/base.css') }}"/>
+<link rel="stylesheet" href="{{ asset('home/Css/core.css') }}"/>
+<link rel="stylesheet" href="{{ asset('home/Css/detail.css') }}"/>
 {{--地图--}}
 
 <script src="{{ asset('home/Scripts/jquery-1.4.2.js') }}"></script>
