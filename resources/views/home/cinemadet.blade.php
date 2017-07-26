@@ -1,7 +1,29 @@
 @extends('home.parent')
 @section('title', '影院详情')
 @section('content')
-
+    <style type="text/css">
+        /* Code tidied up by ScrapBook */
+        @keyframes loginPopAni {
+            0% { opacity: 0; transform: scale(0); }
+            15% { transform: scale(0.667); }
+            25% { transform: scale(0.867); }
+            40% { transform: scale(1); }
+            55% { transform: scale(1.05); }
+            70% { transform: scale(1.08); }
+            85% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes loginPopAni {
+            0% { opacity: 0; transform: scale(0); }
+            15% { transform: scale(0.667); }
+            25% { transform: scale(0.867); }
+            40% { transform: scale(1); }
+            55% { transform: scale(1.05); }
+            70% { transform: scale(1.08); }
+            85% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
 <script language="JavaScript">
          function change(val,obj) {
              obj.style.backgroundColor="#E34551";
@@ -19,7 +41,7 @@
 </script>
 
 <div class="wrap cinema">
-    <section class="box_gray cinemaInfo">
+    <section class="cinemaInfo">
         <span class="title" cid="1448">
             <div class="mv_name" title=""><h1>{{ $cinema->cinema_name}}</h1><i class="icon_q"></i></div>
                 <span class="star_bg">
@@ -160,27 +182,23 @@
 </div>
 
 </div>
-
-
-
-
             </div>
         </section>
-        <section class="siderBox ">
-            <dl class="sider_hot box_gray">
+        <section class="">
+            <dl class=" ">
                 <dt class="titleLine"><h2>全部影院</h2></dt>
                 <dd>
                 @foreach ($cinemaList as $v)
                     <div class="sHotMovie">
                         <ul>
-                                <li>
-                                    <div class="name">
-                                        <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">{{ $v->cinema_name}}</a>
-                                            <span class="score_big"><em class="s">{{ $v->cinema_score}}</em></span>
-                                    </div>
-                                    <div class="add">地址：{{ $v->cinema_address }}</div>
-                                    <div class="tel">电话：{{ $v->cinema_phone }}</div>
-                                </li>
+                            <li>
+                                <div class="name">
+                                    <a href="http://piao.163.com/cinema/5621.html" title="北京马家堡影城">{{ $v->cinema_name}}</a>
+                                        <span class="score_big"><em class="s">{{ $v->cinema_score}}</em></span>
+                                </div>
+                                <div class="add">地址：{{ $v->cinema_address }}</div>
+                                <div class="tel">电话：{{ $v->cinema_phone }}</div>
+                            </li>
                         </ul>
                     </div>
             @endforeach

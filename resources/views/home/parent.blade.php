@@ -17,8 +17,6 @@
 <link rel="stylesheet" href="{{ asset('home/Css/index2014.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/mv_list.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/cinema.css') }}"/>
-<link rel="stylesheet" href="{{ asset('home/Css/base.css') }}"/>
-<link rel="stylesheet" href="{{ asset('home/Css/core.css') }}"/>
 <link rel="stylesheet" href="{{ asset('home/Css/detail.css') }}"/>
 {{--地图--}}
 
@@ -212,8 +210,8 @@
 					<li><b class="b3"></b>渠道多，影院多</li>
 				</ul>
 				<div class="footRightBot">
-					<span>• <a href="http://mall.163.com/help/movie.html" target="_blank" rel="nofollow">常见问题</a></span>
-					<span>• <a href="http://feedback.zxkf.163.com/movie/show.html?flag=1" target="_blank" rel="nofollow">提提意见</a></span>
+					<span>• <a>常见问题</a></span>
+					<span>• <a href="{{ asset('home/idea') }}" target="_blank" rel="nofollow">提提意见</a></span>
 					<span>• 商务合作：010-82558368</span>
 					<span>• 客服电话：0571-26201163</span>
 				</div>

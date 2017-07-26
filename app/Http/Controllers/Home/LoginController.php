@@ -69,6 +69,11 @@ class LoginController extends Controller
 	}
 	public function doregister(Request $request)
     {
+        $arr = $request->except('_token','_method');
+        $re = DB::table('user')->where('phone',$arr['phone'])->get();
+        if($re){
+            return back()->with('msg','该账号已注册');
+        }
 		//表单验证
         $messages = [
             'name.required'=>'必须填写用户名',
@@ -90,6 +95,8 @@ class LoginController extends Controller
             'answer' => 'required',
             'vc'=>'required'
         ],$messages);
+
+
         //取得所有表单数据
         $info = $request->except('_token');
 //        dd($info);

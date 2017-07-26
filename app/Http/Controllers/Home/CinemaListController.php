@@ -38,11 +38,14 @@ class CinemaListController extends Controller
 
         foreach ($cinemaList as $k => $v) {
             $room = DB::table('room')->where('cid',$v->cinema_id)->lists('room_id');
-            $min = DB::table('round')->whereIn('room_id',$room)->orderBy('nprice','asc')->lists('nprice');
+            $min = DB::table('round')
+                ->where('starttime','>',time())
+                ->whereIn('room_id',$room)->orderBy('nprice','asc')->lists('nprice');
+//            dd($min[0]);
             if (count($min) <=0 ){
                 $cinemaList[$k]->min='暂无排期';
             }else{
-                $cinemaList[$k]->min=$min[0];
+                $cinemaList[$k]->min=($min[0]/100).'起';
             }
         }
 //        dd($cinemaList);
