@@ -83,7 +83,8 @@ Route::group(['middleware' => 'getCity'], function(){
     Route::get('/movie/{movieId}/{cinemaId}', 'Home\MovieController@index');
     //展示下订单页面
     Route::get('/order/{roundId}', 'Home\OrderController@showRound');
-
+    //影院查询
+    Route::get('/cinemaSelect','Home\CinemaSelectController@index');
 
 
 

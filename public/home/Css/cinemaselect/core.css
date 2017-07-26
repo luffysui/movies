@@ -1,0 +1,103 @@
+/* Code tidied up by ScrapBook */
+#autoCompleteList { display: none; visibility: visible; position: absolute; font-size: 14px; font-family: Arial,Microsoft YaHei; }
+#topNav { border-bottom: 1px solid rgb(240, 240, 240); background: rgb(252, 252, 252) none repeat scroll 0% 0%; color: rgb(113, 113, 113); position: relative; z-index: 209; width: 100%; min-width: 1190px; }
+#topNav a:hover { text-decoration: underline; color: rgb(127, 127, 127); }
+#topNavWrap { display: block; height: 34px; line-height: 34px; font-size: 12px; color: rgb(93, 93, 93); margin: 0px auto; font-family: Arial,"宋体"; width: 1190px; position: relative; }
+#topNavLeft { float: left; }
+#topNavRight { float: right; color: rgb(192, 192, 192); position: relative; }
+#topNavRight li { float: left; margin-left: 5px; }
+#topNavRight a { color: rgb(50, 50, 50); }
+#topNavRight a:link, #topNavRight a:visited { color: rgb(127, 127, 127); }
+#topNavRight a:hover { color: rgb(127, 127, 127); text-decoration: underline; }
+#topNavRight .last { width: 65px; margin-left: -2px; text-align: center; position: relative; }
+#topNavRight .last a { border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(255, 255, 255) rgb(255, 255, 255) currentcolor; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; height: 20px; line-height: 20px; width: 60px; position: absolute; left: 4px; top: 6px; z-index: 1; }
+@media not all, not all {
+  #topNavRight .last a { top: 7px; }
+}
+#topEpayInfo { color: rgb(114, 113, 113); margin-right: 5px; display: none; }
+#docFoot { width: 100%; font-family: "Microsoft YaHei"; background: rgb(244, 244, 244) none repeat scroll 0% 0%; }
+.foot-wap { height: 162px; color: rgb(127, 127, 127); margin-top: 15px; overflow: hidden; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.footCont { width: 1190px; margin: 0px auto; padding: 30px 0px; height: 100px; }
+.footLeft { float: left; width: 230px; height: 100px; border-right: 1px solid rgb(237, 237, 237); }
+.footLeft .logo { display: block; width: 144px; height: 48px; margin-left: 40px; margin-top: 26px; background: rgb(255, 255, 255) url("norepeat.jpg") no-repeat scroll -101px -81px; }
+.footRight { float: left; width: 899px; margin-left: 60px; height: 100px; }
+.footRightTop { height: 34px; padding-bottom: 21px; overflow: hidden; border-bottom: 1px solid rgb(237, 237, 237); }
+.footRightTop li { position: relative; float: left; width: 245px; padding-left: 54px; height: 34px; line-height: 34px; font-size: 16px; }
+.footRightTop li b { position: absolute; left: 0px; top: 0px; width: 34px; height: 34px; background: rgb(255, 255, 255) url("icon8.png") no-repeat scroll 0px -135px; }
+.footRightTop li .b1 { background-position: 0px -135px; }
+.footRightTop li .b2 { background-position: 0px -170px; }
+.footRightTop li .b3 { background-position: 0px -205px; }
+.footRightBot { padding-top: 21px; }
+.footRightBot span { float: left; font-size: 14px; padding-right: 64px; }
+.footRightBot span a, .footRightBot span a:hover { color: rgb(127, 127, 127); }
+#aboutNEST { text-align: center; padding: 30px 0px 60px; margin: 0px auto; width: 1190px; line-height: 27px; font-size: 14px; color: rgb(63, 63, 63); height: auto; clear: both; }
+#aboutNEST a:link, #aboutNEST a:visited { color: rgb(63, 63, 63); }
+a { color: rgb(63, 63, 63); }
+a:hover { color: rgb(63, 63, 63); text-decoration: underline; }
+.mt6 { margin-top: 6px; }
+.mt10 { margin-top: 10px; }
+.btn_orange61, a.btn_orange61, .btn_gray61, a.btn_gray61 { display: inline-block; width: 61px; height: 24px; line-height: 24px; border: 0px none; font-family: "宋体"; font-size: 12px; font-weight: normal; color: rgb(255, 255, 255); text-align: center; text-decoration: none; background: rgb(255, 75, 41) none repeat scroll 0% 0%; cursor: pointer; }
+.btn_orange76, a.btn_orange76 { width: 76px; height: 29px; line-height: 29px; font-weight: bold; }
+a.btn_orange61:link, a.btn_orange61:visited, a.btn_orange61:link, a.btn_orange61:visited a.btn_gray61:link, a.btn_gray61:visited, a.btn_gray61:hover { color: rgb(255, 255, 255); text-decoration: none; }
+a.btn_orange61:hover { background: rgb(255, 97, 67) none repeat scroll 0% 0%; }
+.wrap { width: 960px; margin: 10px auto 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.searchBoxInd { background-color: rgb(227, 69, 81); }
+.searchBoxInd .searchWrap { position: relative; width: 1190px; margin: 0px auto; height: 74px; background: rgb(227, 69, 81) none repeat scroll 0% 0%; z-index: 100; }
+.searchBoxInd .logo2014 { float: left; width: 180px; height: 74px; margin: 0px 28px 0px 20px; background: rgba(0, 0, 0, 0) url("logo2014.png") no-repeat scroll 0px 0px; }
+.searchWrap ul.shift { float: left; }
+.searchWrap ul.shift li { float: left; height: 74px; }
+.searchWrap ul.shift li a { display: inline-block; height: 74px; line-height: 74px; width: 120px; text-align: center; font-family: "Microsoft YaHei"; font-size: 22px; color: rgb(255, 255, 255); text-decoration: none; }
+.searchWrap ul.shift li.active a, .searchWrap ul.shift li a:hover { background: rgb(207, 61, 72) none repeat scroll 0% 0%; }
+.searchWrap ul.shift li.movie { position: relative; z-index: 9300; }
+.searchWrap ul.shift li.movie dl { display: none; position: absolute; left: 0px; top: 74px; width: 120px; overflow: hidden; background: rgb(227, 69, 81) none repeat scroll 0% 0%; }
+.searchWrap ul.shift li.movie dl a { display: inline-block; width: 120px; height: 58px; line-height: 58px; font-size: 18px; margin: 0px; padding: 0px; cursor: pointer; color: rgb(255, 255, 255); text-align: center; border-top: 1px solid rgb(188, 53, 63); background: rgb(227, 69, 81) none repeat scroll 0% 0%; }
+.searchWrap ul.shift li.movie dl a:hover { background: rgb(207, 61, 72) none repeat scroll 0% 0%; }
+.searchWrap ul.shift li .triangle2 { position: absolute; left: 83px; top: 37px; }
+.switchTopCity { position: relative; float: left; width: 120px; height: 74px; font-family: "Microsoft YaHei"; z-index: 9200; }
+.switchTopCity .curCity { height: 74px; line-height: 74px; text-align: center; z-index: 9200; }
+.switchTopCity .curCity .cityName { font-size: 16px; color: rgb(255, 255, 255); cursor: pointer; }
+.triangle2 { display: inline-block; width: 0px; height: 0px; line-height: 0; font-size: 0px; margin-left: 7px; position: relative; top: -2px; border-width: 4px; border-color: rgb(255, 255, 255) transparent transparent; border-style: solid dashed none; transition: transform 0.2s ease-in 0s; }
+.curCity .textGray { color: rgb(195, 195, 195); }
+.cityList { display: none; position: absolute; left: 0px; top: 74px; width: 943px; padding: 9px; border: 1px solid rgb(233, 233, 233); background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 1; overflow: hidden; font-family: arial,"宋体"; }
+.cityList .title { background-color: rgb(244, 244, 244); padding-top: 10px; padding-left: 10px; overflow: hidden; position: relative; height: 47px; z-index: 1; }
+.cityList .title .close { display: inline-block; position: absolute; right: 14px; top: 18px; width: 19px; height: 19px; background: rgba(0, 0, 0, 0) url("icon8.png") no-repeat scroll 0px -37px; }
+.cityList .title .close:hover { background-position: 0px -57px; }
+.cityList .title .cityTopSearch { float: left; width: 160px; height: 20px; line-height: 20px; font-size: 16px; font-family: "Microsoft YaHei"; color: rgb(63, 63, 63); padding: 6px 36px 8px 10px; display: inline; border: 1px solid rgb(209, 209, 209); }
+.cityList .title .cityTopSearchBtn { position: absolute; left: 181px; top: 11px; width: 36px; height: 34px; cursor: pointer; border: medium none; background: rgba(0, 0, 0, 0) url("icon8.png") no-repeat scroll 0px -2px; }
+.cityList .title .textGray { padding: 7px 36px 7px 10px; font-size: 14px; color: rgb(199, 199, 199); }
+.cityList .title .titleChar { margin-left: 282px; margin-top: -5px; overflow: hidden; list-style: outside none none; cursor: default; font-size: 16px; color: rgb(63, 63, 63); }
+.cityList .title .titleChar .first { font-weight: bold; }
+.cityList .title .titleChar li { float: left; padding: 0px 24px; height: 52px; line-height: 50px; text-align: center; }
+.cityList .title .titleChar .on { color: rgb(63, 63, 63); border-color: rgb(230, 223, 222); background-color: rgb(255, 255, 255); }
+.cityList .cityListBox { color: rgb(104, 104, 104); overflow: hidden; }
+.cityList .cityListBox .hotCity dd { padding-left: 22px; }
+.cityList .cityListBox a { width: 58px; display: inline-block; }
+.cityList .cityListBox .cityListGroup { position: relative; overflow: hidden; margin-top: -1px; }
+.cityList .cityListBox dl { border-top: 1px dashed rgb(209, 209, 209); padding: 14px 0px; overflow: hidden; }
+.cityList .cityListBox dl dt { float: left; clear: both; width: 40px; padding-left: 14px; text-align: left; height: 24px; line-height: 26px; color: rgb(63, 63, 63); font-size: 16px; overflow: hidden; }
+.cityList .cityListBox dl dd { float: left; width: 889px; line-height: 24px; text-align: left; }
+.cityList .cityListBox dl dd a { font-size: 14px; font-family: "Microsoft YaHei"; color: rgb(63, 63, 63); }
+.cityList .cityListBox dl dd a:hover { color: rgb(63, 63, 63); text-decoration: underline; }
+.search { position: relative; float: right; margin-top: 20px; width: 208px; height: 36px; line-height: 36px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 5; }
+.search .ie6 { overflow: hidden; }
+.search .text { position: absolute; top: 0px; left: 0px; width: 161px; padding: 8px 37px 8px 10px; height: 20px; line-height: 20px; border: medium none; font-size: 16px; font-family: "Microsoft YaHei"; color: rgb(63, 63, 63); background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.search .textGray { padding: 8px 37px 8px 10px; font-size: 14px; color: rgb(199, 199, 199); }
+.search .sub { position: absolute; right: 1px; top: 2px; width: 36px; height: 33px; border: 0px none; cursor: pointer; background: rgba(0, 0, 0, 0) url("icon8.png") no-repeat scroll left -3px; }
+.cityTopSearch { border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentcolor rgb(209, 209, 209) rgb(209, 209, 209); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.docBody { width: 960px; margin: 0px auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.mainContent { float: left; width: 710px; }
+.siderBox { float: right; width: 240px; }
+.movieList { margin-left: -4px; margin-top: 2px; }
+.playBox { width: 708px; border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentcolor rgb(219, 219, 219) rgb(219, 219, 219); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; overflow: hidden; position: relative; }
+.mtype_imax { display: inline-block; width: 28px; height: 20px; overflow: hidden; vertical-align: middle; background: rgba(0, 0, 0, 0) url("type.png") no-repeat scroll left -141px; }
+.icon_z { display: inline-block; width: 20px; height: 20px; color: rgb(255, 255, 255); text-indent: -9999px; vertical-align: top; overflow: hidden; background: rgb(229, 84, 95) url("icon8.png") no-repeat scroll 0px -240px; }
+.icon_q { display: inline-block; width: 20px; height: 20px; color: rgb(255, 255, 255); text-indent: -9999px; vertical-align: top; overflow: hidden; background: rgb(255, 96, 0) url("icon8.png") no-repeat scroll -20px -240px; }
+.icon_t { display: inline-block; width: 20px; height: 20px; color: rgb(255, 255, 255); text-indent: -9999px; vertical-align: top; overflow: hidden; background: rgb(255, 150, 0) url("icon8.png") no-repeat scroll 0px -260px; }
+.mtype_imax { display: inline-block; width: 50px; height: 20px; color: rgb(255, 255, 255); text-indent: -9999px; overflow: hidden; vertical-align: top; background: rgb(255, 150, 0) url("icon8.png") no-repeat scroll 0px -280px; }
+#sideBar { width: 60px; height: 125px; position: fixed; left: 50%; bottom: 343px; margin-left: 600px; z-index: 200; }
+#toTop { display: inline-block; width: 60px; height: 60px; vertical-align: middle; outline: medium none; background: rgba(0, 0, 0, 0) url("norepeat.jpg") no-repeat scroll 0px -207px; }
+#toTop:hover { background: rgba(0, 0, 0, 0) url("norepeat.jpg") no-repeat scroll -61px -207px; }
+#feedback { display: inline-block; width: 60px; height: 60px; outline: medium none; vertical-align: middle; background: rgba(0, 0, 0, 0) url("norepeat.jpg") no-repeat scroll 0px -141px; }
+#feedback:hover { background: rgba(0, 0, 0, 0) url("norepeat.jpg") no-repeat scroll -61px -141px; }
+.mapIcon { background: rgba(0, 0, 0, 0) url("common.png") no-repeat scroll -54px -275px; width: 25px; height: 25px; display: inline-block; margin-bottom: 6px; vertical-align: middle; }
+.textGray { color: rgb(195, 195, 195); }
