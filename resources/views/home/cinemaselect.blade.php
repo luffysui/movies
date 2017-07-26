@@ -42,7 +42,7 @@
                 }
 
             </style>
-            <div id="page" style="height:10px;">
+            <div id="page" style="height:50px;">
                 {!! $list->render() !!}
 
             </div>

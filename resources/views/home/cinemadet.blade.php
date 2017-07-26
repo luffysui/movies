@@ -23,9 +23,9 @@
         <span class="title" cid="1448">
             <div class="mv_name" title=""><h1>{{ $cinema->cinema_name}}</h1><i class="icon_q"></i></div>
                 <span class="star_bg">
-                    <em class="star" style="width: 83%;"></em>
+                    <em class="star" style="width: {{ $cinema->cinema_score*10 }}%;"></em>
                 </span>
-                <span class="score_big">8.<em class="s">3</em></span>
+                <span class="score_big">{{ $cinema->cinema_score }}</span>
                 <a href="#none" class="collect" id="collect_cinema" rel="nofollow">收藏</a>
         </span>
             <a href="#none" class="feedback" id="feedback_cinema" rel="nofollow">影院信息纠错</a>
@@ -100,9 +100,9 @@
                         <dt>
                             <h2><a href="{{ url('/movie/'.$v->movie_id)}}">{{ $v->name }} </a>
                                 <span class="star_bg ml10">
-                                    <div class="star" style="width: 75%;"></div>
+                                    <div class="star" style="width: {{ $v->score*10 }}%;"></div>
                                 </span>
-                                <span class="score_big">7.<em class="s">5</em></span>
+                                <span class="score_big">{{ $v->score }}</span>
                             </h2>
                         </dt>
                         <div style="float: left;">
@@ -111,7 +111,7 @@
                        <div style="margin-left: 130px;margin-top: 30px;margin-right:20px;">
                             <div style="font-size:200px;"><dd class="summary">{{ $v->description }}</dd></div>
                             <dd class="des left">导演：{{ $v->director }}</dd>
-                            <dd class="des">上映：{{ $v->start_time }}</dd>
+                            <dd class="des">上映：{{ date('m-d',$v->start_time) }}</dd>
                             <dd class="des left">主演： {{ $v->star }}</dd>
                             <dd class="des">类型：{{ $v->typeName }}</dd>
 
@@ -128,7 +128,7 @@
         <div class="title">
             <strong>影院介绍：</strong>
         </div>
-        <p>五星级数字影院——{{ $cinema->cinema_name}}位于在北京南城的南三环，{{ $cinema->cinema_name}}是继成功运营深圳、佛山、郑州、重庆等影城项目之后，在京建设的五星级影院旗舰店，也填补了北京影院发展不平衡的空白。&nbsp;{{ $cinema->cinema_name}}在2010年8月28日正式开业，“75231828”八位视听密码的开启环节是影城最大亮点，其中，“7”代表影城7个顶级的独立观影厅，可同时容纳近1500人观影；“5”是其南城首家五星级影院的象征；“2”彰显了影院作为{{ $cinema->cinema_name}}的重要地位；“3”则展示了保利影城紧邻南3环的便捷交通位置。</p>
+        <p>{{ $cinema->cinema_desc }}</p>
     </div>
     <div class="mv_comm_plot" id="info2">
         <div class="title">
@@ -185,47 +185,9 @@
                     </div>
             @endforeach
                 </dd>
-
-
-
             </dl>
         </section>
     </div>
-    <section class="aboutBox ti mt10">
-        悦影电影是一个能够让您在线购买电影票的在线选座平台，这里有{{ $cinema->cinema_name}}<span class="aLine">
-            <a href="/onshow" class="seatSub" title="热映电影">热映电影</a>
-            <i>、</i><a href="" class="commentSub" title="影院列表">影院详情</a>
-            <i>、</i><a  class="commentSub" title="特色信息">特色信息</a>
-            <i>、</i><a  class="commentSub" title="优惠信息">优惠信息</a>
-            <i>、</i><a  class="commentSub" title="交通信息">交通信息</a>
-        </span>
-        等，便捷的购票系统，第一时间更新北京保利国际影城(首地大峡谷店)影讯、排期表、团购优惠券信息。
-    </section>
-        <section class="aboutBox mt10">
-            <div class="relTitle">
-                <!-- <a hidefocus="true" class="relCinemaBar" data-show="0"></a> -->相关影院：
-            </div>
-            <div class="relCinemaBox">
-                <div class="relCinema">
-                        <a href="#" target="_blank">广安门电影院</a>、
-                        <a href="" target="_blank">北京市工人俱乐部</a>、
-                        <a href="l# target="_blank">耀莱成龙国际影城(马连道店)</a>、
-                        <a href="#" target="_blank">首都国际影城天桥店</a>、
-                        <a href="#“ target="_blank">中华电影娱乐宫影城</a>、
-                        <a href="#" target="_blank">博纳国际影城(方庄店)</a>、
-                        <a href="#" target="_blank">繁星戏剧村</a>..
-                        <a href="#" target="_blank">糖人街影院</a>、
-                        <a href="#" target="_blank">大观楼影城</a>、
-                        <a href="#" target="_blank">西单文化广场电影院</a>、
-                        <a href="#" target="_blank">摩威秀影城</a>、
-                        <a href="#" target="_blank">iMovie视听馆</a>、
-                        <a href="#" target="_blank">星博正华影城</a>、
-                        <a href="#" target="_blank">世茂国际影城(羊坊店路店)</a>、
-                        <a href="#" target="_blank">首都电影院(西单店)</a>、
-                        <a href="#" target="_blank">北京搜秀影城</a>、
-                </div>
-            </div>
-        </section>
 </div>
 
 
