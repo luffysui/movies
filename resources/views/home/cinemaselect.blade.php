@@ -32,6 +32,21 @@
             </ol>
         </li>
 @endforeach
+            <style>
+                .pagination li{
+                    font-size: 20px;
+                    float: left;
+                    line-height:30px;
+                    padding-left: 20px;
+                    height:10px;
+                }
+
+            </style>
+            <div id="page" style="height:10px;">
+                {!! $list->render() !!}
+
+            </div>
+
 </ul>
 </div>
 @endsection

@@ -31,12 +31,13 @@
                                 @if( $home['movieList'][0]->d3)
                                     <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="/beijing/movie/48488.html" rel="nofollow"><img width="220" height="300" alt="{{ $home['movieList'][0]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][0]->poster }}"></a>
+                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="{{ url('movie').'/'.$home['movieList'][0]->movie_id }}" rel="nofollow">
+                                    <img width="220" height="300" alt="{{ $home['movieList'][0]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][0]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  >
                             <h3>
-                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="/beijing/movie/48488.html" rel="nofollow">{{ $home['movieList'][0]->name }}</a>
+                                <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="{{ url('movie').'/'.$home['movieList'][0]->movie_id }}" rel="nofollow">{{ $home['movieList'][0]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:72%" class="star"></b></span>
@@ -60,12 +61,13 @@
                                 @if( $home['movieList'][1]->d3)
                                 <em class="mvType mvType3d"></em>
                                 @endif
-                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="/beijing/movie/48542.html" rel="nofollow"><img width="220" height="300" alt="{{ $home['movieList'][1]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][1]->poster }}"></a>
+                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="{{ url('movie').'/'.$home['movieList'][1]->movie_id }}" rel="nofollow">
+                                    <img width="220" height="300" alt="{{ $home['movieList'][1]->name }}" src="{{ asset('upload/admin').'/'.$home['movieList'][1]->poster }}"></a>
                             </div>
                         </li>
                         <li class="l2"  style="width:212px;padding-right:0;" >
                             <h3>
-                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="/beijing/movie/48542.html" rel="nofollow">{{ $home['movieList'][1]->name }}</a>
+                                <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="{{ url('movie').'/'.$home['movieList'][1]->movie_id }}" rel="nofollow">{{ $home['movieList'][1]->name }}</a>
                             </h3>
                             <p class="p2">
                                 <span class="star_bg"><b style="width:75%" class="star"></b></span>
@@ -157,9 +159,7 @@
                     </li>
                     @endforeach
                 </ul>
-
             </div>
-
         </div>
         <div class="mainRight" style="">
             <h2 class="colTitle"><span class="colText">广告位</span></h2>
@@ -168,7 +168,6 @@
                 <span class="followBtn"><wb:follow-button uid="3084971975" type="red_1" width="67" height="24"></wb:follow-button></span>
             </div>
         </div>
-
     </section>
     <section class="mainCont clearfix mt15">
         <div class="mainLeft" style="height:556px;">
@@ -182,7 +181,7 @@
                                 {{ $v->min }}<i>元起</i>
                             @else
                                 <i>暂无排期</i>
-                            @endif
+                        @endif
                     <i>元起</i></span>
                     <div class="cName"><a href="{{ url('/cinema/'.$v->cinema_id)}}" target="_blank">{{ $v->cinema_name }}</a>
                         <em class="score ml20">{{ $v->cinema_score }}</em><em class="icon_z ml10">座</em><em class="icon_q ml10">券</em>
