@@ -31,13 +31,9 @@ class MovieListController extends Controller
             setcookie('cityId',$cityId,time()+7*24*60*60);
         }
 
-//        dd($cityId);
         $cityCode = DB::table('region')->where('city_id',$cityId)->value('region_code');
-//        dd($cityCode);
         $regionCode = DB::table('region')->where('father_id',$cityCode)->lists('region_code');
-//        dd($regionCode);
         $cinemaList = DB::table('cinema')->whereIn('region_code',$regionCode)->get();
-//        dd($cinemaList);
         $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
                     ->orderBy('start_time','desc')
                     ->paginate(10);
@@ -45,8 +41,6 @@ class MovieListController extends Controller
         $list = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
                     ->orderBy('score','desc')
                     ->paginate(10);
-        // dd($movieList);
-        // dd($min);
         foreach($movieList as $k=>$v){
             //类型查询
             $min = DB::table('round')->where('movie_id',$v->movie_id)->orderBy('nprice','asc')->value('nprice');

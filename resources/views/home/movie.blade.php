@@ -6,23 +6,23 @@
 
 <div class="wrap990">
     <section class="mv_info_box clearfix">
-        <div id="share" class="share" >
-        	<div class="share_inner">影片分享到<b></b>
-        		<div class="shareDiv" id="shareDiv"></div>
-            </div>
-        </div>
+        {{--<div id="share" class="share" >--}}
+        	{{--<div class="share_inner">影片分享到<b></b>--}}
+        		{{--<div class="shareDiv" id="shareDiv"></div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
     	<div class="poster">
                 {{--<i class="sanD"></i>--}}
-        	<img src="{{ asset('/upload/admin/'.$movie->poster) }}" width="200" height="267" alt="神偷奶爸3" />
+        	<img src="{{ asset('/upload/admin/'.$movie->poster) }}" width="200" height="267"/>
         </div>
         <dl class="mv_info">
         	<dt class="overflow">
             	<span class="mv_name"><h2 >{{ $movie->name }}</h2></span>
 	                <span class="star_bg ml10">
-	                    <div class="star" style="width:75%"></div>
+	                    <div class="star" style="width:{{ $movie->score*10 }}%"></div>
 	                </span>
-                    <span class="score_big">7.<em class="s">5</em></span>
+                    <span class="score_big">{{ $movie->score }}</span>
 
             </dt>
             <dd class="summary">{{ $movie->description }}</dd>
@@ -160,7 +160,7 @@
 @foreach($cinemaList as $v )
         <div class="orangeLine" id="ticketHead">
             <h3><a href="{{ url('/movie/'.$movie->movie_id.'/'.$v->cinema_id) }}" id="ticketCinemaName"><strong>{{ $v->cinema_name }}</strong></a>
-                <span class="score" style="vertical-align:middle;">8.<em class="s">6</em></span>
+                <span class="score" style="vertical-align:middle;">{{ $v->cinema_score }}</span>
                 <span class="icon_z"></span>
                 <span class="icon_q"></span>
                 <span class="icon_t" style="display:none;"></span>
@@ -208,102 +208,40 @@
             	<dt class="title">正在热映</dt>
                 <dd>
                     <ul class="sider_hot_mv clearfix" >
-			 <li mid="48,542">
-				<div class="poster"><a href="/beijing/movie/48542.html#from=cinema.hot" target="_blank" title="神偷奶爸3">
-						<em class="mvType mvType3d"></em>
-		        <img src="Picture/149672625572711549_70_93_webp.jpg" width="70" height="93" alt="神偷奶爸3" /></a></div>
-				<dl>
-					<dt>
-						<h2><a href="/beijing/movie/48542.html#from=cinema.hot" target="_blank" title="神偷奶爸3">神偷奶爸3</a></h2>
-					</dt>
-                                                        <dd class="mv_star"> <span class="star_bg_s"><div style="width:75%" class="star_s"></div></span></dd>
-					<dd class="summary" title="小黄人激萌归来">小黄人激萌归来</dd>
-					<dd class="des" title="史蒂夫·卡瑞尔 克里斯汀·韦格 崔·帕克 米兰达·卡斯格拉夫 拉塞尔·布兰德 迈克尔·贝亚蒂 达纳·盖尔 皮艾尔·柯芬 安迪·尼曼">主演：史蒂夫·卡瑞尔 克里斯汀·韦格 崔·帕克 米兰达·卡斯格拉夫 拉塞尔·布兰德 迈克尔·贝亚蒂 达纳·盖尔 皮艾尔·柯芬 安迪·尼曼</dd>
-				</dl>
-			</li>
-							 <li mid="48,488">
-								<div class="poster"><a href="/beijing/movie/48488.html#from=cinema.hot" target="_blank" title="悟空传">
-						        <img src="Picture/149491065767611038_70_93_webp.jpg" width="70" height="93" alt="悟空传" /></a></div>
-								<dl>
-									<dt>
-										<h2><a href="/beijing/movie/48488.html#from=cinema.hot" target="_blank" title="悟空传">悟空传</a></h2>
-									</dt>
-                                    <dd class="mv_star">
-							                <span class="star_bg_s"><div style="width:72%" class="star_s"></div></span>
-                                    </dd>
-									<dd class="summary" title="这是悟空的故事">这是悟空的故事</dd>
-									<dd class="des" title="彭于晏 倪妮 欧豪 余文乐 郑爽 乔杉 杨迪 俞飞鸿">主演：彭于晏 倪妮 欧豪 余文乐 郑爽 乔杉 杨迪 俞飞鸿</dd>
-								</dl>
-							</li>
-							 <li mid="48,489">
-								<div class="poster"><a href="/beijing/movie/48489.html#from=cinema.hot" target="_blank" title="大护法">
-						        <img src="Picture/149491098489911051_70_93_webp.jpg" width="70" height="93" alt="大护法" /></a></div>
-								<dl>
-									<dt>
-										<h2><a href="/beijing/movie/48489.html#from=cinema.hot" target="_blank" title="大护法">大护法</a></h2>
-									</dt>
-                                    <dd class="mv_star">
-							                <span class="star_bg_s"><div style="width:70%" class="star_s"></div></span>
-                                    </dd>
-									<dd class="summary" title="感谢给我逆境的众生">感谢给我逆境的众生</dd>
-									<dd class="des" title="无">主演：无</dd>
-								</dl>
-							</li>
-							 <li mid="42,221">
-								<div class="poster"><a href="/beijing/movie/42221.html#from=cinema.hot" target="_blank" title="深夜食堂2">
-						        <img src="Picture/1364354066017444317_70_93.jpg" width="70" height="93" alt="深夜食堂2" /></a></div>
-								<dl>
-									<dt>
-										<h2><a href="/beijing/movie/42221.html#from=cinema.hot" target="_blank" title="深夜食堂2">深夜食堂2</a></h2>
-									</dt>
-                                    <dd class="mv_star">
-							                <span class="star_bg_s"><div style="width:77%" class="star_s"></div></span>
-                                    </dd>
-									<dd class="summary" title="温情，感动，这是一部暖心的电影">温情，感动，这是一部暖心的电影</dd>
-									<dd class="des" title="小林薰,安田成美,松重丰,光石研">主演：小林薰,安田成美,松重丰,光石研</dd>
-								</dl>
-							</li>
-							 <li mid="48,506">
-								<div class="poster"><a href="/beijing/movie/48506.html#from=cinema.hot" target="_blank" title="冈仁波齐">
-						        <img src="Picture/149560297663311311_70_93_webp.jpg" width="70" height="93" alt="冈仁波齐" /></a></div>
-								<dl>
-									<dt>
-										<h2><a href="/beijing/movie/48506.html#from=cinema.hot" target="_blank" title="冈仁波齐">冈仁波齐</a></h2>
-									</dt>
-                                    <dd class="mv_star">
-							                <span class="star_bg_s"><div style="width:75%" class="star_s"></div></span>
-                                    </dd>
-									<dd class="summary" title="我们都在朝圣的路上">我们都在朝圣的路上</dd>
-									<dd class="des" title="杨培 尼玛扎堆 斯朗卓嘎 仁曲珍">主演：杨培 尼玛扎堆 斯朗卓嘎 仁曲珍</dd>
-								</dl>
-							</li>
-							 <li mid="48,522">
-								<div class="poster"><a href="/beijing/movie/48522.html#from=cinema.hot" target="_blank" title="变形金刚5：最后的骑士">
-						            <i class="imax"></i>
-						        <img src="Picture/149577630154811512_70_93_webp.jpg" width="70" height="93" alt="变形金刚5：最后的骑士" /></a></div>
-								<dl>
-									<dt>
-										<h2><a href="/beijing/movie/48522.html#from=cinema.hot" target="_blank" title="变形金刚5：最后的骑士">变形金刚5：最后的骑士</a></h2>
-									</dt>
-                                    <dd class="mv_star">
-							                <span class="star_bg_s"><div style="width:80%" class="star_s"></div></span>
-                                    </dd>
-									<dd class="summary" title="擎天柱对战“宇宙大帝”">擎天柱对战“宇宙大帝”</dd>
-									<dd class="des" title="马克·沃尔伯格 彼特·库伦 伊莎贝拉·莫奈 乔什·杜哈明 泰瑞斯·吉布森 安东尼·霍普金斯 劳拉·哈德克 约翰·古德曼 斯坦利·图齐 桑地亚哥·卡布瑞拉 吉尔·伯明翰 让·杜雅尔丹 渡边谦 约翰·迪·玛吉欧 弗兰克·维尔克 米彻·佩勒吉">主演：马克·沃尔伯格 彼特·库伦 伊莎贝拉·莫奈 乔什·杜哈明 泰瑞斯·吉布森 安东尼·霍普金斯 劳拉·哈德克 约翰·古德曼 斯坦利·图齐 桑地亚哥·卡布瑞拉 吉尔·伯明翰 让·杜雅尔丹 渡边谦 约翰·迪·玛吉欧 弗兰克·维尔克 米彻·佩勒吉</dd>
-								</dl>
-							</li>
+@foreach($movieList as $v)
+	 <li mid="48,542">
+		<div class="poster">
+            <a href="{{ url('movie').'/'.$v->movie_id }}" target="_blank" >
+				<em class="mvType mvType3d"></em>
+		        <img src="{{ asset('upload/admin').'/'.$v->poster }}" width="70" height="93" />
+            </a>
+        </div>
+		<dl>
+			<dt>
+				<h2><a href="" target="_blank">{{ $v->name }}</a></h2>
+			</dt>
+			<dd class="mv_star">
+                <span class="star_bg_s">
+                    <div style="width:{{ $v->score*10 }}%" class="star_s"></div>
+                </span></dd>
+			<dd class="summary">{{ $v->description }}</dd>
+			<dd class="des">主演：{{ $v->star }}</dd>
+		</dl>
+	</li>
+@endforeach
+
 					</ul>
                 </dd>
             </dl>
         </section>
     </article>
 </div>
-<form id="formTest" action="http://www.baidu.com" method="get" target="_blank"></form>
+<form id="formTest" action="" method="get" target="_blank"></form>
 <script>
     //用来计算评论时间
     Core.nowTime ='2017/07/19 11:41:54';
 </script>
-<script type="text/javascript" src="Scripts/e97c654c2f564150b740aa8f34593c9a.js"></script>
+<script type="text/javascript" src="{{ asset('home/Scripts/e97c654c2f564150b740aa8f34593c9a.js') }}"></script>
 
 
 

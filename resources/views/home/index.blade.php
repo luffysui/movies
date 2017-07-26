@@ -146,11 +146,11 @@
                             @endif
                             <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
                         </div>
-                        <div class="title">
-                            <span class="playTime2">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</span>
+                        <div class="">
                             <p class="t1">
-                                <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">{{ $v->name }}</a>
+                                <a style="font-weight: bolder;font-size: 20px;" target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">《{{ $v->name }}》</a>
                             </p>
+                            <span class="title">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</span>
                         </div>
                         <p>
                         <b  class="showBtn " >想看</b></p>

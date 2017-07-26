@@ -63,8 +63,13 @@ class MovieController extends Controller
                 $v->roomName = $roomName;
             }
         }
-
-        return  view('home.movie',['movie'=>$movie,'cinema'=>$cinema,'roomList'=>$roomList,'roundList'=>$roundList,'cinemaList'=>$cinemaList,'movieId'=>$movieId]);
+$movieList = DB::table('movie')->where('start_time','<',time())
+                                ->where('stop_time','>',time())
+                                ->take(6)
+                                ->orderBy('start_time','desc')
+                                ->get();
+//        dd($movieList);
+        return  view('home.movie',['movieList'=>$movieList,'movie'=>$movie,'cinema'=>$cinema,'roomList'=>$roomList,'roundList'=>$roundList,'cinemaList'=>$cinemaList,'movieId'=>$movieId]);
     }
     //影评页面
     public function showreply($movieId){
