@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use DB;
-use Redis;
+use Illuminate\Support\Facades\Redis;
 use Session;
 
 //发送短信
@@ -135,6 +135,7 @@ class OrderController extends Controller
         $seats = Redis::smembers($round);
         echo json_encode($seats);
     }
+
 
     //用户订单页面
     public function userIndex()

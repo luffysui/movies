@@ -225,7 +225,7 @@
 //        console.log(seats);
         if(seats.length < 1){
             alert('选个座位啊');
-//            location.reload();
+            location.reload();
         }
         var seatsStr='';
         seats.each(function(){

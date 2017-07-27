@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="4d4aeae7-b937-4775-95c7-1cac27b02ee7" name="zzz" url="http://47.94.17.109">
-        <fileTransfer host="47.94.17.109" port="22" rootFolder="/usr/www/html/project_zhaodalin" accessType="SFTP">
+        <fileTransfer host="47.94.17.109" port="22" rootFolder="/usr/www/html/project" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

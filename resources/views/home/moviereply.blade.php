@@ -14,27 +14,27 @@
 
     <div class="wrap990">
         <section class="mv_info_box clearfix">
-            <div id="share" class="share" >
-                {{--<div class="share_inner">影片分享到<b></b>--}}
-                    {{--<div class="shareDiv" id="shareDiv"></div>--}}
-                {{--</div>--}}
-            </div>
+            {{--<div id="share" class="share" >--}}
+            {{--<div class="share_inner">影片分享到<b></b>--}}
+            {{--<div class="shareDiv" id="shareDiv"></div>--}}
+            {{--</div>--}}
+            {{--</div>--}}
 
             <div class="poster">
                 {{--<i class="sanD"></i>--}}
-                <img src="{{ asset('/upload/admin/'.$movie->poster) }}" width="200" height="267" alt="神偷奶爸3" />
+                <img src="{{ asset('/upload/admin/'.$movie->poster) }}" width="200" height="267"/>
             </div>
             <dl class="mv_info">
                 <dt class="overflow">
                     <span class="mv_name"><h2 >{{ $movie->name }}</h2></span>
                     <span class="star_bg ml10">
-	                    <div class="star" style="width:75%"></div>
+	                    <div class="star" style="width:{{ $movie->score*10 }}%"></div>
 	                </span>
-                    <span class="score_big">7.<em class="s">5</em></span>
+                    <span class="score_big">{{ $movie->score }}</span>
 
                 </dt>
-                <dd class="summary">{{ $movie->description }}</dd>
-                <dd class="des">上映：<em class="">{{ $movie->start_time }}</em></dd>
+                <dd style="width:400px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap" class="summary">{{ $movie->description }}</dd>
+                <dd class="des">上映：<em class="">{{ date('Y年m月d日',$movie->start_time) }}</em></dd>
                 <dd class="des">导演：{{ $movie->director }}</dd>
                 <dd class="des role" id="role">
                     <span style="float:left;">主演：</span>
@@ -43,7 +43,7 @@
 
                     </div>
                 </dd>
-                <dd class="other">@if($movie->d3)<span>3D</span>@endif<span>{{ $movie->duration }}</span>
+                <dd class="other">@if($movie->d3)<span>3D</span>@endif<span>{{ floor($movie->duration/60).'时'.($movie->duration%60).'分钟' }}</span>
                 </dd>
             </dl>
             <script>

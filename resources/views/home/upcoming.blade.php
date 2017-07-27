@@ -29,7 +29,7 @@
                       <li class="l2">
                           <h3><a href="{{ url('/movie/'.$v->movie_id)}}" title="{{ $v->name }}" target="_blank">{{ $v->name }}</a>
 
-                              <span class="star_bg ml20"><b class="star" style="width:72%"></b></span>
+                              <span class="star_bg ml20"><b class="star" style="width:{{ $v->score*10 }}%"></b></span>
                               <em> {{ $v->score }}</em>
 
                           </h3>
@@ -105,17 +105,17 @@
         <dd><b class="b4"></b>4.凭码自助取票</dd>
     </dl>
 </div>
-        <div class="mt15" style="text-overflow: ellipsis;white-space: nowrap;">
-                <h2 class="colTitle"><span class="colText">热映排行榜</span></h2>
-            <ul  class="weeklyTop">
-                <li><em class="score fr">{{ $list[0]->score }}</em><b class="b0"></b><a href="{{ url('movie/'.$list[0]->movie_id) }}" target="_blank" title="">{{ $list[0]->name }}</a></li>
-                <li><em class="score fr">{{ $list[1]->score }}</em><b class="b1"></b><a href="{{ url('movie/'.$list[1]->movie_id) }}" target="_blank" title="">{{ $list[1]->name }}</a></li>
-                <li><em class="score fr">{{ $list[2]->score }}</em><b class="b2"></b><a href="{{ url('movie/'.$list[2]->movie_id) }}" target="_blank" title="">{{ $list[2]->name }}</a></li>
-                <li><em class="score fr">{{ $list[3]->score }}</em><b class="b3"></b><a href="{{ url('movie/'.$list[3]->movie_id) }}" target="_blank" title="">{{ $list[3]->name }}</a></li>
-                <li><em class="score fr">{{ $list[4]->score }}</em><b class="b4"></b><a href="{{ url('movie/'.$list[4]->movie_id) }}" target="_blank" title="">{{ $list[4]->name }}</a></li>
+        {{--<div class="mt15" style="text-overflow: ellipsis;white-space: nowrap;">--}}
+                {{--<h2 class="colTitle"><span class="colText">热映排行榜</span></h2>--}}
+            {{--<ul  class="weeklyTop">--}}
+                {{--<li><em class="score fr">{{ $list[0]->score }}</em><b class="b0"></b><a href="{{ url('movie/'.$list[0]->movie_id) }}" target="_blank" title="">{{ $list[0]->name }}</a></li>--}}
+                {{--<li><em class="score fr">{{ $list[1]->score }}</em><b class="b1"></b><a href="{{ url('movie/'.$list[1]->movie_id) }}" target="_blank" title="">{{ $list[1]->name }}</a></li>--}}
+                {{--<li><em class="score fr">{{ $list[2]->score }}</em><b class="b2"></b><a href="{{ url('movie/'.$list[2]->movie_id) }}" target="_blank" title="">{{ $list[2]->name }}</a></li>--}}
+                {{--<li><em class="score fr">{{ $list[3]->score }}</em><b class="b3"></b><a href="{{ url('movie/'.$list[3]->movie_id) }}" target="_blank" title="">{{ $list[3]->name }}</a></li>--}}
+                {{--<li><em class="score fr">{{ $list[4]->score }}</em><b class="b4"></b><a href="{{ url('movie/'.$list[4]->movie_id) }}" target="_blank" title="">{{ $list[4]->name }}</a></li>--}}
 
-            </ul>
-        </div>
+            {{--</ul>--}}
+        {{--</div>--}}
         <div class="mt15">
         </div>
     </div>

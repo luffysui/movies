@@ -3,12 +3,7 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('home/Css/jquery.jscrollpane.codrops.css') }}">
     <link rel="stylesheet" href="{{ asset('home/Css/detail_new.css') }}">
-    <style type="text/css">
-        @-webkit-keyframes loginPopAni{0%{opacity:0;-webkit-transform:scale(0);}15%{-webkit-transform:scale(0.667);}25%{-webkit-transform:scale(0.867);}40%{-webkit-transform:scale(1);}55%{-webkit-transform:scale(1.05);}70%{-webkit-transform:scale(1.08);}85%{opacity:1;-webkit-transform:scale(1.05);}100%{opacity:1;-webkit-transform:scale(1);}}@keyframes loginPopAni{0%{opacity:0;transform:scale(0);}15%{transform:scale(0.667);}25%{transform:scale(0.867);}40%{transform:scale(1);}55%{transform:scale(1.05);}70%{transform:scale(1.08);}85%{opacity:1;transform:scale(1.05);}100%{opacity:1;transform:scale(1);}}
-        .BMap_stdMpCtrl{
-            display:none;
-        }
-    </style>
+    <style type="text/css">@-webkit-keyframes loginPopAni{0%{opacity:0;-webkit-transform:scale(0);}15%{-webkit-transform:scale(0.667);}25%{-webkit-transform:scale(0.867);}40%{-webkit-transform:scale(1);}55%{-webkit-transform:scale(1.05);}70%{-webkit-transform:scale(1.08);}85%{opacity:1;-webkit-transform:scale(1.05);}100%{opacity:1;-webkit-transform:scale(1);}}@keyframes loginPopAni{0%{opacity:0;transform:scale(0);}15%{transform:scale(0.667);}25%{transform:scale(0.867);}40%{transform:scale(1);}55%{transform:scale(1.05);}70%{transform:scale(1.08);}85%{opacity:1;transform:scale(1.05);}100%{opacity:1;transform:scale(1);}}</style>
     <div class="wrap990">
 
         <section class="cinema_search">
@@ -57,14 +52,16 @@
                                     <span class="bubble_red">1</span>
                                     <a target="_blank" href="{{ url('/cinema/'.$v->cinema_id) }}">{{ $v->cinema_name }}</a>
                                     <span class="score_s ml5">{{ $v->cinema_score }}</span>
+                                </div><div class="c_price"><span><em>{{ $v->min/100 }}</em>
+                                        <i>起</i></span><span class="icon_z"></span>
+                                    <span class="icon_q"></span>
                                 </div>
-                                <div class="c_price">
-                                    <span>
-                                        <em>{{ $v->min }}</em>
-
-                                    </span>
-                                    <span class="icon_z"></span>
-                                    <span class="icon_q"></span></div><div class="c_add">地址：{{ $v->cinema_address }}</div><div class="c_tel">电话：{{ $v->cinema_phone }}</div><div class="c_btn mt8"><a href="{{ url('/cinema/'.$v->cinema_id) }}" class="btn_e34551 btn_89_29" target="_blank">购&nbsp;&nbsp;票</a></div></li>
+                                <div class="c_add">地址：{{ $v->cinema_address }}</div>
+                                <div class="c_tel">电话：{{ $v->cinema_phone }}</div>
+                                <div class="c_btn mt8">
+                                    <a href="{{ url('/cinema/'.$v->cinema_id) }}" class="btn_e34551 btn_89_29" target="_blank">购&nbsp;&nbsp;票</a>
+                                </div>
+                            </li>
 
                         @endforeach
                     </ul>

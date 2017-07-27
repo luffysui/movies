@@ -41,13 +41,30 @@ class MovieController extends Controller
         $regionCode = DB::table('region')->where('father_id',$cityCode)->lists('region_code');
         if($cinemaId == 'a'){
 
-            $cinema = DB::table('cinema')->whereIn('region_code',$regionCode)->first();
+            $cinema = DB::table('cinema')->whereIn('region_code',$regionCode)->orderBy('cinema_score','desc')->first();
         }else{
             $cinema = DB::table('cinema')->where('cinema_id',$cinemaId)->first();
         }
 
         $movie = DB::table('movie')->where('movie_id',$movieId)->first();
-        $cinemaList = DB::table('cinema')->whereIn('region_code',$regionCode)->get();
+        //所有该地区的影院
+        $cinemaList = DB::table('cinema')->whereIn('region_code',$regionCode)->orderBy('cinema_score','desc')->get();
+
+        //找到每家影院的该影院最低价
+        foreach ($cinemaList as $k=>$v)
+        {
+            //这一家影院的影厅
+            $room = DB::table('room')->where('cid',$v->cinema_id)->lists('room_id');
+            $minPrice = DB::table('round')->where('movie_id',$movie->movie_id)->whereIn('room_id',$room)->orderBy('nprice')->first();
+
+            if(!$minPrice){
+                $minP = '暂无排期';
+            }else{
+                $minP = '最低价：'.($minPrice->nprice/100).'元';
+            }
+            $cinemaList[$k]->minPrice = $minP;
+        }
+//        dd($cinemaList);
         //该城市没有影院
         if($cinema==null){
             $roomIdList =[];
@@ -63,14 +80,15 @@ class MovieController extends Controller
                 $v->roomName = $roomName;
             }
         }
-$movieList = DB::table('movie')->where('start_time','<',time())
+        $movieList = DB::table('movie')->where('start_time','<',time())
                                 ->where('stop_time','>',time())
                                 ->take(6)
                                 ->orderBy('start_time','desc')
                                 ->get();
-//        dd($movieList);
         return  view('home.movie',['movieList'=>$movieList,'movie'=>$movie,'cinema'=>$cinema,'roomList'=>$roomList,'roundList'=>$roundList,'cinemaList'=>$cinemaList,'movieId'=>$movieId]);
     }
+
+
     //影评页面
     public function showreply($movieId){
         $count = DB::table('comment')->where('movie_id',$movieId)->count();
@@ -79,7 +97,9 @@ $movieList = DB::table('movie')->where('start_time','<',time())
             ->where('movie_id',$movieId)->orderBy('time', 'desc')->get();
         $movie = DB::table('movie')->where('movie_id',$movieId)->first();
         return view('home.moviereply',['movie'=>$movie,'movieId'=>$movieId,'count'=>$count,'coms'=>$coms]);
-    }
+     }
+
+
     //添加评论操作
     public function doreply(Request $request, $movieId){
 

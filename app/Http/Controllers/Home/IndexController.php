@@ -20,7 +20,7 @@ class IndexController extends Controller
     //展示首页
     public function index(Request $request)
     {
-        if(!Cache::has('staticPageCache_home')){
+//        if(!Cache::has('staticPageCache_home')){
             $movieList = DB::table('movie')->where('start_time','<',time())->where('stop_time','>',time())
                 ->orderBy('start_time','desc')
                 ->take(2)->get();
@@ -35,20 +35,36 @@ class IndexController extends Controller
 			 foreach ($movieList as $key => $value)
 			{
 				//按照现价正序排列取最小值
-				$min = DB::table('round')->where('movie_id',$value->movie_id)->orderBy('nprice','asc')->value('nprice');
+				$min = DB::table('round')->where('starttime','>',time())->where('movie_id',$value->movie_id)->orderBy('nprice','asc')->value('nprice');
 				$movieList[$key]->min=$min;
-				$movieListSec[$key]->min=$min;
-				$cinemaList[$key]->min=$min;
-				// $cinemList[$key]->movie_id=$movieId;
+
 			}
-            $home['movieList'] = $movieList;
+
+
+            foreach ($movieListSec as $key => $value)
+            {
+                //按照现价正序排列取最小值
+                $min = DB::table('round')->where('starttime','>',time())->where('movie_id',$value->movie_id)->orderBy('nprice','asc')->value('nprice');
+                $movieListSec[$key]->min=$min;
+
+            }
+
+            foreach ($cinemaList as $k=>$v)
+            {
+                $room = DB::table('room')->where('cid',$v->cinema_id)->lists('room_id');
+                $min = DB::table('round')->whereIn('room_id',$room)->orderBy('nprice')->first();
+                $cinemaList[$k]->min=$min->nprice;
+            }
+
+
+        $home['movieList'] = $movieList;
             $home['movieListSec'] = $movieListSec;
             $home['movieComingList'] = $movieComingList;
             $home['cinemaList'] = $cinemaList;
 
             Cache::forever('staticPageCache_home', $home);
 
-        }
+//        }
 
 		//轮播图
 		$car = DB::table('carousel')->where('display',1)->get();

@@ -40,15 +40,15 @@
                                 <a target="_blank" title="{{ $home['movieList'][0]->name }}" href="{{ url('movie').'/'.$home['movieList'][0]->movie_id }}" rel="nofollow">{{ $home['movieList'][0]->name }}</a>
                             </h3>
                             <p class="p2">
-                                <span class="star_bg"><b style="width:72%" class="star"></b></span>
-                                <em>7.2</em>
+                                <span class="star_bg"><b style="width: {{ $home['movieList'][0]->score*10 }}%" class="star"></b></span>
+                                <em>{{ $home['movieList'][0]->score }}</em>
                             </p>
                             <p class="p2">{{ date('m',$home['movieList'][0]->start_time) }}月{{ date('d',$home['movieList'][0]->start_time) }}日上映</p>
-                            <p class="p2" style="font-size:12px;">{{ $home['movieList'][0]->description }}</p>
+                            <p class="p2" style="font-size:12px;width:200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">{{ $home['movieList'][0]->description }}</p>
 
                             <span class="lowPrice">
                             @if(isset ($home['movieList'][0]->min))
-                                {{ $home['movieList'][0]->min }}<i>元起</i>
+                                {{ $home['movieList'][0]->min/100 }}<i>元起</i>
                             @else
                                 <i> 暂无排期</i>
                             @endif</span>
@@ -70,15 +70,15 @@
                                 <a target="_blank" title="{{ $home['movieList'][1]->name }}" href="{{ url('movie').'/'.$home['movieList'][1]->movie_id }}" rel="nofollow">{{ $home['movieList'][1]->name }}</a>
                             </h3>
                             <p class="p2">
-                                <span class="star_bg"><b style="width:75%" class="star"></b></span>
-                                <em>7.5</em>
+                                <span class="star_bg"><b style="width:{{ $home['movieList'][1]->score*10 }}%" class="star"></b></span>
+                                <em>{{ $home['movieList'][1]->score }}</em>
                             </p>
                             <p class="p2">{{ date('m',$home['movieList'][1]->start_time) }}月{{ date('d',$home['movieList'][1]->start_time) }}日上映</p>
-                            <p class="p2" style="font-size:12px;">{{ $home['movieList'][1]->description }}</p>
+                            <p class="p2" style="font-size:12px;width:200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">{{ $home['movieList'][1]->description }}</p>
 
                             <span class="lowPrice">
-                            @if(isset ($home['movieList'][0]->min))
-                                {{ $home['movieList'][0]->min }}<i>元起</i>
+                            @if(isset ($home['movieList'][1]->min))
+                                {{ $home['movieList'][1]->min/100 }}<i>元起</i>
                             @else
                                <i> 暂无排期</i>
                             @endif</span>
@@ -97,10 +97,10 @@
                                 <a target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow"><img width="220" height="300" alt="{{ $v->name }}" src="{{ asset('upload/admin').'/'.$v->poster }}"></a>
                             </div>
                             <div class="m_con"><div class="cName"><strong>{{ $v->name }} </strong></div>
-                                <em>7.0</em>
+                                <em>{{ $v->score }}</em>
                                     <strong>
                                     @if(isset ($v->min))
-                                            {{ $v->min }}<i>元起</i>
+                                            {{ $v->min/100 }}<i>元起</i>
                                         @else
                                             <i>暂无排期</i>
                                         @endif
@@ -150,7 +150,7 @@
                         </div>
                         <div class="">
                             <p class="t1">
-                                <a style="font-weight: bolder;font-size: 20px;" target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">《{{ $v->name }}》</a>
+                                <a style="font-weight: bolder;font-size: 20px;" target="_blank" title="{{ $v->name }}" href="{{ url('/movie/'.$v->movie_id)}}" rel="nofollow">{{ $v->name }}</a>
                             </p>
                             <span class="title">{{ date('m',$v->start_time) }}月{{ date('d',$v->start_time) }}日上映</span>
                         </div>
@@ -178,11 +178,11 @@
                     <a href="{{ url('/cinema/'.$v->cinema_id)}}l" rel="nofollow" class="showBtn btnView" target="_blank">查看</a>
                     <span class="lowPrice">
                             @if(isset ($v->min))
-                                {{ $v->min }}<i>元起</i>
+                                {{ $v->min/100 }}<i>元起</i>
                             @else
                                 <i>暂无排期</i>
                         @endif
-                    <i>元起</i></span>
+                    <i></i></span>
                     <div class="cName"><a href="{{ url('/cinema/'.$v->cinema_id)}}" target="_blank">{{ $v->cinema_name }}</a>
                         <em class="score ml20">{{ $v->cinema_score }}</em><em class="icon_z ml10">座</em><em class="icon_q ml10">券</em>
                     </div>

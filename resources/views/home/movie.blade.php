@@ -1,7 +1,8 @@
 ﻿@extends('home.parent')
-@section('title', '影院地图')
+@section('title', '影片详情')
 @section('content')
 <link rel="stylesheet" href="{{ asset('/home/Css/detail_new.css') }}"/>
+
 
 
 <div class="wrap990">
@@ -25,8 +26,8 @@
                     <span class="score_big">{{ $movie->score }}</span>
 
             </dt>
-            <dd class="summary">{{ $movie->description }}</dd>
-            <dd class="des">上映：<em class="">{{ date('m',$movie->start_time) }}月{{ date('d',$movie->start_time) }}日</em></dd>
+            <dd style="width:400px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap" class="summary">{{ $movie->description }}</dd>
+            <dd class="des">上映：<em class="">{{ date('Y年m月d日',$movie->start_time) }}</em></dd>
             <dd class="des">导演：{{ $movie->director }}</dd>
             <dd class="des role" id="role">
 	            <span style="float:left;">主演：</span>
@@ -35,7 +36,7 @@
 
 		            </div>
             </dd>
-            <dd class="other">@if($movie->d3)<span>3D</span>@endif<span>{{ $movie->duration }}</span>
+            <dd class="other">@if($movie->d3)<span>3D</span>@endif<span>{{ floor($movie->duration/60).'时'.($movie->duration%60).'分钟' }}</span>
             </dd>
         </dl>
         <script>
@@ -167,6 +168,7 @@
                 <span class="icon_t" style="display:none;"></span>
                 <span class="mtype_imax" style="display:none;"></span>
             </h3>
+            <p style=" font-size: 20px ; color:#E34551">{{ $v->minPrice }}   </p>
             <div class="add">地址：{{ $v->cinema_address }}
                 <a href="javascript:;" id="3031" title="查看地图" onclick="Core.cinemaMapDialog(this.id);"></a>
             </div>
@@ -219,13 +221,13 @@
         </div>
 		<dl>
 			<dt>
-				<h2><a href="" target="_blank">{{ $v->name }}</a></h2>
+				<h2><a href="{{ url('movie').'/'.$v->movie_id }}" target="_blank">{{ $v->name }}</a></h2>
 			</dt>
 			<dd class="mv_star">
                 <span class="star_bg_s">
                     <div style="width:{{ $v->score*10 }}%" class="star_s"></div>
                 </span></dd>
-			<dd class="summary">{{ $v->description }}</dd>
+			<dd style="" class="summary">{{ $v->description }}</dd>
 			<dd class="des">主演：{{ $v->star }}</dd>
 		</dl>
 	</li>

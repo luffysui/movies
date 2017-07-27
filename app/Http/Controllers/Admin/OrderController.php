@@ -13,7 +13,7 @@ use App\Org\Send;
 use App\Org\REST;
 
 
-use Redis;
+use Illuminate\Support\Facades\Redis;
 
 class OrderController extends Controller
 {
